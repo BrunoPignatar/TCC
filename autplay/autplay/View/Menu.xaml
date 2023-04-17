@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="autplay.View.Menu">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#CDFFD8"
+                          Offset="0.1" />
+            <GradientStop Color="#94B9FF"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="logo" HeightRequest="250" Scale="1.7" Margin="15" HorizontalOptions="CenterAndExpand"/>
+
+            <StackLayout>
+                <Frame BackgroundColor="White"
+                       CornerRadius="10"
+                       HeightRequest="350"
+                       Margin="15,0,15,0">
+                    <StackLayout>
+
+                            <Label Text="SELECIONE O AVATAR" TextColor="Black" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold"/>
+
+
+                        <Label Text=""/>
+                        <Label Text=""/>
+
+                        <Label Text=""/>
+                        <Label Text=""/>
+
+                        <Label Text=""/>
+                        <Label Text=""/>
+
+                        <Label Text=""/>
+                        
+
+                        <ImageButton x:Name="btn_add"
+                             HeightRequest="130"
+                             Margin="-40"
+                             Source=""
+                             Clicked="btn_add_Clicked"
+                             BackgroundColor="Transparent"/>
+                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="JOGAR" TextColor="Black" FontSize="30" Clicked="Button_Clicked"/>
+
+                    </StackLayout>
+                </Frame>
+                       
+            </StackLayout>
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

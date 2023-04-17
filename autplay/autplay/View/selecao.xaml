@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="autplay.View.selecao">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#CDFFD8"
+                          Offset="0.1" />
+            <GradientStop Color="#94B9FF"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <Image x:Name="logo" HeightRequest="250" Scale="1.7" Margin="15" HorizontalOptions="CenterAndExpand"/>
+        <StackLayout>
+                <Frame BackgroundColor="White"
+                       CornerRadius="10"
+                       HeightRequest="300"
+                       Margin="15,0,15,0">
+                    <StackLayout>
+
+                        <Label Text="SELECIONE O MUNDO" TextColor="Black" HorizontalTextAlignment="Center" FontSize="22" FontAttributes="Bold"/>
+                        
+                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="MUNDO 1" TextColor="Black" FontSize="30" Margin="10"/>
+                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="MUNDO 2" TextColor="Black" FontSize="30" Margin="10"/>
+                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="MUNDO 3" TextColor="Black" FontSize="30" Margin="10"/>
+
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+
+
+        </StackLayout>
+
+
+
+
+
+    </ContentPage.Content>
+</ContentPage>
