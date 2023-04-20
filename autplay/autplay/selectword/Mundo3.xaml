@@ -1,7 +1,16 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="autplay.selectword.Mundo3">
+             x:Class="autplay.selectword.Mundo3"
+             Title="MUNDO 3">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#CDFFD8"
+                          Offset="0.1" />
+            <GradientStop Color="#94B9FF"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
            

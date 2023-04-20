@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="autplay.View.selecao">
+             x:Class="autplay.View.selecao"
+             Title="SELEÇÃO DE MUNDO">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#CDFFD8"
@@ -23,9 +24,9 @@
 
                         <Label Text="SELECIONE O MUNDO" TextColor="Black" HorizontalTextAlignment="Center" FontSize="22" FontAttributes="Bold"/>
                         
-                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="MUNDO 1" TextColor="Black" FontSize="30" Margin="10"/>
-                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="MUNDO 2" TextColor="Black" FontSize="30" Margin="10"/>
-                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="MUNDO 3" TextColor="Black" FontSize="30" Margin="10"/>
+                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="MUNDO 1" TextColor="Black" FontSize="30" Margin="10" Clicked="Button_Clicked"/>
+                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="MUNDO 2" TextColor="Black" FontSize="30" Margin="10" Clicked="Button_Clicked_1"/>
+                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="MUNDO 3" TextColor="Black" FontSize="30" Margin="10" Clicked="Button_Clicked_2"/>
 
 
                     </StackLayout>
