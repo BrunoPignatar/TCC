@@ -19,6 +19,7 @@ namespace autplay.View
             logo.Source = ImageSource.FromResource("autplay.Assets.logo.png");
 
             btn_add.Source = ImageSource.FromResource("autplay.Assets.botaoadd.png");
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
