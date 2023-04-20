@@ -30,13 +30,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="selectword\Mundo1.xaml">
+    <EmbeddedResource Update="View\SelectWords\Mundo1.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="selectword\Mundo2.xaml">
+    <EmbeddedResource Update="View\SelectWords\Mundo2.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="selectword\Mundo3.xaml">
+    <EmbeddedResource Update="View\SelectWords\Mundo3.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Menu.xaml">

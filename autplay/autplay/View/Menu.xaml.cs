@@ -16,13 +16,15 @@ namespace autplay.View
         public Menu()
         {
             InitializeComponent();
+            //ADIÇÃO DAS IMAGENS
             logo.Source = ImageSource.FromResource("autplay.Assets.logo.png");
-
             btn_add.Source = ImageSource.FromResource("autplay.Assets.botaoadd.png");
+            //REMOVENDO A NAVBAR
             NavigationPage.SetHasNavigationBar(this, false);
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        //BOTÃO QUE LEVA A TELA DE SELEÇÃO-- OK
+        private async void btn_jogar_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -35,9 +37,11 @@ namespace autplay.View
             }
         }
 
+        //BOTÃO DE ADICIONAR FOTO COMO AVATAR--
         private void btn_add_Clicked(object sender, EventArgs e)
         {
 
         }
+
     }
 }

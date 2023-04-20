@@ -11,19 +11,22 @@
                           Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
-    
+
     <ContentPage.Content>
         <StackLayout>
-            <Image x:Name="logo" HeightRequest="250" Scale="1.7" Margin="15" HorizontalOptions="CenterAndExpand"/>
+            <Image x:Name="logo" HeightRequest="220" Scale="1.7" Margin="15" HorizontalOptions="CenterAndExpand"/>
 
             <StackLayout>
                 <Frame BackgroundColor="White"
                        CornerRadius="10"
                        HeightRequest="350"
-                       Margin="15,0,15,0">
+                       Margin="15,0,15,0"
+                       VerticalOptions="CenterAndExpand">
                     <StackLayout>
 
-                            <Label Text="SELECIONE O AVATAR" TextColor="Black" HorizontalTextAlignment="Center" FontSize="20" FontAttributes="Bold"/>
+                        <Label Text="SELECIONE O SEU AVATAR" TextColor="Black" 
+                               HorizontalTextAlignment="Center" FontSize="20" 
+                               FontAttributes="Bold"/>
 
 
                         <Label Text=""/>
@@ -36,21 +39,26 @@
                         <Label Text=""/>
 
                         <Label Text=""/>
-                        
 
                         <ImageButton x:Name="btn_add"
                              HeightRequest="130"
                              Margin="-40"
+                             Scale="1.1"
                              Source=""
                              Clicked="btn_add_Clicked"
                              BackgroundColor="Transparent"/>
-                        <Button BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" Text="JOGAR" TextColor="Black" FontSize="30" Clicked="Button_Clicked"/>
+
+                        <Button x:Name="btn_jogar"
+                                BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" 
+                                Text="JOGAR" TextColor="White" FontSize="30" 
+                                Clicked="btn_jogar_Clicked"
+                                Margin="0,7,0,0"/>
 
                     </StackLayout>
                 </Frame>
-                       
+
             </StackLayout>
-            
+
 
         </StackLayout>
     </ContentPage.Content>
