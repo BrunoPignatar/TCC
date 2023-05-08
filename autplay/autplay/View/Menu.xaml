@@ -1,10 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="autplay.View.Menu"
              >
     <ContentPage.Background>
+        <!--
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#CDFFD8"
+                          Offset="0.1" />
+            <GradientStop Color="#94B9FF"
+                          Offset="1.0" />
+        </LinearGradientBrush> -->
+
+        <!-- StartPoint defaults to (0,0) -->
+        <LinearGradientBrush EndPoint="0,1">
             <GradientStop Color="#CDFFD8"
                           Offset="0.1" />
             <GradientStop Color="#94B9FF"
@@ -23,24 +33,83 @@
                        Margin="15,0,15,0"
                        VerticalOptions="CenterAndExpand">
                     <StackLayout>
-
                         <Label Text="SELECIONE O SEU AVATAR" TextColor="Black" 
                                HorizontalTextAlignment="Center" FontSize="20" 
                                FontAttributes="Bold"/>
 
 
-                        <Label Text=""/>
-                        <Label Text=""/>
+                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
 
-                        <Label Text=""/>
-                        <Label Text=""/>
+                            <!--
+                            <Button x:Name="voltar_opt" Text="↑" CornerRadius="50" 
+                                    Rotation="-90"
+                                    BackgroundColor="Transparent" FontSize="50" 
+                                    FontAttributes="Bold"
+                                    xct:TouchEffect.AnimationDuration="250"
+                                    xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                                    xct:TouchEffect.PressedScale="0.75"
+                                    xct:TouchEffect.PressedOpacity="0.1"
+                                    xct:TouchEffect.PressedBackgroundColor="#8C52FF"
+                                    xct:TouchEffect.NormalBackgroundColor="Transparent"
+                                    /> -->
 
-                        <Label Text=""/>
-                        <Label Text=""/>
+                            <CarouselView  x:Name="avatares">
+                                <CarouselView.ItemTemplate>
+                                    <DataTemplate>
+                                        <StackLayout>
+                                            <Frame HasShadow="True"
+                                               BorderColor="DarkGray"
+                                               CornerRadius="10"
+                                               Margin="10"
+                                               HeightRequest="500"
+                                               HorizontalOptions="Center"
+                                               VerticalOptions="CenterAndExpand">
+                                                <StackLayout>
 
-                        <Label Text=""/>
+                                                    <Image Source="{Binding Imagem}"
+                                                       Aspect="AspectFill"
+                                                       HeightRequest="110"
+                                                       WidthRequest="110"
+                                                           Scale="1.1"
+                                                       HorizontalOptions="Center" />
 
-                        <ImageButton x:Name="btn_add"
+                                                    <Label Text="{Binding Nome}"
+                                                           TextTransform="Uppercase"
+                                                           FontAttributes="Bold"
+                                                           HorizontalOptions="Center"
+                                                           TextColor="#8C52FF"
+                                                           FontSize="16"
+                                                           VerticalOptions="EndAndExpand"
+                                                           />
+
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+                                    </DataTemplate>
+                                </CarouselView.ItemTemplate>
+                            </CarouselView>
+
+                            <!--
+                                    
+
+                            <Button x:Name="avancar_opt" Text="↑" CornerRadius="50" 
+                                    Rotation="90"
+                                    HorizontalOptions="EndAndExpand"
+                                    BackgroundColor="Transparent" FontSize="50" 
+                                    FontAttributes="Bold"
+                                    xct:TouchEffect.AnimationDuration="250"
+                                    xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                                    xct:TouchEffect.PressedScale="0.75"
+                                    xct:TouchEffect.PressedOpacity="0.1"
+                                    xct:TouchEffect.PressedBackgroundColor="#8C52FF"
+                                    xct:TouchEffect.NormalBackgroundColor="Transparent"/> -->
+
+
+                        </StackLayout>
+
+
+                        <StackLayout VerticalOptions="EndAndExpand">
+                            <ImageButton x:Name="btn_add"
                              HeightRequest="130"
                              Margin="-40"
                              Scale="1.1"
@@ -48,12 +117,12 @@
                              Clicked="btn_add_Clicked"
                              BackgroundColor="Transparent"/>
 
-                        <Button x:Name="btn_jogar"
+                            <Button x:Name="btn_jogar"
                                 BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" 
                                 Text="JOGAR" TextColor="White" FontSize="30" 
                                 Clicked="btn_jogar_Clicked"
                                 Margin="0,7,0,0"/>
-
+                        </StackLayout>
                     </StackLayout>
                 </Frame>
 
