@@ -53,56 +53,45 @@
                                     xct:TouchEffect.NormalBackgroundColor="Transparent"
                                     /> -->
 
-                            <CarouselView  x:Name="avatares">
-                                <CarouselView.ItemTemplate>
-                                    <DataTemplate>
-                                        <StackLayout>
-                                            <Frame HasShadow="True"
-                                               BorderColor="DarkGray"
-                                               CornerRadius="10"
-                                               Margin="10"
-                                               HeightRequest="500"
-                                               HorizontalOptions="Center"
-                                               VerticalOptions="CenterAndExpand">
-                                                <StackLayout>
 
-                                                    <Image Source="{Binding Imagem}"
-                                                       Aspect="AspectFill"
-                                                       HeightRequest="110"
-                                                       WidthRequest="110"
-                                                           Scale="1.1"
-                                                       HorizontalOptions="Center" />
+                            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10">
 
-                                                    <Label Text="{Binding Nome}"
-                                                           TextTransform="Uppercase"
-                                                           FontAttributes="Bold"
-                                                           HorizontalOptions="Center"
-                                                           TextColor="#8C52FF"
-                                                           FontSize="16"
-                                                           VerticalOptions="EndAndExpand"
-                                                           />
+                                    <StackLayout>
+                                        <ImageButton x:Name="btn_arara" Clicked="btn_arara_Clicked_1" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
+                                    </StackLayout>
 
-                                                </StackLayout>
-                                            </Frame>
-                                        </StackLayout>
-                                    </DataTemplate>
-                                </CarouselView.ItemTemplate>
-                            </CarouselView>
+                                    <StackLayout>
+                                        <ImageButton x:Name="btn_gato" Clicked="btn_gato_Clicked" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
+                                    </StackLayout>
 
-                            <!--
-                                    
+                                    <StackLayout>
+                                        <ImageButton  x:Name="btn_peixe" Clicked="btn_peixe_Clicked" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
+                                    </StackLayout>
 
-                            <Button x:Name="avancar_opt" Text="↑" CornerRadius="50" 
-                                    Rotation="90"
-                                    HorizontalOptions="EndAndExpand"
-                                    BackgroundColor="Transparent" FontSize="50" 
-                                    FontAttributes="Bold"
-                                    xct:TouchEffect.AnimationDuration="250"
-                                    xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                                    xct:TouchEffect.PressedScale="0.75"
-                                    xct:TouchEffect.PressedOpacity="0.1"
-                                    xct:TouchEffect.PressedBackgroundColor="#8C52FF"
-                                    xct:TouchEffect.NormalBackgroundColor="Transparent"/> -->
+                                    <StackLayout>
+                                        <ImageButton x:Name="btn_dog" Clicked="btn_gato_Clicked" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Cachorro"/>
+                                    </StackLayout>
+
+                                    <StackLayout>
+                                        <ImageButton x:Name="btn_horse" Clicked="btn_gato_Clicked" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Cavalo"/>
+                                    </StackLayout>
+
+
+
+
+
+
+
+
+                                </StackLayout>
+                            </ScrollView>
+                           
 
 
                         </StackLayout>

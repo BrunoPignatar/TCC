@@ -15,27 +15,25 @@ namespace autplay.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Menu : ContentPage
     {
-        ObservableCollection<Avatares> list;
+        
         public Menu()
         {
             InitializeComponent();
             //ADIÇÃO DAS IMAGENS
             logo.Source = ImageSource.FromResource("autplay.Assets.logo.png");
             btn_add.Source = ImageSource.FromResource("autplay.Assets.botaoadd.png");
+            btn_arara.Source = ImageSource.FromResource("autplay.Assets.parrot.png");
+            btn_gato.Source = ImageSource.FromResource("autplay.Assets.cat.png");
+            btn_dog.Source = ImageSource.FromResource("autplay.Assets.dog.png");
+            btn_peixe.Source = ImageSource.FromResource("autplay.Assets.clown-fish.png");
+            btn_horse.Source = ImageSource.FromResource("autplay.Assets.horse.png");
+
+
             //REMOVENDO A NAVBAR
             NavigationPage.SetHasNavigationBar(this, false);
 
-            //ADICIONANDO OS AVATARES
-            list = new ObservableCollection<Avatares>
-            {
-                new Avatares{Nome="juan",Imagem="https://tinyurl.com/sm59xs32"},
-                new Avatares{Nome="Cachorro",Imagem="https://tinyurl.com/4fujmffr"},
-                new Avatares{Nome="Gato",Imagem="https://tinyurl.com/2zbbx3an"},
-                new Avatares{Nome="Peixe",Imagem="https://tinyurl.com/445abh2e"},
-                new Avatares{Nome="Arara",Imagem="https://tinyurl.com/3n4dz6nu"},
-        };
-            avatares.ItemsSource = list;
-
+           
+           
 
     }
 
@@ -59,5 +57,21 @@ namespace autplay.View
 
     }
 
-}
+        
+
+        private void btn_arara_Clicked_1(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new View.selecao());
+        }
+
+        private void btn_gato_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new View.selecao());
+        }
+
+        private void btn_peixe_Clicked(object sender, EventArgs e)
+        {
+
+        }
+    }
 }
