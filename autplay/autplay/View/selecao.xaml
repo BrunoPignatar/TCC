@@ -25,7 +25,26 @@
                                FontSize="22" FontAttributes="Bold"/>
 
 
+                    <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10">
 
+                            <StackLayout>
+                                <ImageButton x:Name=""  BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
+                            </StackLayout>
+
+                            <StackLayout>
+                                <ImageButton x:Name=""  BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
+                            </StackLayout>
+
+                            <StackLayout>
+                                <ImageButton  x:Name=""  BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </ScrollView>
                 </StackLayout>
             </Frame>
 
