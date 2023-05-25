@@ -55,17 +55,17 @@ namespace autplay.View
 
         private void btn_wordrose_Clicked(object sender, EventArgs e)
         {
-            
+            Navigation.PushAsync(new selectword.Mundo1());
         }
 
         private void btn_wordapocalypse_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new selectword.Mundo2());
         }
 
         private void btn_wordgum_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new selectword.Mundo3());
         }
     }
 }

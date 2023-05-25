@@ -54,8 +54,8 @@
                                     /> -->
 
 
-                            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10">
+                            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalOptions="CenterAndExpand">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10" VerticalOptions="CenterAndExpand">
 
                                     <StackLayout>
                                         <ImageButton x:Name="btn_arara" Clicked="btn_arara_Clicked_1" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
@@ -106,11 +106,11 @@
                              Clicked="btn_add_Clicked"
                              BackgroundColor="Transparent"/>
 
-                            <Button x:Name="btn_jogar"
+                            <!--<Button x:Name="btn_jogar"
                                 BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" 
                                 Text="JOGAR" TextColor="White" FontSize="30" 
                                 Clicked="btn_jogar_Clicked"
-                                Margin="0,7,0,0"/>
+                                Margin="0,7,0,0"/>-->
                         </StackLayout>
                     </StackLayout>
                 </Frame>

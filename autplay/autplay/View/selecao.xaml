@@ -13,47 +13,57 @@
     </ContentPage.Background>
 
     <ContentPage.Content>
+
         <StackLayout>
+
+            
             <Frame BackgroundColor="White"
-                       CornerRadius="10"
-                       HeightRequest="400"
-                       Margin="15,0,15,0"
-                       VerticalOptions="CenterAndExpand">
+                   CornerRadius="10"
+                   Padding="2"
+                   HeightRequest="400"
+                   Margin="15,0,15,0"
+                   VerticalOptions="CenterAndExpand">
+                
                 <StackLayout>
+
+                    <StackLayout.Background>
+                        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                            <GradientStop Color="#CDFFD8"
+                          Offset="0.1" />
+                            <GradientStop Color="#94B9FF"
+                          Offset="1.0" />
+                        </LinearGradientBrush>
+                    </StackLayout.Background>
+
+
+
 
                     <Label Text="SELECIONE O MUNDO" TextColor="Black" HorizontalTextAlignment="Center"
                                FontSize="22" FontAttributes="Bold"/>
-
-
-
-                    <Frame
-                        BackgroundColor="Black"
-                        HeightRequest="300"
-                        CornerRadius="30">
-
-                        <StackLayout>
+            
+                        
                             <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalOptions="CenterAndExpand">
                         <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10" >
 
                             <StackLayout>
-                                <ImageButton x:Name="btn_wordrose" Scale="2" Clicked="btn_wordrose_Clicked"  Margin="10" BackgroundColor="Black" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <Label TextColor="white" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
+                                <ImageButton x:Name="btn_wordrose" Scale="2.5" Clicked="btn_wordrose_Clicked"  Margin="10" BackgroundColor="Transparent" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <Label TextColor="white" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordRose"  />
                             </StackLayout>
 
                             <StackLayout>
-                                <ImageButton x:Name="btn_wordapocalypse" Scale="2" Clicked="btn_wordapocalypse_Clicked" Margin="10" BackgroundColor="Black" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <Label TextColor="white" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
+                                <ImageButton x:Name="btn_wordapocalypse" Scale="2.5" Clicked="btn_wordapocalypse_Clicked" Margin="10" BackgroundColor="Transparent" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <Label TextColor="white" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordApocalypse"/>
                             </StackLayout>
 
                             <StackLayout>
-                                <ImageButton  x:Name="btn_wordgum" Scale="2" Clicked="btn_wordgum_Clicked" Margin="10" BackgroundColor="black" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <Label TextColor="white" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
+                                <ImageButton  x:Name="btn_wordgum" Scale="2.5" Clicked="btn_wordgum_Clicked" Margin="10" BackgroundColor="Transparent" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <Label TextColor="white" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordGum"/>
                             </StackLayout>
 
                         </StackLayout>
                     </ScrollView>
-                        </StackLayout>
-                    </Frame>
+                        
+                    
                 </StackLayout>
             </Frame>
 

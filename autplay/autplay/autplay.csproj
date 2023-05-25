@@ -63,15 +63,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="View\SelectWords\Mundo1.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\SelectWords\Mundo2.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="View\SelectWords\Mundo3.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Update="View\Menu.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -82,5 +73,6 @@
 
   <ItemGroup>
     <Folder Include="Assets\Avatar\" />
+    <Folder Include="View\SelectWords\" />
   </ItemGroup>
 </Project>
