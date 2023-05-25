@@ -17,6 +17,9 @@
     <None Remove="Assets\dog.png" />
     <None Remove="Assets\horse.png" />
     <None Remove="Assets\logo.png" />
+    <None Remove="Assets\mundo1.png" />
+    <None Remove="Assets\mundo2.png" />
+    <None Remove="Assets\mundo3.png" />
     <None Remove="Assets\parrot.png" />
   </ItemGroup>
 
@@ -37,6 +40,15 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\logo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\mundo1.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\mundo2.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\mundo3.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\parrot.png">

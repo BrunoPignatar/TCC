@@ -25,26 +25,35 @@
                                FontSize="22" FontAttributes="Bold"/>
 
 
-                    <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10">
+
+                    <Frame
+                        BackgroundColor="Black"
+                        HeightRequest="300"
+                        CornerRadius="30">
+
+                        <StackLayout>
+                            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10" >
 
                             <StackLayout>
-                                <ImageButton x:Name=""  BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
+                                <ImageButton x:Name="btn_wordrose" Scale="2" Clicked="btn_wordrose_Clicked"  Margin="10" BackgroundColor="Black" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <Label TextColor="white" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
                             </StackLayout>
 
                             <StackLayout>
-                                <ImageButton x:Name=""  BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
+                                <ImageButton x:Name="btn_wordapocalypse" Scale="2" Clicked="btn_wordapocalypse_Clicked" Margin="10" BackgroundColor="Black" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <Label TextColor="white" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
                             </StackLayout>
 
                             <StackLayout>
-                                <ImageButton  x:Name=""  BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
+                                <ImageButton  x:Name="btn_wordgum" Scale="2" Clicked="btn_wordgum_Clicked" Margin="10" BackgroundColor="black" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <Label TextColor="white" FontSize="20" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
                             </StackLayout>
 
                         </StackLayout>
                     </ScrollView>
+                        </StackLayout>
+                    </Frame>
                 </StackLayout>
             </Frame>
 
