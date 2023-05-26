@@ -99,7 +99,7 @@
 
                         <StackLayout VerticalOptions="EndAndExpand">
                             <ImageButton x:Name="btn_add"
-                             HeightRequest="130"
+                             HeightRequest="180"
                              Margin="-40"
                              Scale="1.1"
                              Source=""

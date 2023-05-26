@@ -15,6 +15,24 @@ namespace autplay.selectword
         public Mundo3()
         {
             InitializeComponent();
+
+            //removendo a navbar
+            NavigationPage.SetHasNavigationBar(this, false);
+        }
+
+        private void jogo1_mundo3_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jogo2_mundo3_Clicked(object sender, EventArgs e)
+        {
+
+        }
+
+        private void jogo3_mundo3_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

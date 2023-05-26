@@ -13,6 +13,64 @@
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
+
+
+            <Frame
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="Transparent">
+
+                <StackLayout>
+
+                    <Button
+                        x:Name="jogo1_mundo2"
+                         FontAttributes="Bold"
+                         VerticalOptions="Center"
+                         BorderColor="Black"
+                    BorderWidth="1"
+                    CornerRadius="10"
+                    HeightRequest="40"
+                    WidthRequest="50"
+                    Margin="10"
+                    BackgroundColor="white"
+                    Text="JOGO 1"
+                    TextColor="Black"
+                        Clicked="jogo1_mundo2_Clicked"
+                        FontSize="18"/>
+
+                    <Button
+                        x:Name="jogo2_mundo2"
+                         FontAttributes="Bold"
+                         VerticalOptions="Center"
+                         BorderColor="Black"
+                         BorderWidth="1"
+                         CornerRadius="10"
+                         HeightRequest="40"
+                         WidthRequest="50"
+                         Margin="10"
+                         BackgroundColor="white"
+                         Text="JOGO 2"
+                         TextColor="Black"
+                         Clicked="jogo2_mundo2_Clicked"
+                         FontSize="18"/>
+
+                    <Button
+                        x:Name="jogo3_mundo2"
+                         FontAttributes="Bold"
+                         VerticalOptions="Center"
+                         BorderColor="Black"
+                         BorderWidth="1"
+                         CornerRadius="10"
+                         HeightRequest="40"
+                         WidthRequest="50"
+                         Margin="10"
+                         BackgroundColor="white"
+                         Text="JOGO 3"
+                         TextColor="Black"
+                         Clicked="jogo3_mundo2_Clicked"
+                         FontSize="18"/>
+
+                </StackLayout>
+            </Frame>
           
         </StackLayout>
     </ContentPage.Content>

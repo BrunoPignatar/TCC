@@ -13,7 +13,70 @@
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
-         
+
+
+           
+            <Frame
+                 VerticalOptions="CenterAndExpand"
+                 BackgroundColor="Transparent">
+                <StackLayout>
+
+                    <Button  
+                    x:Name="jogo1"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    BorderColor="Black"
+                    BorderWidth="1"
+                    CornerRadius="10"
+                    HeightRequest="40"
+                    WidthRequest="50"
+                    Margin="10"
+                    BackgroundColor="white"
+                    Text="JOGO 1"
+                    TextColor="Black"
+                    Clicked="jogo1_Clicked"
+                    FontSize="18"
+                />
+
+            <Button
+                x:Name="jogo2"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                BorderColor="Black"
+                BorderWidth="1"
+                CornerRadius="10"
+                HeightRequest="40"
+                WidthRequest="50"
+                Margin="10"
+                BackgroundColor="White"
+                Text="JOGO 2"
+                TextColor="Black"
+                Clicked="jogo2_Clicked"
+                FontSize="18"/>
+
+
+            <Button
+                x:Name="jogo3"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                BorderColor="Black"
+                BorderWidth="1"
+                CornerRadius="10"
+                HeightRequest="40"
+                WidthRequest="50"
+                Margin="10"
+                BackgroundColor="white"
+                Text="JOGO 3"
+                TextColor="Black"
+                Clicked="jogo3_Clicked"
+                FontSize="18"/>
+                    
+                </StackLayout>
+            </Frame>
+       
+
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
