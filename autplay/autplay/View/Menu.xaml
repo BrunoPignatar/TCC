@@ -24,7 +24,7 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Image x:Name="logo" HeightRequest="220" Scale="1.7" Margin="15" HorizontalOptions="CenterAndExpand"/>
+            <Image x:Name="logo" HeightRequest="220" Margin="15" HorizontalOptions="CenterAndExpand"/>
 
             <StackLayout>
                 <Frame BackgroundColor="White"

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="autplay.View.jogos.jogodavelha">
+
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#6BC6FA"
+                          Offset="0.1" />
+            <GradientStop Color="#D938A7"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame
+                CornerRadius="10"
+                Margin="10"
+                VerticalOptions="CenterAndExpand"
+                BackgroundColor="White">
+                <Grid ColumnDefinitions="*, *, *"
+          RowDefinitions="*, *, *, *"
+          VerticalOptions="Center"
+          Padding="10">
+
+                <Label Grid.Row="0" Grid.Column="0" 
+               Grid.ColumnSpan="3"
+               FontSize="60"
+               HorizontalTextAlignment="Center"
+               Text="Jogo da Velha" TextColor="Black" FontAttributes="Bold"/>
+
+                    <Button x:Name="btn10" Grid.Row="1" Grid.Column="0" Text="" BackgroundColor="#d094e3" Clicked="btn10_Clicked"/>
+                    <Button x:Name="btn11" Grid.Row="1" Grid.Column="1" Text="" BackgroundColor="#d094e3" Clicked="btn10_Clicked"/>
+                    <Button x:Name="btn12" Grid.Row="1" Grid.Column="2" Text="" BackgroundColor="#d094e3" Clicked="btn10_Clicked"/>
+
+                    <Button x:Name="btn20" Grid.Row="2" Grid.Column="0" Text="" BackgroundColor="#d094e3" Clicked="btn10_Clicked"/>
+                    <Button x:Name="btn21" Grid.Row="2" Grid.Column="1" Text="" BackgroundColor="#d094e3" Clicked="btn10_Clicked"/>
+                    <Button x:Name="btn22" Grid.Row="2" Grid.Column="2" Text="" BackgroundColor="#d094e3" Clicked="btn10_Clicked"/>
+
+                    <Button x:Name="btn30" Grid.Row="3" Grid.Column="0" Text="" BackgroundColor="#d094e3" Clicked="btn10_Clicked"/>
+                    <Button x:Name="btn31" Grid.Row="3" Grid.Column="1" Text="" BackgroundColor="#d094e3" Clicked="btn10_Clicked"/>
+                    <Button x:Name="btn32" Grid.Row="3" Grid.Column="2" Text="" BackgroundColor="#d094e3" Clicked="btn10_Clicked"/>
+
+              
+            </Grid>
+            </Frame>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

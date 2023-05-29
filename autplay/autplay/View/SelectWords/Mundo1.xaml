@@ -2,14 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="autplay.selectword.Mundo1"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Title="MUNDO 1">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#CDFFD8"
+            <GradientStop Color="#6BC6FA"
                           Offset="0.1" />
-            <GradientStop Color="#94B9FF"
+            <GradientStop Color="#D938A7"
                           Offset="1.0" />
         </LinearGradientBrush>
+        
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
@@ -18,58 +20,65 @@
            
             <Frame
                  VerticalOptions="CenterAndExpand"
-                 BackgroundColor="Transparent">
+                 BackgroundColor="Transparent"
+                 CornerRadius="10"
+                 Margin="10">
                 <StackLayout>
 
                     <Button  
                     x:Name="jogo1"
                     FontAttributes="Bold"
                     VerticalOptions="Center"
-                    BorderColor="Black"
+                    BorderColor="Transparent"
                     BorderWidth="1"
                     CornerRadius="10"
-                    HeightRequest="40"
+                    HeightRequest="60"
                     WidthRequest="50"
                     Margin="10"
-                    BackgroundColor="white"
-                    Text="JOGO 1"
+                    BackgroundColor="WHITE"
+                    Text="JOGO DA VELHA"
                     TextColor="Black"
                     Clicked="jogo1_Clicked"
                     FontSize="18"
-                />
+                    xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
 
             <Button
                 x:Name="jogo2"
                 FontAttributes="Bold"
                 VerticalOptions="Center"
-                BorderColor="Black"
+                BorderColor="Transparent"
                 BorderWidth="1"
                 CornerRadius="10"
-                HeightRequest="40"
+                HeightRequest="60"
                 WidthRequest="50"
                 Margin="10"
                 BackgroundColor="White"
                 Text="JOGO 2"
                 TextColor="Black"
                 Clicked="jogo2_Clicked"
-                FontSize="18"/>
+                FontSize="18"
+                xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
 
 
             <Button
                 x:Name="jogo3"
                 FontAttributes="Bold"
                 VerticalOptions="Center"
-                BorderColor="Black"
+                BorderColor="Transparent"
                 BorderWidth="1"
                 CornerRadius="10"
-                HeightRequest="40"
+                HeightRequest="60"
                 WidthRequest="50"
                 Margin="10"
                 BackgroundColor="white"
                 Text="JOGO 3"
                 TextColor="Black"
                 Clicked="jogo3_Clicked"
-                FontSize="18"/>
+                FontSize="18"
+                xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
                     
                 </StackLayout>
             </Frame>
