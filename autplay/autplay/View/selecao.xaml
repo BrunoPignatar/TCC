@@ -35,10 +35,10 @@
             
                         
                             <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalOptions="CenterAndExpand">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10" >
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Spacing="20" Padding="10" >
 
                             <StackLayout>
-                                <ImageButton x:Name="btn_wordrose" Scale="2.5" Clicked="btn_wordrose_Clicked"  Margin="10" BackgroundColor="Transparent" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                <ImageButton x:Name="btn_wordrose" Scale="2.5" Clicked="btn_wordrose_Clicked"  BackgroundColor="Transparent"  Margin="10"  Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
                                 <Label TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordRose"  />
                             </StackLayout>
 

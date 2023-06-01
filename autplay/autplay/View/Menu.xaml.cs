@@ -71,7 +71,7 @@ namespace autplay.View
 
         private void btn_peixe_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new View.selecao());
         }
     }
 }
