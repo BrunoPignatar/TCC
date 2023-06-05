@@ -12,7 +12,10 @@ namespace autplay
 
             MainPage = new NavigationPage(new View.Menu());
         }
-
+        /**
+         * Armazena os dados do Avatar após o login.
+         */
+        public static Model.Avatares DadosAvatar { get; set; }
         protected override void OnStart()
         {
         }

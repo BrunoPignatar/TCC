@@ -24,7 +24,9 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Image x:Name="logo" HeightRequest="220" Margin="15" HorizontalOptions="CenterAndExpand"/>
+            <Image x:Name="logo" HeightRequest="220" 
+                   Margin="15" HorizontalOptions="CenterAndExpand"
+                   Scale="1.8"/>
 
             <StackLayout>
                 <Frame BackgroundColor="White"
@@ -33,12 +35,19 @@
                        Margin="15,0,15,0"
                        VerticalOptions="CenterAndExpand">
                     <StackLayout>
-                        <Label Text="SELECIONE O SEU AVATAR" TextColor="Black" 
+                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                            <Label Text="SELECIONE O SEU" TextColor="Black" 
                                HorizontalTextAlignment="Center" FontSize="20" 
                                FontAttributes="Bold"/>
+                            <Label Text="AVATAR" TextColor="#8C52FF" 
+                               HorizontalTextAlignment="Center" FontSize="20" 
+                               FontAttributes="Bold"/>
+                        </StackLayout>
+                        
 
 
-                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand">
+                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand"
+                                     Margin="0,35,0,0">
 
                             <!--
                             <Button x:Name="voltar_opt" Text="↑" CornerRadius="50" 
@@ -55,43 +64,36 @@
 
 
                             <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalOptions="CenterAndExpand">
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="20" Padding="10" VerticalOptions="CenterAndExpand">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30" Padding="10" VerticalOptions="CenterAndExpand">
 
-                                    <StackLayout>
-                                        <ImageButton x:Name="btn_arara" Clicked="btn_arara_Clicked_1" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <StackLayout Scale="1.3" Margin="7">
+                                        <ImageButton x:Name="btn_arara" Clicked="btn_arara_Clicked_1" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
                                         <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
                                     </StackLayout>
 
-                                    <StackLayout>
-                                        <ImageButton x:Name="btn_gato" Clicked="btn_gato_Clicked" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <StackLayout Scale="1.3" Margin="7">
+                                        <ImageButton x:Name="btn_gato" Clicked="btn_gato_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
                                         <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
                                     </StackLayout>
 
-                                    <StackLayout>
-                                        <ImageButton  x:Name="btn_peixe" Clicked="btn_peixe_Clicked" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <StackLayout Scale="1.3" Margin="7">
+                                        <ImageButton  x:Name="btn_peixe" Clicked="btn_peixe_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
                                         <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
                                     </StackLayout>
 
-                                    <StackLayout>
-                                        <ImageButton x:Name="btn_dog" Clicked="btn_gato_Clicked" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <StackLayout Scale="1.3" Margin="7">
+                                        <ImageButton x:Name="btn_dog" Clicked="btn_dog_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
                                         <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Cachorro"/>
                                     </StackLayout>
 
-                                    <StackLayout>
-                                        <ImageButton x:Name="btn_horse" Clicked="btn_gato_Clicked" BackgroundColor="Gray" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <StackLayout Scale="1.3" Margin="7">
+                                        <ImageButton x:Name="btn_horse" Clicked="btn_horse_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
                                         <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Cavalo"/>
                                     </StackLayout>
 
-
-
-
-
-
-
-
                                 </StackLayout>
                             </ScrollView>
-                           
+
 
 
                         </StackLayout>
@@ -99,10 +101,9 @@
 
                         <StackLayout VerticalOptions="EndAndExpand">
                             <ImageButton x:Name="btn_add"
-                             HeightRequest="180"
-                             Margin="-40"
-                             Scale="1.1"
-                             Source=""
+                             HeightRequest="100"
+                             Margin="0,0,0,15"
+                             Scale="2.4"
                              Clicked="btn_add_Clicked"
                              BackgroundColor="Transparent"/>
 

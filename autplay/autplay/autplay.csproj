@@ -11,11 +11,18 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Assets\Avatar\**" />
+    <EmbeddedResource Remove="Assets\Avatar\**" />
+    <None Remove="Assets\Avatar\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="Assets\botaoadd.png" />
     <None Remove="Assets\cat.png" />
     <None Remove="Assets\clown-fish.png" />
     <None Remove="Assets\dog.png" />
     <None Remove="Assets\horse.png" />
+    <None Remove="Assets\lapis.png" />
     <None Remove="Assets\logo.png" />
     <None Remove="Assets\mundo1.png" />
     <None Remove="Assets\mundo2.png" />
@@ -37,6 +44,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\horse.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Assets\lapis.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\logo.png">
@@ -75,7 +85,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Assets\Avatar\" />
     <Folder Include="View\SelectWords\" />
   </ItemGroup>
 </Project>

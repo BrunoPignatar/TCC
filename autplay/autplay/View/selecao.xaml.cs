@@ -18,10 +18,20 @@ namespace autplay.View
             //REMOVENDO A NAVBAR
             NavigationPage.SetHasNavigationBar(this, false);
 
-            btn_wordapocalypse.Source = ImageSource.FromResource("autplay.Assets.mundo2.png");
-            btn_wordgum.Source = ImageSource.FromResource("autplay.Assets.mundo3.png");
-            btn_wordrose.Source = ImageSource.FromResource("autplay.Assets.mundo1.png");
+            //ADICIONANDO AS IMAGENS DOS MUNDOS
+            btn_worldapocalypse.Source = ImageSource.FromResource("autplay.Assets.mundo2.png");
+            btn_worldgum.Source = ImageSource.FromResource("autplay.Assets.mundo3.png");
+            btn_worldrose.Source = ImageSource.FromResource("autplay.Assets.mundo1.png");
 
+            //BARRA DO USUÁRIO(AVATAR)
+            AvatarImage.Source = ImageSource.FromResource(App.DadosAvatar.Imagem);
+            lblBoasVindas.Text = "Bem-vindo Senhor " + App.DadosAvatar.Nome;
+            AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
+
+            //DEIXANDO AS FONTES EM NEGRITO E ITÁLICO
+            worldapocalypse.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            worldgum.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            worldrose.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
 
         }
 
@@ -38,9 +48,22 @@ namespace autplay.View
             }
         }
 
+        private void btn_worldrose_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new selectword.Mundo1());
+        }
 
+        private void btn_worldapocalypse_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new selectword.Mundo2());
+        }
 
-        private async void btn_voltar_Clicked(object sender, EventArgs e)
+        private void btn_worldgum_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushAsync(new selectword.Mundo3());
+        }
+
+        private void AlterAvatar_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -51,21 +74,7 @@ namespace autplay.View
             {
                 DisplayAlert("Error", ex.Message, "OK");
             }
-        }
 
-        private void btn_wordrose_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new selectword.Mundo1());
-        }
-
-        private void btn_wordapocalypse_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new selectword.Mundo2());
-        }
-
-        private void btn_wordgum_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new selectword.Mundo3());
         }
     }
 }
