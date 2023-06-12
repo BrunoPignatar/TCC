@@ -16,6 +16,35 @@
     <ContentPage.Content>
         <StackLayout>
 
+            <Frame HeightRequest="38"
+                   BackgroundColor="#6BC6FA">
+
+                <StackLayout Orientation="Horizontal">
+
+                    <ImageButton x:Name="AvatarImage"
+                           BackgroundColor="#D938A7"
+                           Scale="1.9"
+                           Padding="4" Margin="2"
+                           CornerRadius="50"/>
+
+                    <Label x:Name="lblBoasVindas"
+                           TextColor="#D938A7" FontSize="20" 
+                           Margin="15,0,0,0"
+                           HorizontalTextAlignment="Start" 
+                           FontAttributes="Bold"
+                           VerticalTextAlignment="Center"/>
+
+                    <ImageButton x:Name="AlterAvatar"
+                           BackgroundColor="#D938A7"
+                           HorizontalOptions="EndAndExpand"
+                           VerticalOptions="Center"
+                           Padding="-3"
+                           Scale="1.3"
+                           Margin="0,2,0,0"
+                           CornerRadius="50"
+                           Clicked="AlterAvatar_Clicked" />
+                </StackLayout>
+            </Frame>
 
            
             <Frame

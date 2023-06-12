@@ -18,10 +18,19 @@ namespace autplay.selectword
 
             //removendo a navbar
             NavigationPage.SetHasNavigationBar(this, false);
+
+            //BARRA DO USUÁRIO(AVATAR)
+            AvatarImage.Source = ImageSource.FromResource(App.DadosAvatar.Imagem);
+            lblBoasVindas.Text = "Bem-vindo Senhor " + App.DadosAvatar.Nome;
+            AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
         }
 
-        private void jogo1_Clicked(object sender, EventArgs e)
+        private async void jogo1_Clicked(object sender, EventArgs e)
         {
+            
+            // Aguardar por 2 segundos (2000 milissegundos)
+            await Task.Delay(300);
+            
             Navigation.PushAsync(new autplay.View.jogos.jogodavelha());
         }
 
@@ -33,6 +42,18 @@ namespace autplay.selectword
         private void jogo3_Clicked(object sender, EventArgs e)
         {
 
+        }
+
+        private void AlterAvatar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                App.Current.MainPage = new NavigationPage(new View.Menu());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
         }
     }
 }

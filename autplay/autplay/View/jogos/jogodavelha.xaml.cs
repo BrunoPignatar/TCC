@@ -16,6 +16,9 @@ namespace autplay.View.jogos
 
         string vez = "X";
         int jogadas = 0;
+        int WinX = 0;
+        int WinO = 0;
+        int Empates = 0;
         public jogodavelha()
         {
             InitializeComponent();
@@ -24,13 +27,17 @@ namespace autplay.View.jogos
 
         private async void btn10_Clicked(object sender, EventArgs e)
         {
+            // Identificando qual botão disparou o evento
             Button botao_clicado = (Button)sender;
 
+            // Desabilitando o botão
             botao_clicado.IsEnabled = false;
 
+            // Trocando texto do botão de acordo com quem é a vez.
             if (vez == "X")
             {
                 botao_clicado.Text = "X"; 
+                botao_clicado.TextColor = Color.White;
                 vez = "O";
                 jogadas++;
             }
@@ -41,78 +48,103 @@ namespace autplay.View.jogos
                 jogadas++;
             }
 
+            //horizontal
             if (btn10.Text == "X" && btn11.Text == "X" && btn12.Text == "X")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou X!!!!", "OK");
                 zerar();
+                WinX++;
+                Xwin.Text = WinX.ToString();
 
             }
             else if (btn10.Text == "O" && btn11.Text == "O" && btn12.Text == "O")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou O!!!!", "OK");
                 zerar();
+                WinO++;
+                Owin.Text = WinO.ToString();
             }
 
             if (btn20.Text == "X" && btn21.Text == "X" && btn22.Text == "X")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou X!!!!", "OK");
                 zerar();
+                WinX++;
+                Xwin.Text = WinX.ToString();
 
             }
             else if (btn20.Text == "O" && btn21.Text == "O" && btn22.Text == "O")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou O!!!!", "OK");
                 zerar();
+                WinO++;
+                Owin.Text = WinO.ToString();
             }
 
             if (btn30.Text == "X" && btn31.Text == "X" && btn32.Text == "X")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou X!!!!", "OK");
                 zerar();
+                WinX++;
+                Xwin.Text = WinX.ToString();
 
             }
             else if (btn30.Text == "O" && btn31.Text == "O" && btn32.Text == "O")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou O!!!!", "OK");
                 zerar();
+                WinO++;
+                Owin.Text = WinO.ToString();
             }
 
-            //(
+            //vertical
 
             if (btn10.Text == "X" && btn20.Text == "X" && btn30.Text == "X")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou X!!!!", "OK");
                 zerar();
+                WinX++;
+                Xwin.Text = WinX.ToString();
 
             }
             else if (btn10.Text == "O" && btn20.Text == "O" && btn30.Text == "O")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou O!!!!", "OK");
                 zerar();
+                WinO++;
+                Owin.Text = WinO.ToString();
             }
 
             if (btn11.Text == "X" && btn21.Text == "X" && btn31.Text == "X")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou X!!!!", "OK");
                 zerar();
+                WinX++;
+                Xwin.Text = WinX.ToString();
 
             }
             else if (btn11.Text == "O" && btn21.Text == "O" && btn31.Text == "O")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou O!!!!", "OK");
                 zerar();
+                WinO++;
+                Owin.Text = WinO.ToString();
             }
 
             if (btn12.Text == "X" && btn22.Text == "X" && btn32.Text == "X")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou X!!!!", "OK");
                 zerar();
+                WinX++;
+                Xwin.Text = WinX.ToString();
 
             }
             else if (btn12.Text == "O" && btn22.Text == "O" && btn32.Text == "O")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou O!!!!", "OK");
                 zerar();
+                WinO++;
+                Owin.Text = WinO.ToString();
             }
 
 
@@ -122,30 +154,41 @@ namespace autplay.View.jogos
             {
                 await DisplayAlert("Parabéns!", "Você ganhou X!!!!", "OK");
                 zerar();
+                WinX++;
+                Xwin.Text = WinX.ToString();
 
             }
             else if (btn10.Text == "O" && btn21.Text == "O" && btn32.Text == "O")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou O!!!!", "OK");
                 zerar();
+                WinO++;
+                Owin.Text = WinO.ToString();
             }
 
             if (btn12.Text == "X" && btn21.Text == "X" && btn30.Text == "X")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou X!!!!", "OK");
                 zerar();
+                WinX++;
+                Xwin.Text = WinX.ToString();
 
             }
             else if (btn12.Text == "O" && btn21.Text == "O" && btn30.Text == "O")
             {
                 await DisplayAlert("Parabéns!", "Você ganhou O!!!!", "OK");
                 zerar();
+                WinO++;
+                Owin.Text = WinO.ToString();
             }
 
+            // Empate
             if (jogadas == 9)
             {
-                await DisplayAlert("Não temos um vencedor!", "O jogo deu velha! EMPATE.", "OK");
+                await DisplayAlert("Não temos um vencedor!", "O jogo deu velha! \nEMPATE.", "OK");
                 zerar();
+                Empates++;
+                empatestxt.Text = Empates.ToString();
             }
 
            
@@ -174,6 +217,8 @@ namespace autplay.View.jogos
             btn31.Text = "";
             btn32.IsEnabled = true;
             btn32.Text = "";
+            vez = "X";
+            jogadas = 0;
         }
     }
 }
