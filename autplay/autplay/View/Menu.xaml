@@ -25,98 +25,115 @@
     <ContentPage.Content>
         <StackLayout>
             <Image x:Name="logo" HeightRequest="220" 
-                   Margin="15" HorizontalOptions="CenterAndExpand"
-                   Scale="1.8"/>
+                   Margin="15,25,15,15" HorizontalOptions="CenterAndExpand"
+                   />
 
-            <StackLayout>
-                <Frame BackgroundColor="White"
+
+            <Frame BackgroundColor="White"
                        CornerRadius="10"
-                       HeightRequest="350"
-                       Margin="15,0,15,0"
+                       HeightRequest="430"
+                       Margin="15,0,15,90"
                        VerticalOptions="CenterAndExpand">
-                    <StackLayout>
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                            <Label Text="SELECIONE O SEU" TextColor="Black" 
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                        <Label Text="SELECIONE O SEU" TextColor="Black" 
                                HorizontalTextAlignment="Center" FontSize="20" 
                                FontAttributes="Bold"/>
-                            <Label Text="AVATAR" TextColor="#8C52FF" 
+                        <Label Text="AVATAR" TextColor="#8C52FF" 
                                HorizontalTextAlignment="Center" FontSize="20" 
                                FontAttributes="Bold"/>
-                        </StackLayout>
-                        
+                    </StackLayout>
 
 
-                        <StackLayout Orientation="Horizontal" VerticalOptions="CenterAndExpand"
-                                     Margin="0,35,0,0">
 
-                            <!--
-                            <Button x:Name="voltar_opt" Text="↑" CornerRadius="50" 
-                                    Rotation="-90"
-                                    BackgroundColor="Transparent" FontSize="50" 
-                                    FontAttributes="Bold"
-                                    xct:TouchEffect.AnimationDuration="250"
-                                    xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                                    xct:TouchEffect.PressedScale="0.75"
-                                    xct:TouchEffect.PressedOpacity="0.1"
-                                    xct:TouchEffect.PressedBackgroundColor="#8C52FF"
-                                    xct:TouchEffect.NormalBackgroundColor="Transparent"
-                                    /> -->
+                    <StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand"
+                                     Margin="0,10,0,0">
 
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never"
+                                    VerticalOptions="CenterAndExpand" Scale="1.1" Margin="5">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                                         Spacing="30" Padding="10">
 
-                            <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalOptions="CenterAndExpand">
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30" Padding="10" VerticalOptions="CenterAndExpand">
-
-                                    <StackLayout Scale="1.3" Margin="7">
-                                        <ImageButton x:Name="btn_arara" Clicked="btn_arara_Clicked_1" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
-                                    </StackLayout>
-
-                                    <StackLayout Scale="1.3" Margin="7">
-                                        <ImageButton x:Name="btn_gato" Clicked="btn_gato_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
-                                    </StackLayout>
-
-                                    <StackLayout Scale="1.3" Margin="7">
-                                        <ImageButton  x:Name="btn_peixe" Clicked="btn_peixe_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
-                                    </StackLayout>
-
-                                    <StackLayout Scale="1.3" Margin="7">
-                                        <ImageButton x:Name="btn_dog" Clicked="btn_dog_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Cachorro"/>
-                                    </StackLayout>
-
-                                    <StackLayout Scale="1.3" Margin="7">
-                                        <ImageButton x:Name="btn_horse" Clicked="btn_horse_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                        <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Cavalo"/>
-                                    </StackLayout>
-
+                                <StackLayout Scale="1.3" Margin="7">
+                                    <ImageButton x:Name="btn_arara" Clicked="btn_arara_Clicked_1" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
                                 </StackLayout>
-                            </ScrollView>
+
+                                <StackLayout Scale="1.3" Margin="7">
+                                    <ImageButton x:Name="btn_gato" Clicked="btn_gato_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
+                                </StackLayout>
+
+                                <StackLayout Scale="1.3" Margin="7">
+                                    <ImageButton  x:Name="btn_peixe" Clicked="btn_peixe_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
+                                </StackLayout>
+
+                                <StackLayout Scale="1.3" Margin="7">
+                                    <ImageButton x:Name="btn_dog" Clicked="btn_dog_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Cachorro"/>
+                                </StackLayout>
+
+                                <StackLayout Scale="1.3" Margin="7">
+                                    <ImageButton x:Name="btn_horse" Clicked="btn_horse_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
+                                    <Label TextColor="Black" FontSize="14" HorizontalOptions="Center" FontAttributes="Bold" Text="Cavalo"/>
+                                </StackLayout>
+
+                            </StackLayout>
+                        </ScrollView>
 
 
 
-                        </StackLayout>
+                    </StackLayout>
+
+                    <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,0">
+
+                        <Frame BorderColor="black"
+                               CornerRadius="50"
+                               HeightRequest="50"
+                               Scale="0.9"
+                               >
+                            <Entry x:Name="txtNome" Placeholder="DIGITE SEU NOME AQUI!" 
+                                   PlaceholderColor="#8C52FF" TextColor="#8C52FF" FontSize="20"
+                                   HorizontalOptions="CenterAndExpand" MaxLength="15"
+                                   Scale="1.6" HorizontalTextAlignment="Center" FontAttributes="Bold"
+                               />
+
+                        </Frame>
+                        
+                        <Button x:Name="btn_add"
+                                Clicked="btn_add_Clicked"
+                                Margin="5"
+                                CornerRadius="50"
+                                HeightRequest="100"
+                                WidthRequest="100"
+                                BackgroundColor="#94B9FF"
+                                Text="+"
+                                FontSize="50" TextColor="White" FontAttributes="Bold"
+                                HorizontalOptions="CenterAndExpand">
+                            
+                        </Button>
+                    </StackLayout>
 
 
-                        <StackLayout VerticalOptions="EndAndExpand">
-                            <ImageButton x:Name="btn_add"
-                             HeightRequest="100"
-                             Margin="0,0,0,15"
+                    <!-- <ImageButton 
+                             HeightRequest="20"
+                                 WidthRequest="30"
+                             Margin="0,0,0,0"
                              Scale="2.4"
+                             
                              Clicked="btn_add_Clicked"
-                             BackgroundColor="Transparent"/>
+                             BackgroundColor="red"
+                             VerticalOptions="EndAndExpand"/> -->
 
-                            <!--<Button x:Name="btn_jogar"
+                    <!--<Button x:Name="btn_jogar"
                                 BackgroundColor="#8C52FF" CornerRadius="30" FontAttributes="Bold" 
                                 Text="JOGAR" TextColor="White" FontSize="30" 
                                 Clicked="btn_jogar_Clicked"
                                 Margin="0,7,0,0"/>-->
-                        </StackLayout>
-                    </StackLayout>
-                </Frame>
 
-            </StackLayout>
+                </StackLayout>
+            </Frame>
 
 
         </StackLayout>

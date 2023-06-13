@@ -42,9 +42,10 @@ namespace autplay.View
         //}
 
         //BOTÃO DE ADICIONAR FOTO COMO AVATAR--
-        private void btn_add_Clicked(object sender, EventArgs e)
+        private async void btn_add_Clicked(object sender, EventArgs e)
         {
-            
+            DisplayAlert("teste", "teste", "ok");
+
         }
 
         //BOTÕES PARA OS AVATARES
@@ -157,7 +158,7 @@ namespace autplay.View
         private void AdcImagens()
         {
             logo.Source = ImageSource.FromResource("autplay.Assets.logo.png");
-            btn_add.Source = ImageSource.FromResource("autplay.Assets.botaoadd.png");
+            //btn_add.Source = ImageSource.FromResource("autplay.Assets.botaoadd.png");
             btn_arara.Source = ImageSource.FromResource("autplay.Assets.parrot.png");
             btn_gato.Source = ImageSource.FromResource("autplay.Assets.cat.png");
             btn_dog.Source = ImageSource.FromResource("autplay.Assets.dog.png");
