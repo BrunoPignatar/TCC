@@ -6,7 +6,7 @@ using System.Text;
 using System.Threading.Tasks;
 using autplay.Model;
 using autplay.View;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -25,26 +25,59 @@ namespace autplay.View
             //REMOVENDO A NAVBAR
             NavigationPage.SetHasNavigationBar(this, false);
 
+            //DEIXANDO AS FONTES EM NEGRITO E ITÁLICO
+            txtArara.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            txtCavalo.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            txtGato.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            txtPeixe.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            txtDog.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+
         }
-
-        //BOTÃO QUE LEVA A TELA DE SELEÇÃO-- OK
-        //private async void btn_jogar_Clicked(object sender, EventArgs e)
-        //{
-        //    try
-        //    {
-        //        await Navigation.PushAsync(new autplay.View.selecao());
-
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        DisplayAlert("Error", ex.Message, "OK");
-        //    }
-        //}
 
         //BOTÃO DE ADICIONAR FOTO COMO AVATAR--
         private async void btn_add_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("teste", "teste", "ok");
+            //DisplayAlert("teste", "teste", "ok");
+
+            try
+            {
+                string nome;
+
+                //FAZER REQUERIR UM NOME
+                //if (txtNome.Text == "")
+                //{
+                //    DisplayAlert("Erro", "Digite um Nome para o Avatar", "OK");
+                        
+                //    return;
+                //}
+
+
+                nome = txtNome.Text;
+
+                var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
+                {
+
+                    Title = "Selecione uma imagem"
+                });
+
+                if (result != null)
+                {
+                    Avatares a = new Avatares
+                    {
+                        ImagemEnviada = ImageSource.FromFile(result.FullPath),
+                        Nome = nome,
+                        Id = 6,
+                        ImagemPadrao = null,
+                    };
+                    App.DadosAvatar = a;
+                }
+
+                App.Current.MainPage = new NavigationPage(new View.selecao());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Erro", "Ocorreu um erro ao enviar a imagem!\nTente Novamente.", "OK");
+            }
 
         }
 
@@ -57,7 +90,9 @@ namespace autplay.View
                 {
                     Nome = "Arara",
                     Id = 1,
-                    Imagem = "autplay.Assets.parrot.png"
+                    ImagemPadrao = ImageSource.FromResource("autplay.Assets.parrot.png"),
+                    ImagemEnviada = null
+
                 };
                 App.DadosAvatar = a;
                 App.Current.MainPage = new NavigationPage(new View.selecao());
@@ -69,8 +104,6 @@ namespace autplay.View
             }
         }
 
-
-
         private void btn_gato_Clicked(object sender, EventArgs e)
         {
             try
@@ -79,7 +112,8 @@ namespace autplay.View
                 {
                     Nome = "Gato",
                     Id = 2,
-                    Imagem = "autplay.Assets.cat.png"
+                    ImagemPadrao = ImageSource.FromResource("autplay.Assets.cat.png"),
+                    ImagemEnviada = null
                 };
                 App.DadosAvatar = a;
                 App.Current.MainPage = new NavigationPage(new View.selecao());
@@ -89,7 +123,7 @@ namespace autplay.View
             {
                 DisplayAlert("Error", ex.Message, "OK");
             }
-            
+
         }
 
         private void btn_peixe_Clicked(object sender, EventArgs e)
@@ -100,7 +134,8 @@ namespace autplay.View
                 {
                     Nome = "Peixe",
                     Id = 3,
-                    Imagem = "autplay.Assets.clown-fish.png"
+                    ImagemPadrao = ImageSource.FromResource("autplay.Assets.clown-fish.png"),
+                    ImagemEnviada = null
                 };
                 App.DadosAvatar = a;
                 App.Current.MainPage = new NavigationPage(new View.selecao());
@@ -110,7 +145,7 @@ namespace autplay.View
             {
                 DisplayAlert("Error", ex.Message, "OK");
             }
-            
+
         }
 
         private void btn_dog_Clicked(object sender, EventArgs e)
@@ -121,7 +156,8 @@ namespace autplay.View
                 {
                     Nome = "Cachorro",
                     Id = 4,
-                    Imagem = "autplay.Assets.dog.png"
+                    ImagemPadrao = ImageSource.FromResource("autplay.Assets.dog.png"),
+                    ImagemEnviada = null
                 };
                 App.DadosAvatar = a;
                 App.Current.MainPage = new NavigationPage(new View.selecao());
@@ -131,7 +167,7 @@ namespace autplay.View
             {
                 DisplayAlert("Error", ex.Message, "OK");
             }
-            
+
         }
 
         private void btn_horse_Clicked(object sender, EventArgs e)
@@ -142,7 +178,8 @@ namespace autplay.View
                 {
                     Nome = "Cavalo",
                     Id = 5,
-                    Imagem = "autplay.Assets.horse.png"
+                    ImagemPadrao = ImageSource.FromResource("autplay.Assets.horse.png"),
+                    ImagemEnviada = null
                 };
                 App.DadosAvatar = a;
                 App.Current.MainPage = new NavigationPage(new View.selecao());
@@ -152,13 +189,12 @@ namespace autplay.View
             {
                 DisplayAlert("Error", ex.Message, "OK");
             }
-            
+
         }
 
         private void AdcImagens()
         {
             logo.Source = ImageSource.FromResource("autplay.Assets.logo.png");
-            //btn_add.Source = ImageSource.FromResource("autplay.Assets.botaoadd.png");
             btn_arara.Source = ImageSource.FromResource("autplay.Assets.parrot.png");
             btn_gato.Source = ImageSource.FromResource("autplay.Assets.cat.png");
             btn_dog.Source = ImageSource.FromResource("autplay.Assets.dog.png");

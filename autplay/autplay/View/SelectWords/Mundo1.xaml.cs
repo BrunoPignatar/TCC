@@ -20,8 +20,8 @@ namespace autplay.selectword
             NavigationPage.SetHasNavigationBar(this, false);
 
             //BARRA DO USUÁRIO(AVATAR)
-            AvatarImage.Source = ImageSource.FromResource(App.DadosAvatar.Imagem);
-            lblBoasVindas.Text = "Bem-vindo Senhor " + App.DadosAvatar.Nome;
+            AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
+            lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
             AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
         }
 

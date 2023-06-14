@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace autplay.Model
 {
@@ -8,6 +9,9 @@ namespace autplay.Model
     {
         public int Id { get; set; }
         public string Nome { get; set; }
-        public string Imagem { get; set;}
+        public ImageSource ImagemPadrao { get; set;}
+        public ImageSource ImagemEnviada { get; set; }
+
+
     }
 }

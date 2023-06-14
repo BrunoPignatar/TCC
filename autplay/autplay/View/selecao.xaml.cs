@@ -1,4 +1,5 @@
-﻿using System;
+﻿using autplay.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -24,8 +25,19 @@ namespace autplay.View
             btn_worldrose.Source = ImageSource.FromResource("autplay.Assets.mundo1.png");
 
             //BARRA DO USUÁRIO(AVATAR)
-            AvatarImage.Source = ImageSource.FromResource(App.DadosAvatar.Imagem);
-            lblBoasVindas.Text = "Bem-vindo Senhor " + App.DadosAvatar.Nome;
+            //AvatarImage.Source = ImageSource.FromResource(App.DadosAvatar.ImagemPadrao);
+            if(App.DadosAvatar.ImagemEnviada != null)
+            {
+                AvatarImage.Source = App.DadosAvatar.ImagemEnviada;
+                lblBoasVindas.Text = "Bem-vindo Senhor " + App.DadosAvatar.Nome;
+
+            }
+            else
+            {
+                AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
+                lblBoasVindas.Text = "Bem-vindo Senhor " + App.DadosAvatar.Nome;
+            }
+
             AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
 
             //DEIXANDO AS FONTES EM NEGRITO E ITÁLICO
