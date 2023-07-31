@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="autplay.View.jogos.jogodasoma">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="Azure"
+                          Offset="0.23" />
+            <GradientStop Color="Azure"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame HeightRequest="250"
+                   Margin="5"
+                   BackgroundColor="Green"
+                   BorderColor="Yellow"
+                   CornerRadius="15">
+                <StackLayout Orientation="Horizontal">
+
+                    <Label x:Name="txt_numero1" FontSize="Title"/>
+                    <Label Text="+" FontSize="Title"/>
+                    <Label x:Name="txt_numero2" FontSize="Title"/>
+                </StackLayout>
+            </Frame>
+           
+
+
+            <StackLayout>
+                <Frame
+                 VerticalOptions="CenterAndExpand"
+                 BackgroundColor="Transparent"
+                 CornerRadius="10"
+                 Margin="20">
+                <StackLayout>
+
+                    <Button  
+                    x:Name="btn_1"
+                    FontAttributes="Bold"
+                    VerticalOptions="Center"
+                    BorderColor="Black"
+                    BorderWidth="1"
+                    CornerRadius="10"
+                    HeightRequest="70"
+                    WidthRequest="50"
+                    Margin="10"
+                    BackgroundColor="WHITE"
+                    Text="asd"
+                    TextColor="Black"
+                    
+                    FontSize="18"
+                   />
+
+                    <Button
+              x:Name="btn_2"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                BorderColor="Black"
+                BorderWidth="1"
+                CornerRadius="10"
+                HeightRequest="70"
+                WidthRequest="50"
+                Margin="10"
+                BackgroundColor="White"
+                Text="asd"
+                TextColor="Black"
+                
+                FontSize="18"
+              />
+
+
+                    <Button
+                x:Name="btn_3"
+                FontAttributes="Bold"
+                VerticalOptions="Center"
+                BorderColor="Black"
+                BorderWidth="1"
+                CornerRadius="10"
+                HeightRequest="70"
+                WidthRequest="50"
+                Margin="10"
+                BackgroundColor="white"
+                Text="asd"
+                TextColor="Black"
+                
+                FontSize="18"
+               />
+
+                </StackLayout>
+            </Frame>
+            </StackLayout>
+
+
+
+
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

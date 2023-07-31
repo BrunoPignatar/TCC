@@ -132,20 +132,6 @@
                 </Grid>
             </Frame>
 
-            <Button x:Name="voltar_selecao"
-                            Text="↩"
-                            CornerRadius="200"
-                            FontAttributes="Bold"
-                            HeightRequest="100"
-                            FontSize="50"
-                            BackgroundColor="Transparent"
-                            BorderColor="Transparent"
-                            TextColor="Black"
-                            BorderWidth="1"
-                            VerticalOptions="EndAndExpand"
-                            Clicked="voltar_selecao_Clicked"
-                            
-                            />
 
 
         </StackLayout>

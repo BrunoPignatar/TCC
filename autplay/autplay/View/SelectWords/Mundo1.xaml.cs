@@ -21,7 +21,7 @@ namespace autplay.selectword
 
             //BARRA DO USUÁRIO(AVATAR)
             AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
-            lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
+            lblBoasVindas.Text = "Bem-vindo " + App.DadosAvatar.Nome;
             AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
         }
 

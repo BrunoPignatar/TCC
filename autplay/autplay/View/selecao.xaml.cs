@@ -29,13 +29,13 @@ namespace autplay.View
             if(App.DadosAvatar.ImagemEnviada != null)
             {
                 AvatarImage.Source = App.DadosAvatar.ImagemEnviada;
-                lblBoasVindas.Text = "Bem-vindo Senhor " + App.DadosAvatar.Nome;
+                lblBoasVindas.Text = "Bem-vindo  " + App.DadosAvatar.Nome;
 
             }
             else
             {
                 AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
-                lblBoasVindas.Text = "Bem-vindo Senhor " + App.DadosAvatar.Nome;
+                lblBoasVindas.Text = "Bem-vindo " + App.DadosAvatar.Nome;
             }
 
             AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
