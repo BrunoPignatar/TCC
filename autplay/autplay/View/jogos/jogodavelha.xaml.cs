@@ -220,5 +220,12 @@ namespace autplay.View.jogos
             vez = "X";
             jogadas = 0;
         }
+
+        private async void voltar_selecao_Clicked(object sender, EventArgs e)
+        {
+            await Task.Delay(300);
+
+            Navigation.PushAsync(new autplay.selectword.Mundo1());
+        }
     }
 }
