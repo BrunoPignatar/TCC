@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             
              x:Class="autplay.View.Menu"
              >
     <ContentPage.Background>
@@ -47,57 +48,57 @@
 
 
 
-                    
 
-                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never"
+
+                    <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never"
                                     VerticalOptions="CenterAndExpand" Margin="0,3,0,0">
-                            <StackLayout Orientation="Horizontal" Spacing="30" Padding="10">
+                        <StackLayout Orientation="Horizontal" Spacing="30" Padding="10">
 
-                                <StackLayout Scale="1.3" Margin="7">
-                                    <ImageButton x:Name="btn_arara" Clicked="btn_arara_Clicked_1" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90"
+                            <StackLayout Scale="1.3" Margin="7">
+                                <ImageButton x:Name="btn_arara" Clicked="btn_arara_Clicked_1" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90"
                                                  xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                                 xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#94B9FF"/>
-                                    <Label x:Name="txtArara" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
-                                </StackLayout>
+                                <Label x:Name="txtArara" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Arara"/>
+                            </StackLayout>
 
-                                <StackLayout Scale="1.3" Margin="7">
-                                    <ImageButton x:Name="btn_gato" Clicked="btn_gato_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90"
+                            <StackLayout Scale="1.3" Margin="7">
+                                <ImageButton x:Name="btn_gato" Clicked="btn_gato_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90"
                                                  xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                                 xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#94B9FF"/>
-                                    <Label x:Name="txtGato" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
-                                </StackLayout>
+                                <Label x:Name="txtGato" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Gato"/>
+                            </StackLayout>
 
-                                <StackLayout Scale="1.3" Margin="7">
-                                    <ImageButton  x:Name="btn_peixe" Clicked="btn_peixe_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" 
+                            <StackLayout Scale="1.3" Margin="7">
+                                <ImageButton  x:Name="btn_peixe" Clicked="btn_peixe_Clicked" BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" 
                                                   xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                                 xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#94B9FF"/>
-                                    <Label x:Name="txtPeixe" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
-                                </StackLayout>
-
-                                <StackLayout Scale="1.3" Margin="7">
-                                    <ImageButton x:Name="btn_dog" Clicked="btn_dog_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" 
-                                                 xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#94B9FF"/>
-                                    <Label x:Name="txtDog" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Cachorro"/>
-                                </StackLayout>
-
-                                <StackLayout Scale="1.3" Margin="7">
-                                    <ImageButton x:Name="btn_horse" Clicked="btn_horse_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90"
-                                                 xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#94B9FF"/>
-                                    <Label x:Name="txtCavalo" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Cavalo"/>
-                                </StackLayout>
-
+                                <Label x:Name="txtPeixe" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Peixe"/>
                             </StackLayout>
-                        </ScrollView>
+
+                            <StackLayout Scale="1.3" Margin="7">
+                                <ImageButton x:Name="btn_dog" Clicked="btn_dog_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" 
+                                                 xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#94B9FF"/>
+                                <Label x:Name="txtDog" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Cachorro"/>
+                            </StackLayout>
+
+                            <StackLayout Scale="1.3" Margin="7">
+                                <ImageButton x:Name="btn_horse" Clicked="btn_horse_Clicked"  BackgroundColor="#94B9FF" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90"
+                                                 xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#94B9FF"/>
+                                <Label x:Name="txtCavalo" TextColor="Black" FontSize="15" HorizontalOptions="Center" FontAttributes="Bold" Text="Cavalo"/>
+                            </StackLayout>
+
+                        </StackLayout>
+                    </ScrollView>
 
 
 
-                    
 
-                    <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,0">
 
-                        <Frame BorderColor="black"
+                    <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,05">
+
+                        <!--<Frame BorderColor="black"
                                
                                CornerRadius="50"
                                HeightRequest="50"
@@ -111,7 +112,16 @@
                                    Margin="1"
                                />
 
-                        </Frame>
+                        </Frame>-->
+
+                        <Entry x:Name="txtNome" Placeholder="DIGITE O NOME AQUI!" 
+                               PlaceholderColor="#8C52FF" TextColor="#8C52FF" FontSize="20"
+                               HorizontalOptions="CenterAndExpand" MaxLength="15"
+                               
+                               Scale="1.25"
+                               HorizontalTextAlignment="Center" FontAttributes="Bold"
+                               Margin="0,0,0,15"
+                               />
 
                         <Button x:Name="btn_add"
                                 Clicked="btn_add_Clicked"

@@ -29,21 +29,21 @@ namespace autplay.View
             if(App.DadosAvatar.ImagemEnviada != null)
             {
                 AvatarImage.Source = App.DadosAvatar.ImagemEnviada;
-                lblBoasVindas.Text = "Bem-vindo  " + App.DadosAvatar.Nome;
+                lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
 
             }
             else
             {
                 AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
-                lblBoasVindas.Text = "Bem-vindo " + App.DadosAvatar.Nome;
+                lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
             }
 
             AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
 
             //DEIXANDO AS FONTES EM NEGRITO E ITÁLICO
-            worldapocalypse.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-            worldgum.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-            worldrose.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            //worldapocalypse.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            //worldgum.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            //worldrose.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
 
         }
 
@@ -80,6 +80,7 @@ namespace autplay.View
             try
             {
                 App.Current.MainPage = new NavigationPage(new Menu());
+                App.DadosAvatar = null;
 
             }
             catch (Exception ex)

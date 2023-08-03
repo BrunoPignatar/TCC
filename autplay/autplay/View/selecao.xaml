@@ -16,7 +16,7 @@
 
         <StackLayout>
 
-            <Frame HeightRequest="60"
+            <Frame HeightRequest="50"
                    BackgroundColor="#CDFFD8"
                    BorderColor="Transparent">
 
@@ -40,7 +40,7 @@
                            HorizontalOptions="EndAndExpand"
                            VerticalOptions="Center"
                            Padding="-3"
-                           Scale="0.9"
+                           Scale="1"
                            Margin="0,2,0,0"
                            CornerRadius="50"
                            Clicked="AlterAvatar_Clicked"/>
@@ -69,17 +69,17 @@
 
                             <StackLayout>
                                 <ImageButton x:Name="btn_worldrose" Scale="2.5" Clicked="btn_worldrose_Clicked"  BackgroundColor="Transparent"  Margin="10"  Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <Label x:Name="worldrose" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordRose"  />
+                                <!--<Label x:Name="worldrose" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordRose"  />-->
                             </StackLayout>
 
                             <StackLayout>
                                 <ImageButton x:Name="btn_worldapocalypse" Scale="2.5" Clicked="btn_worldapocalypse_Clicked" Margin="10" BackgroundColor="Transparent" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <Label x:Name="worldapocalypse" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordApocalypse"/>
+                                <!--<Label x:Name="worldapocalypse" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordApocalypse"/>-->
                             </StackLayout>
 
                             <StackLayout>
                                 <ImageButton  x:Name="btn_worldgum" Scale="2.5" Clicked="btn_worldgum_Clicked" Margin="10" BackgroundColor="Transparent" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <Label x:Name="worldgum" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordGum"/>
+                                <!--<Label x:Name="worldgum" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordGum"/>-->
                             </StackLayout>
 
                         </StackLayout>
