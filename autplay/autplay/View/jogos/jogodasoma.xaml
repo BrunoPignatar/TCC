@@ -48,12 +48,12 @@
                     BackgroundColor="WHITE"
                     Text="asd"
                     TextColor="Black"
-                    
+                    Clicked="btn_1_Clicked"
                     FontSize="18"
                    />
 
                     <Button
-              x:Name="btn_2"
+                x:Name="btn_2"
                 FontAttributes="Bold"
                 VerticalOptions="Center"
                 BorderColor="Black"
@@ -65,7 +65,7 @@
                 BackgroundColor="White"
                 Text="asd"
                 TextColor="Black"
-                
+                Clicked="btn_2_Clicked"
                 FontSize="18"
               />
 
@@ -83,11 +83,28 @@
                 BackgroundColor="white"
                 Text="asd"
                 TextColor="Black"
-                
+                Clicked="btn_3_Clicked"
                 FontSize="18"
                />
 
-                </StackLayout>
+                        <Button x:Name="btn_4"
+                            FontAttributes="Bold"
+                            VerticalOptions="Center"
+                            BorderColor="Black"
+                            BorderWidth="1"
+                            CornerRadius="10"
+                            HeightRequest="70"
+                            WidthRequest="50"
+                            Margin="10"
+                            BackgroundColor="white"
+                            Text="asd"
+                            TextColor="Black"
+                            Clicked="btn_4_Clicked"             
+                            FontSize="18"/>
+
+
+
+                    </StackLayout>
             </Frame>
             </StackLayout>
 
