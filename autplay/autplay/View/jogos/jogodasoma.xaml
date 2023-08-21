@@ -17,95 +17,89 @@
                    BackgroundColor="Green"
                    BorderColor="Yellow"
                    CornerRadius="15">
-                <StackLayout Orientation="Horizontal">
+                <StackLayout>
 
                     <Label x:Name="txt_numero1" FontSize="Title"/>
                     <Label Text="+" FontSize="Title"/>
                     <Label x:Name="txt_numero2" FontSize="Title"/>
                 </StackLayout>
             </Frame>
-           
-
-
             <StackLayout>
                 <Frame
-                 VerticalOptions="CenterAndExpand"
-                 BackgroundColor="Transparent"
-                 CornerRadius="10"
-                 Margin="20">
-                <StackLayout>
+                         VerticalOptions="CenterAndExpand"
+                         BackgroundColor="Transparent"
+                         CornerRadius="10"
+                         Margin="20">
+                    <StackLayout>
 
-                    <Button  
-                    x:Name="btn_1"
-                    FontAttributes="Bold"
-                    VerticalOptions="Center"
-                    BorderColor="Black"
-                    BorderWidth="1"
-                    CornerRadius="10"
-                    HeightRequest="70"
-                    WidthRequest="50"
-                    Margin="10"
-                    BackgroundColor="WHITE"
-                    Text="asd"
-                    TextColor="Black"
-                    Clicked="btn_1_Clicked"
-                    FontSize="18"
-                   />
+                        <Button x:Name="btn_1"
+                                FontAttributes="Bold"
+                                VerticalOptions="Center"
+                                BorderColor="Black"
+                                BorderWidth="1"
+                                CornerRadius="10"
+                                HeightRequest="70"
+                                WidthRequest="50"
+                                Margin="10"
+                                BackgroundColor="WHITE"
+                                Text="asd"
+                                TextColor="Black"
+                                Clicked="btn_1_Clicked"
+                                FontSize="18"
+                        />
 
-                    <Button
-                x:Name="btn_2"
-                FontAttributes="Bold"
-                VerticalOptions="Center"
-                BorderColor="Black"
-                BorderWidth="1"
-                CornerRadius="10"
-                HeightRequest="70"
-                WidthRequest="50"
-                Margin="10"
-                BackgroundColor="White"
-                Text="asd"
-                TextColor="Black"
-                Clicked="btn_2_Clicked"
-                FontSize="18"
-              />
+                        <Button x:Name="btn_2"
+                                    FontAttributes="Bold"
+                                    VerticalOptions="Center"
+                                    BorderColor="Black"
+                                    BorderWidth="1"
+                                    CornerRadius="10"
+                                    HeightRequest="70"
+                                    WidthRequest="50"
+                                    Margin="10"
+                                    BackgroundColor="White"
+                                    Text="asd"
+                                    TextColor="Black"
+                                    Clicked="btn_2_Clicked"
+                                    FontSize="18"
+                        />
 
-
-                    <Button
-                x:Name="btn_3"
-                FontAttributes="Bold"
-                VerticalOptions="Center"
-                BorderColor="Black"
-                BorderWidth="1"
-                CornerRadius="10"
-                HeightRequest="70"
-                WidthRequest="50"
-                Margin="10"
-                BackgroundColor="white"
-                Text="asd"
-                TextColor="Black"
-                Clicked="btn_3_Clicked"
-                FontSize="18"
-               />
+                        <Button x:Name="btn_3"
+                                        FontAttributes="Bold"
+                                        VerticalOptions="Center"
+                                        BorderColor="Black"
+                                        BorderWidth="1"
+                                        CornerRadius="10"
+                                        HeightRequest="70"
+                                        WidthRequest="50"
+                                        Margin="10"
+                                        BackgroundColor="white"
+                                        Text="asd"
+                                        TextColor="Black"
+                                        Clicked="btn_3_Clicked"
+                                        FontSize="18"
+                        />
 
                         <Button x:Name="btn_4"
-                            FontAttributes="Bold"
-                            VerticalOptions="Center"
-                            BorderColor="Black"
-                            BorderWidth="1"
-                            CornerRadius="10"
-                            HeightRequest="70"
-                            WidthRequest="50"
-                            Margin="10"
-                            BackgroundColor="white"
-                            Text="asd"
-                            TextColor="Black"
-                            Clicked="btn_4_Clicked"             
-                            FontSize="18"/>
+                                        FontAttributes="Bold"       
+                                        VerticalOptions="Center"
+                                        BorderColor="Black"
+                                        BorderWidth="1"
+                                        CornerRadius="10"
+                                        HeightRequest="70"
+                                        WidthRequest="50"
+                                        Margin="10"
+                                        BackgroundColor="white"
+                                        Text="asd"
+                                        TextColor="Black"
+                                        Clicked="btn_4_Clicked"             
+                                        FontSize="18"
+                        />
 
 
 
                     </StackLayout>
-            </Frame>
+                </Frame>
             </StackLayout>
 
 

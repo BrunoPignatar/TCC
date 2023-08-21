@@ -23,10 +23,11 @@ namespace autplay.View
             btn_worldapocalypse.Source = ImageSource.FromResource("autplay.Assets.mundo2.png");
             btn_worldgum.Source = ImageSource.FromResource("autplay.Assets.mundo3.png");
             btn_worldrose.Source = ImageSource.FromResource("autplay.Assets.mundo1.png");
+            setas.Source = ImageSource.FromResource("autplay.Assets.setas.png");
 
             //BARRA DO USUÁRIO(AVATAR)
             //AvatarImage.Source = ImageSource.FromResource(App.DadosAvatar.ImagemPadrao);
-            if(App.DadosAvatar.ImagemEnviada != null)
+            if (App.DadosAvatar.ImagemEnviada != null)
             {
                 AvatarImage.Source = App.DadosAvatar.ImagemEnviada;
                 lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;

@@ -7,41 +7,66 @@
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#698F38"
-                          Offset="0.1" />
+                          Offset="0.28" />
             <GradientStop Color="#C6734E"
                           Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
+            <Frame HeightRequest="50"
+                   BackgroundColor="#698F38"
+                   BorderColor="Transparent">
+
+                <StackLayout Orientation="Horizontal">
+
+                    <ImageButton x:Name="AvatarImage"
+                           BackgroundColor="#698F38"
+                           Scale="1.4"
+                           Padding="4" Margin="2"
+                           CornerRadius="50"/>
+
+                    <Label x:Name="lblBoasVindas"
+                           TextColor="#FAF9F6" FontSize="20" 
+                           Margin="15,0,0,0"
+                           HorizontalTextAlignment="Start"
+                           FontAttributes="Bold"
+                           VerticalTextAlignment="Center"/>
+
+                    <ImageButton x:Name="AlterAvatar"
+                           BackgroundColor="#698F38"
+                           HorizontalOptions="EndAndExpand"
+                           VerticalOptions="Center"
+                           Padding="-3"
+                           Scale="1"
+                           Margin="0,2,0,0"
+                           CornerRadius="50"
+                           Clicked="AlterAvatar_Clicked" />
+                </StackLayout>
+            </Frame>
             
-            <!--> 
-            #454463
-            -->
 
 
-            <Frame
-                VerticalOptions="CenterAndExpand"
-                BackgroundColor="Transparent">
+            
 
-                <StackLayout>
+                <StackLayout VerticalOptions="CenterAndExpand">
 
                     <Button
                         x:Name="jogo1_mundo2"
                          FontAttributes="Bold"
                          VerticalOptions="Center"
                          BorderWidth="1"
-                         CornerRadius="10"
+                         CornerRadius="15"
                          HeightRequest="60"
                          WidthRequest="50"
                          Margin="10"
-                         BackgroundColor="white"
+                         BackgroundColor="#FAF9F6"
                          Text="÷"
-                         TextColor="Black"
+                         TextColor="#698F38"
                         Clicked="jogo1_mundo2_Clicked"
                         FontSize="30"
                     xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#C6734E"/>
                     
 
                     <Button
@@ -49,38 +74,59 @@
                          FontAttributes="Bold"
                          VerticalOptions="Center"
                          BorderWidth="1"
-                         CornerRadius="10"
+                         CornerRadius="15"
                          HeightRequest="60"
                          WidthRequest="50"
                          Margin="10"
-                         BackgroundColor="white"
+                         BackgroundColor="#FAF9F6"
                          Text="JOGO 2"
-                         TextColor="Black"
+                         TextColor="#698F38"
                          Clicked="jogo2_mundo2_Clicked"
                          FontSize="18"
                          xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                         xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                         xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#C6734E"/>
 
                     <Button
                         x:Name="jogo3_mundo2"
                          FontAttributes="Bold"
                          VerticalOptions="Center"
                          BorderWidth="1"
-                         CornerRadius="10"
+                         CornerRadius="15"
                          HeightRequest="60"
                          WidthRequest="50"
                          Margin="10"
-                         BackgroundColor="white"
+                         BackgroundColor="#FAF9F6"
                          Text="JOGO 3"
-                         TextColor="Black"
+                         TextColor="#698F38"
                          Clicked="jogo3_mundo2_Clicked"
                          FontSize="18"
                          xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                         xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                         xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#C6734E"/>
 
                 </StackLayout>
-            </Frame>
-          
+
+            <StackLayout VerticalOptions="End">
+                <Button
+                            x:Name="voltar"
+                            FontAttributes="Bold"
+                            
+                            BorderColor="Transparent"
+                            BorderWidth="1"
+                            CornerRadius="15"
+                            HeightRequest="60"
+                            WidthRequest="50"
+                            Margin="10,0,10,10"
+                            BackgroundColor="white"
+                            Text="RETORNAR"
+                            TextColor="#698F38"
+                            Clicked="voltar_Clicked"
+                            FontSize="23"
+                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#C6734E"/>
+
+            </StackLayout>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -6,7 +6,7 @@
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#CDFFD8"
-                          Offset="0.1" />
+                          Offset="0.28" />
             <GradientStop Color="#94B9FF"
                           Offset="1.0" />
         </LinearGradientBrush>
@@ -47,49 +47,46 @@
                 </StackLayout>
             </Frame>
 
-            <Frame BackgroundColor="White"
-                   CornerRadius="10"
-                   Padding="2"
-                   HeightRequest="400"
-                   Margin="15,0,15,0"
-                   VerticalOptions="CenterAndExpand">
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Frame BackgroundColor="Transparent"
+                   
+                   Padding="0"
+                   HeightRequest="250"
+                   Margin="0,0,0,0"
+                   >
 
-                <StackLayout>
+                    <StackLayout>
 
-
-
-
-
-                    <Label Text="SELECIONE O MUNDO" TextColor="Black" HorizontalTextAlignment="Center"
-                               FontSize="22" FontAttributes="Bold"/>
+                        <Label Text="SELECIONE UM MUNDO" TextColor="#8C52FF" HorizontalOptions="Center"
+                               FontSize="25" FontAttributes="Bold" Margin="0,0,0,0"/>
 
 
-                    <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalOptions="CenterAndExpand">
-                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Spacing="20" Padding="10" >
+                        <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Spacing="0" Padding="23" Margin="20,0,15,8" >
 
-                            <StackLayout>
-                                <ImageButton x:Name="btn_worldrose" Scale="2.5" Clicked="btn_worldrose_Clicked"  BackgroundColor="Transparent"  Margin="10"  Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <!--<Label x:Name="worldrose" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordRose"  />-->
+                                <StackLayout>
+                                    <ImageButton x:Name="btn_worldrose" Scale="3.5" Clicked="btn_worldrose_Clicked"  BackgroundColor="Transparent"  Margin="10,10,0,0"  Padding="14" CornerRadius="50" WidthRequest="300" HorizontalOptions="Center" HeightRequest="100" />
+                                    <!--<Label x:Name="worldrose" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordRose"  />-->
+                                </StackLayout>
+
+                                <StackLayout>
+                                    <ImageButton x:Name="btn_worldapocalypse" Scale="3.5" Clicked="btn_worldapocalypse_Clicked" Margin="10,10,0,0" BackgroundColor="Transparent" Padding="14" CornerRadius="50"  WidthRequest="300" HeightRequest="100" />
+                                    <!--<Label x:Name="worldapocalypse" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordApocalypse"/>-->
+                                </StackLayout>
+
+                                <StackLayout>
+                                    <ImageButton  x:Name="btn_worldgum" Scale="3.5" Clicked="btn_worldgum_Clicked" Margin="10,10,0,0" BackgroundColor="Transparent" Padding="14" CornerRadius="50"  WidthRequest="300" HeightRequest="100" />
+                                    <!--<Label x:Name="worldgum" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordGum"/>-->
+                                </StackLayout>
+                                
                             </StackLayout>
+                        </ScrollView>
+                        <Image x:Name="setas" Scale="3.5" Margin="0,0,0,0" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
+                </Frame>
+                
 
-                            <StackLayout>
-                                <ImageButton x:Name="btn_worldapocalypse" Scale="2.5" Clicked="btn_worldapocalypse_Clicked" Margin="10" BackgroundColor="Transparent" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <!--<Label x:Name="worldapocalypse" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordApocalypse"/>-->
-                            </StackLayout>
-
-                            <StackLayout>
-                                <ImageButton  x:Name="btn_worldgum" Scale="2.5" Clicked="btn_worldgum_Clicked" Margin="10" BackgroundColor="Transparent" Padding="15" CornerRadius="50" WidthRequest="90" HeightRequest="90" />
-                                <!--<Label x:Name="worldgum" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordGum"/>-->
-                            </StackLayout>
-
-                        </StackLayout>
-                    </ScrollView>
-
-
-                </StackLayout>
-            </Frame>
-
-
+            </StackLayout>
         </StackLayout>
 
 

@@ -7,17 +7,18 @@
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#6BC6FA"
-                          Offset="0.1" />
+                          Offset="0.28" />
             <GradientStop Color="#D938A7"
                           Offset="1.0" />
         </LinearGradientBrush>
-        
+
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
 
             <Frame HeightRequest="50"
-                   BackgroundColor="#6BC6FA">
+                   BackgroundColor="#6BC6FA"
+                   BorderColor="Transparent">
 
                 <StackLayout Orientation="Horizontal">
 
@@ -46,72 +47,87 @@
                 </StackLayout>
             </Frame>
 
-           
-            <Frame
-                 VerticalOptions="CenterAndExpand"
-                 BackgroundColor="Transparent"
-                 CornerRadius="10"
-                 Margin="10">
-                <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand">
 
-                    <Button  
+                <Button  
                     x:Name="jogo1"
                     FontAttributes="Bold"
                     VerticalOptions="Center"
                     BorderColor="Transparent"
                     BorderWidth="1"
-                    CornerRadius="10"
+                    CornerRadius="15"
                     HeightRequest="60"
                     WidthRequest="50"
-                    Margin="10"
+                    Margin="10,0,10,0"
                     BackgroundColor="WHITE"
                     Text="JOGO DA VELHA"
-                    TextColor="Black"
+                    TextColor="#D938A7"
                     Clicked="jogo1_Clicked"
-                    FontSize="18"
+                    FontSize="23"
                     xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#D938A7"/>
 
-            <Button
+                <Button
                 x:Name="jogo2"
                 FontAttributes="Bold"
-                VerticalOptions="Center"
+                
                 BorderColor="Transparent"
                 BorderWidth="1"
-                CornerRadius="10"
+                CornerRadius="15"
                 HeightRequest="60"
                 WidthRequest="50"
-                Margin="10"
+                Margin="10,10,10,0"
                 BackgroundColor="White"
                 Text="JOGO 2"
-                TextColor="Black"
+                TextColor="#D938A7"
                 Clicked="jogo2_Clicked"
-                FontSize="18"
+                FontSize="23"
                 xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#D938A7"/>
 
 
-            <Button
+                <Button
                 x:Name="jogo3"
                 FontAttributes="Bold"
-                VerticalOptions="Center"
+                
                 BorderColor="Transparent"
                 BorderWidth="1"
-                CornerRadius="10"
+                CornerRadius="15"
                 HeightRequest="60"
                 WidthRequest="50"
-                Margin="10"
+                Margin="10,10,10,0"
                 BackgroundColor="white"
                 Text="JOGO 3"
-                TextColor="Black"
+                TextColor="#D938A7"
                 Clicked="jogo3_Clicked"
-                FontSize="18"
+                FontSize="23"
                 xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
-                    
-                </StackLayout>
-            </Frame>
-       
+                xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#D938A7"/>
+
+                
+            </StackLayout>
+
+            <StackLayout VerticalOptions="End">
+                <Button
+                            x:Name="voltar"
+                            FontAttributes="Bold"
+                            
+                            BorderColor="Transparent"
+                            BorderWidth="1"
+                            CornerRadius="15"
+                            HeightRequest="60"
+                            WidthRequest="50"
+                            Margin="10,0,10,10"
+                            BackgroundColor="white"
+                            Text="RETORNAR"
+                            TextColor="#D938A7"
+                            Clicked="voltar_Clicked"
+                            FontSize="23"
+                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#D938A7"/>
+
+            </StackLayout>
+
 
 
 

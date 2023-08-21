@@ -77,5 +77,19 @@ namespace autplay.selectword
                 DisplayAlert("Error", ex.Message, "OK");
             }
         }
+
+        private async void voltar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                await Task.Delay(300);
+                App.Current.MainPage = new NavigationPage(new View.selecao());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
+            
+        }
     }
 }
