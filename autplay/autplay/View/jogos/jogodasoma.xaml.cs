@@ -16,10 +16,11 @@ namespace autplay.View.jogos
     {
         int RESPOSTA;
         //bool REINICIAR = false;
+        
         public jogodasoma()
         {
             InitializeComponent();
-            //gerador();
+            gerar();
 
         }
 
@@ -233,26 +234,44 @@ namespace autplay.View.jogos
 
         public void gerar()
         {
-            int vlr_botao1 = aleatorio();
-            int vlr_botao2 = aleatorio();
-            int vlr_botao3 = aleatorio();
-            int vlr_botao4 = aleatorio();
+            int n1 = aleatorio(6);
+            int n2 = aleatorio(6);
+            RESPOSTA = n1 + n2;
 
-            while(vlr_botao1 == vlr_botao2 || vlr_botao1 == vlr_botao3 || vlr_botao1 == vlr_botao4)
+            txt_numero1.Text = n1.ToString();
+            txt_numero2.Text = n2.ToString();
+
+            int vlr_botao1 = aleatorio(11);
+            int vlr_botao2 = aleatorio(11);
+            int vlr_botao3 = aleatorio(11);
+            int vlr_botao4 = aleatorio(11);
+
+            int botao = aleatorio(5);
+
+            if (botao == 1)
+            { vlr_botao1 = RESPOSTA; }
+            else if(botao == 2)
+            { vlr_botao2 = RESPOSTA; }
+            else if(botao == 3)
+            { vlr_botao3 = RESPOSTA; }
+            else if(botao == 4)
+            { vlr_botao4 = RESPOSTA; }
+
+            while (vlr_botao1 == vlr_botao2 || vlr_botao1 == vlr_botao3 || vlr_botao1 == vlr_botao4)
             {
-                vlr_botao1 = aleatorio();
+                vlr_botao1 = aleatorio(11);
             }
             while (vlr_botao2 == vlr_botao1 || vlr_botao2 == vlr_botao3 || vlr_botao2 == vlr_botao4)
             {
-                vlr_botao2 = aleatorio();
+                vlr_botao2 = aleatorio(11);
             }
             while (vlr_botao3 == vlr_botao2 || vlr_botao3 == vlr_botao1 || vlr_botao3 == vlr_botao4)
             {
-                vlr_botao3 = aleatorio();
+                vlr_botao3 = aleatorio(11);
             }
             while (vlr_botao4 == vlr_botao2 || vlr_botao4 == vlr_botao3 || vlr_botao4 == vlr_botao1)
             {
-                vlr_botao4 = aleatorio();
+                vlr_botao4 = aleatorio(11);
             }
 
             btn_1.Text = vlr_botao1.ToString();
@@ -261,22 +280,31 @@ namespace autplay.View.jogos
             btn_4.Text = vlr_botao4.ToString();
 
             // TERMINAR ESSA FUNÇÃO AINDA
-
-
         }
 
-        private int aleatorio()
+        private int aleatorio(int n)
         {
             var random = new Random();
             // Gere um valor aleatório entre 1 e 10 para os botões
-            return random.Next(1, 11);
+            return random.Next(1, n);
         }
 
-        private void Button_Click(object sender, EventArgs e)
+        private async void Button_Click(object sender, EventArgs e)
         {
             // Manipule o clique do botão aqui
             Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
-            string valor = button.Text;
+            int valor = int.Parse(button.Text);
+
+            if (valor == RESPOSTA)
+            {
+                await DisplayAlert("Parabéns", "Você acertou", "OK");
+                gerar();
+            }
+            else
+            {
+                await DisplayAlert("Que Pena", "Você errou\nTente Novamente!", "OK");
+            }
+
             //MessageBox.Show("Você clicou no botão com valor: " + valor);
         }
     }

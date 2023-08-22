@@ -61,10 +61,10 @@
                          WidthRequest="50"
                          Margin="10"
                          BackgroundColor="#FAF9F6"
-                         Text="÷"
+                         Text="JOGO DA SOMA"
                          TextColor="#698F38"
                         Clicked="jogo1_mundo2_Clicked"
-                        FontSize="30"
+                        FontSize="23"
                     xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                     xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#C6734E"/>
                     
@@ -79,7 +79,7 @@
                          WidthRequest="50"
                          Margin="10"
                          BackgroundColor="#FAF9F6"
-                         Text="JOGO 2"
+                         Text="JOGO DA SUBTRAÇÃO"
                          TextColor="#698F38"
                          Clicked="jogo2_mundo2_Clicked"
                          FontSize="18"
