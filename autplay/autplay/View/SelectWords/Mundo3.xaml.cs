@@ -22,7 +22,7 @@ namespace autplay.selectword
 
         private void jogo1_mundo3_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new autplay.View.jogos.jogodocorreto());
         }
 
         private void jogo2_mundo3_Clicked(object sender, EventArgs e)

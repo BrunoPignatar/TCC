@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="autplay.View.jogos.jogodocorreto">
+    
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#23E9FC"
+                          Offset="0.1" />
+            <GradientStop Color="#F25EC4"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame Scale="0.9" BackgroundColor="White" CornerRadius="30" VerticalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Label x:Name="txt_pergunta" Text="esse é o animal" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="30"/>
+
+
+                    <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                        <Button CornerRadius="100" x:Name="btn_sim" HorizontalOptions="StartAndExpand" Text="✓" BackgroundColor="Transparent" FontSize="50" Clicked="btn_sim_Clicked" TextColor="Green"
+                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.SpringOut}"
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+
+                        <Image x:Name="img_animal"/>
+
+                        <Button  CornerRadius="100" x:Name="btn_nao" HorizontalOptions="EndAndExpand" Text="X" BackgroundColor="Transparent" FontSize="50" Clicked="btn_nao_Clicked" TextColor="Red" 
+                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.SpringOut}"
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                    </StackLayout>
+                </StackLayout>
+            </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
