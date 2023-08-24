@@ -19,7 +19,8 @@ namespace autplay.View.jogos
             gerador();
         }
 
-        int pergunta = 0, numero = 0;
+        int pergunta = 0, numero = 0, anteriorpgt = 0, anteriornmr = 0;
+        
 
         public void gerador()
         {
@@ -27,6 +28,12 @@ namespace autplay.View.jogos
 
             pergunta = random.Next(1, 5);
             numero = random.Next(1, 5);
+
+            if(numero == anteriornmr)
+            {
+                numero = random.Next(1, 5);
+            }
+
 
             if (pergunta == 1)
             {
@@ -69,18 +76,20 @@ namespace autplay.View.jogos
             {
                 img_animal.Source = ImageSource.FromResource("autplay.Assets.parrot.png");
             }
+
+            anteriornmr = numero;
         }
 
         private async void btn_sim_Clicked(object sender, EventArgs e)
         {
             if (numero == pergunta)
             {
-                await DisplayAlert("parabéns", "você acertou", "OK");
+                await DisplayAlert("Parabéns", "Você acertou", "OK");
                 gerador();
             }
             else
             {
-                await DisplayAlert("parabéns", "você errou", "OK");
+                await DisplayAlert("Que Pena", "Você errou\nTente Novamente!", "OK");
                 gerador();
             }
         }
@@ -89,12 +98,12 @@ namespace autplay.View.jogos
         {
             if (numero != pergunta)
             {
-                await DisplayAlert("parabéns", "você acertou", "OK");
+                await DisplayAlert("Parabéns", "Você acertou", "OK");
                 gerador();
             }
             else
             {
-                await DisplayAlert("parabéns", "você errou", "OK");
+                await DisplayAlert("Que Pena", "Você errou\nTente Novamente!", "OK");
                 gerador();
             }
         }

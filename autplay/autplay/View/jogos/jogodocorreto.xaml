@@ -16,6 +16,13 @@
     <ContentPage.Content>
         <StackLayout>
 
+            <Frame BackgroundColor="yellow"
+                   HeightRequest="100">
+                <StackLayout>
+                    
+                </StackLayout>
+            </Frame>
+
             <Frame Scale="0.9" BackgroundColor="White" CornerRadius="30" VerticalOptions="CenterAndExpand">
                 <StackLayout>
                     <Label x:Name="txt_pergunta" Text="esse é o animal" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="Black" FontSize="30"/>

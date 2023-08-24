@@ -12,16 +12,23 @@
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
-            <Frame HeightRequest="250"
-                   Margin="5"
-                   BackgroundColor="Green"
-                   BorderColor="Yellow"
-                   CornerRadius="15">
-                <StackLayout>
+            <!--<Frame BackgroundColor="green"
+                   HeightRequest="10"
+                   CornerRadius="15"
+                   Margin="10,0,120,0">
+                <Label Text="a" />
+            </Frame>-->
 
-                    <Label x:Name="txt_numero1" FontSize="Title"/>
-                    <Label Text="+" FontSize="Title"/>
-                    <Label x:Name="txt_numero2" FontSize="Title"/>
+            <Frame HeightRequest="100"
+                   Margin="5,0,5,0"
+                   BackgroundColor="Green"
+                   BorderColor="DarkGreen"
+                   CornerRadius="15">
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+
+                    <Label x:Name="txt_numero1" FontSize="50" TextColor="white"/>
+                    <Label Text="+" FontSize="50" TextColor="white"/>
+                    <Label x:Name="txt_numero2" FontSize="50" TextColor="white"/>
                 </StackLayout>
             </Frame>
             <StackLayout>
