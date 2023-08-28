@@ -2,119 +2,136 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="autplay.View.jogos.jogodasoma">
-    <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="Azure"
-                          Offset="0.23" />
-            <GradientStop Color="Azure"
-                          Offset="1.0" />
-        </LinearGradientBrush>
-    </ContentPage.Background>
     <ContentPage.Content>
-        <StackLayout>
-            <!--<Frame BackgroundColor="green"
-                   HeightRequest="10"
-                   CornerRadius="15"
-                   Margin="10,0,120,0">
-                <Label Text="a" />
-            </Frame>-->
+        <Grid>
+            <Image x:Name="background" Aspect="AspectFill" />
+            <StackLayout>
 
-            <Frame HeightRequest="100"
-                   Margin="5,0,5,0"
+                <Frame HeightRequest="22"
+                       WidthRequest="10"
+                       Margin="10,10,10,0"
+                       BackgroundColor="YellowGreen"
+                       BorderColor="DarkGreen"
+                       CornerRadius="15">
+                    <Label x:Name="Score" Margin="0,0,0,0" FontSize="20"
+                           TextColor="white" FontAttributes="bold"
+                           Text="Score: "/>
+                    
+                </Frame>
+
+                <Frame HeightRequest="100"
+                   Margin="10,0,10,0"
                    BackgroundColor="Green"
                    BorderColor="DarkGreen"
                    CornerRadius="15">
-                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                    
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center"
+                                 VerticalOptions="Center">
 
-                    <Label x:Name="txt_numero1" FontSize="50" TextColor="white"/>
-                    <Label Text="+" FontSize="50" TextColor="white"/>
-                    <Label x:Name="txt_numero2" FontSize="50" TextColor="white"/>
-                </StackLayout>
-            </Frame>
-            <StackLayout>
-                <Frame
-                         VerticalOptions="CenterAndExpand"
+                        <Label x:Name="txt_numero1" FontSize="50" TextColor="white"/>
+                        <Label Text="+" FontSize="50" TextColor="white"/>
+                        <Label x:Name="txt_numero2" FontSize="50" TextColor="white"/>
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout>
+                    <!-- FALTA COLOCAR OS BOTÕES NO FINAL DA TELA E AJUSTAR A LOCALIZAÇÃO DOS ELEMENTOS -->
+                    <Frame
+                         VerticalOptions="End"
                          BackgroundColor="Transparent"
                          CornerRadius="10"
                          Margin="20">
-                    <StackLayout>
+                        <StackLayout>
+                            <Grid RowDefinitions="*,*"
+                              ColumnDefinitions="*,*"
+                              >
 
-                        <Button x:Name="btn_1"
-                                FontAttributes="Bold"
-                                VerticalOptions="Center"
-                                BorderColor="Black"
-                                BorderWidth="1"
-                                CornerRadius="10"
-                                HeightRequest="70"
-                                WidthRequest="50"
-                                Margin="10"
-                                BackgroundColor="WHITE"
-                                Text="asd"
-                                TextColor="Black"
-                                Clicked="Button_Click"
-                                FontSize="18"
-                        />
-
-                        <Button x:Name="btn_2"
+                                <Button x:Name="btn_1"
                                     FontAttributes="Bold"
                                     VerticalOptions="Center"
                                     BorderColor="Black"
                                     BorderWidth="1"
-                                    CornerRadius="10"
-                                    HeightRequest="70"
-                                    WidthRequest="50"
-                                    Margin="10"
-                                    BackgroundColor="White"
+                                    CornerRadius="100"
+                                    HeightRequest="150"
+                                    WidthRequest="150"
+                                    Margin="0,0,0,0"
+                                    BackgroundColor="YellowGreen"
                                     Text="asd"
-                                    TextColor="Black"
+                                    TextColor="White"
                                     Clicked="Button_Click"
-                                    FontSize="18"
-                        />
+                                    FontSize="25"
+                                    Grid.Row="0"
+                                    Grid.Column="0"
+                                    />
 
-                        <Button x:Name="btn_3"
+                                <Button x:Name="btn_2"
+                                    FontAttributes="Bold"
+                                    VerticalOptions="Center"
+                                    BorderColor="Black"
+                                    BorderWidth="1"
+                                    CornerRadius="100"
+                                    HeightRequest="150"
+                                    WidthRequest="150"
+                                    Margin="0,0,0,0"
+                                    BackgroundColor="RoyalBlue"
+                                    Text="asd"
+                                    TextColor="white"
+                                    Clicked="Button_Click"
+                                    FontSize="25"
+                                    Grid.Row="0"
+                                    Grid.Column="1" 
+                                    />
+
+                                <Button x:Name="btn_3"
                                         FontAttributes="Bold"
                                         VerticalOptions="Center"
                                         BorderColor="Black"
                                         BorderWidth="1"
-                                        CornerRadius="10"
-                                        HeightRequest="70"
-                                        WidthRequest="50"
-                                        Margin="10"
-                                        BackgroundColor="white"
+                                        CornerRadius="100"
+                                        HeightRequest="150"
+                                        WidthRequest="150"
+                                        Margin="0,0,0,0"
+                                        BackgroundColor="DarkCyan"
                                         Text="asd"
-                                        TextColor="Black"
+                                        TextColor="white"
                                         Clicked="Button_Click"
-                                        FontSize="18"
-                        />
+                                        FontSize="25"
+                                        Grid.Row="1"
+                                        Grid.Column="0"
+                                        />
 
-                        <Button x:Name="btn_4"
+                                <Button x:Name="btn_4"
                                         FontAttributes="Bold"       
                                         VerticalOptions="Center"
                                         BorderColor="Black"
                                         BorderWidth="1"
-                                        CornerRadius="10"
-                                        HeightRequest="70"
-                                        WidthRequest="50"
-                                        Margin="10"
-                                        BackgroundColor="white"
+                                        CornerRadius="100"
+                                        HeightRequest="150"
+                                        WidthRequest="150"
+                                        Margin="0,0,0,0"
+                                        BackgroundColor="pink"
                                         Text="asd"
-                                        TextColor="Black"
+                                        TextColor="white"
                                         Clicked="Button_Click"             
-                                        FontSize="18"
-                        />
+                                        FontSize="25"
+                                        Grid.Row="1"
+                                        Grid.Column="1"
+                                        />
+
+
+                            </Grid>
+                        </StackLayout>
+
+                    </Frame>
+                </StackLayout>
 
 
 
-                    </StackLayout>
-                </Frame>
+
+
+
+
             </StackLayout>
-
-
-
-
-
-
-
-        </StackLayout>
+        </Grid>
     </ContentPage.Content>
 </ContentPage>
