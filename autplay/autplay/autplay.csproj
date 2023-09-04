@@ -81,6 +81,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="View\jogos\jogodasubtração.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\jogos\jogodavelha.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -96,6 +99,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="View\jogos\Mundo2\" />
     <Folder Include="View\SelectWords\" />
   </ItemGroup>
 </Project>

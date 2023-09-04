@@ -3,36 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
-using autplay.Model;
 
-using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
+using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace autplay.View.jogos
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class jogodasoma : ContentPage
+    public partial class jogodasubtração : ContentPage
     {
         int RESPOSTA;
         Color corAntiga;
         int acertos = 0;
-
-        public jogodasoma()
+        public jogodasubtração()
         {
             InitializeComponent();
             //REMOVENDO A NAVBAR
             NavigationPage.SetHasNavigationBar(this, false);
             background.Source = ImageSource.FromResource("autplay.Assets.backgroundJogodaSoma.png");
             gerar();
-            
         }
 
         public void gerar()
         {
             int n1 = aleatorio(6);
             int n2 = aleatorio(6);
-            RESPOSTA = n1 + n2;
+            while(n1 <= n2 || n1 == 0)
+            {
+                n1 = 5;
+            }
+
+            RESPOSTA = n1 - n2;
 
             txt_numero1.Text = n1.ToString();
             txt_numero2.Text = n2.ToString();
@@ -42,7 +43,8 @@ namespace autplay.View.jogos
             int vlr_botao3 = aleatorio(11);
             int vlr_botao4 = aleatorio(11);
 
-            int botao = aleatorio(5);
+            var random = new Random();
+            int botao = random.Next(1,6);
 
             if (botao == 1)
             { vlr_botao1 = RESPOSTA; }
@@ -88,7 +90,7 @@ namespace autplay.View.jogos
         {
             var random = new Random();
             // Gere um valor aleatório entre 1 e 10 para os botões
-            return random.Next(1, n);
+            return random.Next(0, n);
         }
 
         private async void Button_Click(object sender, EventArgs e)
@@ -99,7 +101,7 @@ namespace autplay.View.jogos
             await Model.Animacoes.AnimacaoBotao(button);
             Task.Delay(500);
             int valor = int.Parse(button.Text);
-            
+
             if (valor == RESPOSTA)
             {
                 await DisplayAlert("Parabéns", "Você acertou", "OK");
@@ -132,4 +134,3 @@ namespace autplay.View.jogos
         }
     }
 }
-

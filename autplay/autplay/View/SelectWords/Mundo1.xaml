@@ -23,10 +23,14 @@
                 <StackLayout Orientation="Horizontal">
 
                     <ImageButton x:Name="AvatarImage"
-                           BackgroundColor="#D938A7"
-                           Scale="1.4"
-                           Padding="4" Margin="2"
-                           CornerRadius="50"/>
+                           BackgroundColor="#94B9FF"
+                           Scale="1.5"
+                           HeightRequest="50"
+                           Padding="4"
+                           WidthRequest="45"
+                           Margin="3"
+                           CornerRadius="50"
+                           Aspect="AspectFill"/>
 
                     <Label x:Name="lblBoasVindas"
                            TextColor="#D938A7" FontSize="20" 

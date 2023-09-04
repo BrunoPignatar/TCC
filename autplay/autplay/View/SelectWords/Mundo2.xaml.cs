@@ -55,9 +55,17 @@ namespace autplay.selectword
             }
         }
 
-        private void jogo2_mundo2_Clicked(object sender, EventArgs e)
+        private async void jogo2_mundo2_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                await Navigation.PushAsync(new autplay.View.jogos.jogodasubtração());
 
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
         }
 
         private void jogo3_mundo2_Clicked(object sender, EventArgs e)

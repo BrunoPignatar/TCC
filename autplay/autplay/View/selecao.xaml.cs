@@ -88,7 +88,11 @@ namespace autplay.View
             {
                 DisplayAlert("Error", ex.Message, "OK");
             }
+        }
 
+        private void AvatarImage_Clicked(object sender, EventArgs e)
+        {
+            DisplayAlert("teste", "imagem do avatar", "OK");
         }
     }
 }

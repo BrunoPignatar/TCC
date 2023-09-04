@@ -11,7 +11,7 @@ namespace autplay
             InitializeComponent();
 
             //MainPage = new NavigationPage(new View.Menu());
-            MainPage = new NavigationPage(new View.jogos.jogodasoma());
+            MainPage = new NavigationPage(new View.Menu());
         }
         /**
          * Armazena os dados do Avatar após o login.

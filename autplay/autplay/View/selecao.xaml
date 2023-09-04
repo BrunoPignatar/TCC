@@ -24,9 +24,14 @@
 
                     <ImageButton x:Name="AvatarImage"
                            BackgroundColor="#94B9FF"
-                           Scale="1.4"
-                           Padding="4" Margin="3"
-                           CornerRadius="50"/>
+                           Scale="1.5"
+                           HeightRequest="50"
+                           WidthRequest="45"
+                           Padding="4"
+                           Margin="3"
+                           Clicked="AvatarImage_Clicked"
+                           CornerRadius="50"
+                           Aspect="AspectFill"/>
 
                     <Label x:Name="lblBoasVindas"
                            TextColor="#8C52FF" FontSize="20" 
@@ -51,7 +56,7 @@
                 <Frame BackgroundColor="Transparent"
                    
                    Padding="0"
-                   HeightRequest="250"
+                   HeightRequest="220"
                    Margin="0,0,0,0"
                    >
 
@@ -62,21 +67,33 @@
 
 
                         <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never">
-                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Spacing="0" Padding="23" Margin="20,0,15,8" >
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center"  Spacing="-20" Padding="20" Margin="0,0,0,0" >
 
                                 <StackLayout>
-                                    <ImageButton x:Name="btn_worldrose" Scale="3.5" Clicked="btn_worldrose_Clicked"  BackgroundColor="Transparent"  Margin="10,10,0,0"  Padding="14" CornerRadius="50" WidthRequest="300" HorizontalOptions="Center" HeightRequest="100" />
-                                    <!--<Label x:Name="worldrose" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordRose"  />-->
+                                    <!-- ARRUMAR TAMANHO DOS BOTOES DOS MUNDOS -->
+                                    <ImageButton x:Name="btn_worldrose" Scale="3.5" 
+                                                 Clicked="btn_worldrose_Clicked"  
+                                                 BackgroundColor="Transparent"  
+                                                 Margin="10,10,0,0"  Padding="14" CornerRadius="50" 
+                                                 WidthRequest="300" HorizontalOptions="Center" 
+                                                 HeightRequest="100" />
+                                    
                                 </StackLayout>
 
                                 <StackLayout>
-                                    <ImageButton x:Name="btn_worldapocalypse" Scale="3.5" Clicked="btn_worldapocalypse_Clicked" Margin="10,10,0,0" BackgroundColor="Transparent" Padding="14" CornerRadius="50"  WidthRequest="300" HeightRequest="100" />
-                                    <!--<Label x:Name="worldapocalypse" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordApocalypse"/>-->
+                                    <ImageButton x:Name="btn_worldapocalypse" Scale="3.5" 
+                                                 Clicked="btn_worldapocalypse_Clicked" Margin="10,10,0,0" 
+                                                 BackgroundColor="Transparent" Padding="14" 
+                                                 CornerRadius="50"  WidthRequest="300" HeightRequest="100" />
+                                    
                                 </StackLayout>
 
                                 <StackLayout>
-                                    <ImageButton  x:Name="btn_worldgum" Scale="3.5" Clicked="btn_worldgum_Clicked" Margin="10,10,0,0" BackgroundColor="Transparent" Padding="14" CornerRadius="50"  WidthRequest="300" HeightRequest="100" />
-                                    <!--<Label x:Name="worldgum" TextColor="Black" FontSize="20" HorizontalOptions="Center" FontAttributes="Italic" Text="WordGum"/>-->
+                                    <ImageButton  x:Name="btn_worldgum" Scale="3.5" 
+                                                  Clicked="btn_worldgum_Clicked" Margin="10,10,0,0" 
+                                                  BackgroundColor="Transparent" Padding="14" 
+                                                  CornerRadius="50"  WidthRequest="300" HeightRequest="100" />
+                  
                                 </StackLayout>
                                 
                             </StackLayout>
