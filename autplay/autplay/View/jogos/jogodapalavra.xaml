@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="autplay.View.jogos.jogodapalavra"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#6BC6FA"
+                          Offset="0.23" />
+            <GradientStop Color="#D938A7"
+                          Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame CornerRadius="10" BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+                <StackLayout>
+                    <Image xct:ShadowEffect.Color="Black" x:Name="img_imagem"/>
+
+                    <Label Text="que animal é esse" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+
+                    <Entry x:Name="txt_resposta"/>
+
+                    <Button x:Name="btn_enviar" Text="enviar" Clicked="btn_enviar_Clicked" TextColor="Black" CornerRadius="10" BorderWidth="1"
+                            BorderColor="Black" BackgroundColor="Transparent"/>
+                </StackLayout>
+            </Frame>
+
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

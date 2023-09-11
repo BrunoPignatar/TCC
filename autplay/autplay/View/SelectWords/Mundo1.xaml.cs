@@ -57,7 +57,7 @@ namespace autplay.selectword
 
         private void jogo2_Clicked(object sender, EventArgs e)
         {
-
+            Navigation.PushAsync(new autplay.View.jogos.jogodapalavra());
         }
 
         private void jogo3_Clicked(object sender, EventArgs e)

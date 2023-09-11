@@ -81,6 +81,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="View\jogos\jogodapalavra.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="View\jogos\jogodasubtração.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
