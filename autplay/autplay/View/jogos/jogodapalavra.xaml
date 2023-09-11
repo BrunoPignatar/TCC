@@ -17,7 +17,7 @@
 
             <Frame CornerRadius="10" BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
                 <StackLayout>
-                    <Image xct:ShadowEffect.Color="Black" x:Name="img_imagem"/>
+                    <Image x:Name="img_imagem"/>
 
                     <Label Text="que animal é esse" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
 

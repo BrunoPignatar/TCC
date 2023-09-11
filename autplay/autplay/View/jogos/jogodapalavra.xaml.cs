@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace autplay.View.jogos
@@ -56,6 +57,11 @@ namespace autplay.View.jogos
 
         private async void btn_enviar_Clicked(object sender, EventArgs e)
         {
+            Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+            await Model.Animacoes.AnimacaoBotao(button);
+            Task.Delay(500);
+
 
 
             if (txt_resposta.Text == resposta_correta)
