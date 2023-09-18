@@ -70,7 +70,7 @@ namespace autplay.View.jogos
             }
             else
             {
-                await DisplayAlert("qu̡̠̣̤̎͌ͥ̂͊̉ͅe̦̲͍͆̈́ ͙̹̺͙̖̿̐ͣ̅͐̚p̦͙̬̰͍͚ͩ̿̋ͅe͋͐n̝̬̞̂ͨͅâ͆̽\r\n", "v͒͆̊͊́̂͘o̳͖͚̜c̖̙̮̳͖̠̣ê̝̍ͤ̌̏͟ ̧̔͗̇̈́̀ͯȅ̤͍̰̟̬̌̊ͅr̲͈͜r̙ͣ̆ͭ͘o̪͎̣ṳ̠̠̣̗̅̅̓ͯ͟\r\n", "o̖͚̟͍̘̰̻ͨͥ̈͗k͔͒̈͊̒͝");
+                await DisplayAlert("que pena que", "você errou", "ok");
             }
 
             txt_resposta.Text = "";
