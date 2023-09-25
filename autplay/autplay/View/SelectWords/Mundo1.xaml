@@ -5,7 +5,7 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Title="MUNDO 1">
     <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.9">
             <GradientStop Color="#6BC6FA"
                           Offset="0.28" />
             <GradientStop Color="#D938A7"
@@ -23,37 +23,43 @@
                 <StackLayout Orientation="Horizontal">
 
                     <ImageButton x:Name="AvatarImage"
-                           BackgroundColor="#94B9FF"
+                           BackgroundColor="#6BC6FA"
+                           BorderColor="#8C52FF"
+                           BorderWidth="1"
                            Scale="1.5"
                            HeightRequest="50"
-                           Padding="4"
                            WidthRequest="45"
+                           Padding="4.5"
                            Margin="3"
+                           
                            CornerRadius="50"
                            Aspect="AspectFill"/>
 
                     <Label x:Name="lblBoasVindas"
-                           TextColor="#D938A7" FontSize="20" 
-                           Margin="15,0,0,0"
-                           HorizontalTextAlignment="Start"
+                           TextColor="#8C52FF" FontSize="20" 
+                           Margin="15,0,5,0"
+                           HorizontalTextAlignment="Start" 
+                           
                            FontAttributes="Bold"
                            VerticalTextAlignment="Center"/>
 
                     <ImageButton x:Name="AlterAvatar"
-                           BackgroundColor="#D938A7"
+                           BackgroundColor="#8C52FF"
                            HorizontalOptions="EndAndExpand"
                            VerticalOptions="Center"
                            Padding="-3"
                            Scale="1"
                            Margin="0,2,0,0"
                            CornerRadius="50"
-                           Clicked="AlterAvatar_Clicked" />
+                           Clicked="AlterAvatar_Clicked"/>
                 </StackLayout>
             </Frame>
+            <BoxView Color="#8C52FF" HeightRequest="1"
+                     HorizontalOptions="FillAndExpand"/>
 
             <StackLayout VerticalOptions="CenterAndExpand">
 
-                <Button  
+                <Button
                     x:Name="jogo1"
                     FontAttributes="Bold"
                     VerticalOptions="Center"

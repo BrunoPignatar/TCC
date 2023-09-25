@@ -5,7 +5,7 @@
              x:Class="autplay.selectword.Mundo3"
              Title="MUNDO 3">
     <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+        <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1.2">
             <GradientStop Color="#23E9FC"
                           Offset="0.1" />
             <GradientStop Color="#F25EC4"
@@ -15,13 +15,49 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Frame
-                VerticalOptions="CenterAndExpand"
-                BackgroundColor="Transparent">
+            <Frame HeightRequest="50"
+                   BackgroundColor="#23E9FC"
+                   BorderColor="Transparent">
 
-                <StackLayout>
+                <StackLayout Orientation="Horizontal">
 
-                    <Button
+                    <ImageButton x:Name="AvatarImage"
+                           BackgroundColor="#23E9FC"
+                           BorderColor="#F25EC4"
+                           BorderWidth="1"
+                           Scale="1.5"
+                           HeightRequest="50"
+                           WidthRequest="45"
+                           Padding="4.5"
+                           Margin="3"
+                           
+                           CornerRadius="50"
+                           Aspect="AspectFill"/>
+
+                    <Label x:Name="lblBoasVindas"
+                           TextColor="#8C52FF" FontSize="20" 
+                           Margin="15,0,5,0"
+                           HorizontalTextAlignment="Start" 
+                           
+                           FontAttributes="Bold"
+                           VerticalTextAlignment="Center"/>
+
+                    <ImageButton x:Name="AlterAvatar"
+                           BackgroundColor="#8C52FF"
+                           HorizontalOptions="EndAndExpand"
+                           VerticalOptions="Center"
+                           Padding="-3"
+                           Scale="1"
+                           Margin="0,2,0,0"
+                           CornerRadius="50"
+                           Clicked="AlterAvatar_Clicked"/>
+                </StackLayout>
+            </Frame>
+            <BoxView Color="#F25EC4" HeightRequest="1"
+                     HorizontalOptions="FillAndExpand"/>
+
+            <StackLayout VerticalOptions="CenterAndExpand">
+                <Button
                         x:Name="jogo1_mundo3"
                          FontAttributes="Bold"
                          VerticalOptions="Center"
@@ -31,7 +67,7 @@
                          WidthRequest="50"
                          Margin="10"
                          BackgroundColor="white"
-                         Text="JOGO 1"
+                         Text="JOGO DO CORRETO"
                          TextColor="Black"
                          Clicked="jogo1_mundo3_Clicked"
                          FontSize="18"
@@ -72,7 +108,7 @@
                         xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                         xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
                 </StackLayout>
-            </Frame>
+            
 
             <StackLayout VerticalOptions="End">
                 <Button

@@ -15,7 +15,7 @@
         </LinearGradientBrush> -->
 
         <!-- StartPoint defaults to (0,0) -->
-        <LinearGradientBrush EndPoint="0,1">
+        <LinearGradientBrush EndPoint="0,0.7">
             <GradientStop Color="#CDFFD8"
                           Offset="0.1" />
             <GradientStop Color="#94B9FF"
@@ -39,10 +39,11 @@
                 <StackLayout>
                     <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                         <Label Text="SELECIONE O SEU" TextColor="Black" 
-                               HorizontalTextAlignment="Center" FontSize="20" 
+                               HorizontalTextAlignment="Center" FontSize="21" 
                                FontAttributes="Bold"/>
                         <Label Text="AVATAR" TextColor="#8C52FF" 
-                               HorizontalTextAlignment="Center" FontSize="20" 
+                               VerticalTextAlignment="Center"
+                               HorizontalTextAlignment="Center" FontSize="22" 
                                FontAttributes="Bold"/>
                     </StackLayout>
 
@@ -114,22 +115,22 @@
 
                         </Frame>-->
 
-                        <Entry x:Name="txtNome" Placeholder="DIGITE O NOME AQUI!" 
+                        <Entry x:Name="txtNome" Placeholder="DIGITE O NOME AQUI" 
                                PlaceholderColor="#8C52FF" TextColor="#8C52FF" FontSize="20"
                                HorizontalOptions="CenterAndExpand" MaxLength="15"
                                
-                               Scale="1.25"
+                               Scale="1.15"
                                HorizontalTextAlignment="Center" FontAttributes="Bold"
                                Margin="0,0,0,15"
                                />
 
                         <Button x:Name="btn_add"
                                 Clicked="btn_add_Clicked"
-                                Margin="0,5,0,0"
+                                Margin="0,0,0,0"
                                 CornerRadius="100"
                                 HeightRequest="90"
                                 BorderColor="#8C52FF"
-                                BorderWidth="0.5"
+                                BorderWidth="1"
                                 WidthRequest="90"
                                 BackgroundColor="#94B9FF"
                                 Text="+"

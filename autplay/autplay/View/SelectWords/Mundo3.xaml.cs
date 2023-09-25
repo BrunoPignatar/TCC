@@ -18,6 +18,24 @@ namespace autplay.selectword
 
             //removendo a navbar
             NavigationPage.SetHasNavigationBar(this, false);
+
+            if (App.DadosAvatar.ImagemEnviada != null)
+            {
+                AvatarImage.Source = App.DadosAvatar.ImagemEnviada;
+                lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
+
+            }
+            else
+            {
+                AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
+                lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
+            }
+
+
+            //AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
+            //lblBoasVindas.Text = "Bem-vindo " + App.DadosAvatar.Nome;
+
+            AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
         }
 
         private void jogo1_mundo3_Clicked(object sender, EventArgs e)
@@ -40,12 +58,18 @@ namespace autplay.selectword
             try
             {
                 await Task.Delay(300);
-                App.Current.MainPage = new NavigationPage(new View.selecao());
+                //App.Current.MainPage = new NavigationPage(new View.selecao());
+                Navigation.PopAsync();
             }
             catch (Exception ex)
             {
                 DisplayAlert("Error", ex.Message, "OK");
             }
+        }
+
+        private void AlterAvatar_Clicked(object sender, EventArgs e)
+        {
+
         }
     }
 }

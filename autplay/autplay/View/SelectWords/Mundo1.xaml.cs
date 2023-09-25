@@ -83,7 +83,8 @@ namespace autplay.selectword
             try
             {
                 await Task.Delay(300);
-                App.Current.MainPage = new NavigationPage(new View.selecao());
+                //App.Current.MainPage = new NavigationPage(new View.selecao());
+                Navigation.PopAsync();
             }
             catch (Exception ex)
             {
