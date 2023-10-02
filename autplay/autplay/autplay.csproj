@@ -12,8 +12,11 @@
 
   <ItemGroup>
     <Compile Remove="Assets\Avatar\**" />
+    <Compile Remove="View\jogos\Mundo2\**" />
     <EmbeddedResource Remove="Assets\Avatar\**" />
+    <EmbeddedResource Remove="View\jogos\Mundo2\**" />
     <None Remove="Assets\Avatar\**" />
+    <None Remove="View\jogos\Mundo2\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -102,7 +105,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="View\jogos\Mundo2\" />
     <Folder Include="View\SelectWords\" />
   </ItemGroup>
 </Project>

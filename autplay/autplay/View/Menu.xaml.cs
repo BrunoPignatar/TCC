@@ -8,6 +8,7 @@ using autplay.Model;
 using autplay.View;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
 
 namespace autplay.View
@@ -19,44 +20,20 @@ namespace autplay.View
         public Menu()
         {
             InitializeComponent();
-            //ADIÇÃO DAS IMAGENS
-            AdcImagens();
-
-            //REMOVENDO A NAVBAR
-            NavigationPage.SetHasNavigationBar(this, false);
-
-            //DEIXANDO AS FONTES EM NEGRITO E ITÁLICO
-            txtArara.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-            txtCavalo.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-            txtGato.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-            txtPeixe.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-            txtDog.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-
+            ConfigElementos();
         }
 
-        //BOTÃO DE ADICIONAR FOTO COMO AVATAR--
+        //BOTÃO DE ADICIONAR FOTO COMO AVATAR 
         private async void btn_add_Clicked(object sender, EventArgs e)
         {
-            //DisplayAlert("teste", "teste", "ok");
-
             try
             {
-                string nome;
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
 
-                //FAZER REQUERIR UM NOME
-                //if (txtNome.Text == "")
-                //{
-                //    DisplayAlert("Erro", "Digite um Nome para o Avatar", "OK");
-                        
-                //    return;
-                //}
-
-
-                nome = txtNome.Text;
+                await Model.Animacoes.AnimacaoBotao(button);
 
                 var result = await MediaPicker.PickPhotoAsync(new MediaPickerOptions
                 {
-
                     Title = "Selecione uma imagem"
                 });
 
@@ -65,7 +42,7 @@ namespace autplay.View
                     Avatares a = new Avatares
                     {
                         ImagemEnviada = ImageSource.FromFile(result.FullPath),
-                        Nome = nome,
+                        Nome = txtNome.Text,
                         Id = 6,
                         ImagemPadrao = null,
                     };
@@ -76,13 +53,12 @@ namespace autplay.View
             }
             catch (Exception ex)
             {
-                DisplayAlert("Erro", "Ocorreu um erro ao enviar a imagem!\nTente Novamente.", "OK");
+                await DisplayAlert("Erro", "Ocorreu um erro ao enviar a imagem!\nTente Novamente.", "OK");
             }
-
         }
 
         //BOTÕES PARA OS AVATARES
-        private void btn_arara_Clicked_1(object sender, EventArgs e)
+        private async void btn_arara_Clicked_1(object sender, EventArgs e)
         {
             try
             {
@@ -92,7 +68,6 @@ namespace autplay.View
                     Id = 1,
                     ImagemPadrao = ImageSource.FromResource("autplay.Assets.parrot.png"),
                     ImagemEnviada = null
-
                 };
                 App.DadosAvatar = a;
                 App.Current.MainPage = new NavigationPage(new View.selecao());
@@ -100,11 +75,11 @@ namespace autplay.View
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error", ex.Message, "OK");
             }
         }
 
-        private void btn_gato_Clicked(object sender, EventArgs e)
+        private async void btn_gato_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -121,12 +96,11 @@ namespace autplay.View
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error", ex.Message, "OK");
             }
-
         }
 
-        private void btn_peixe_Clicked(object sender, EventArgs e)
+        private async void btn_peixe_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -143,12 +117,11 @@ namespace autplay.View
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error", ex.Message, "OK");
             }
-
         }
 
-        private void btn_dog_Clicked(object sender, EventArgs e)
+        private async void btn_dog_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -165,12 +138,11 @@ namespace autplay.View
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error", ex.Message, "OK");
             }
-
         }
 
-        private void btn_horse_Clicked(object sender, EventArgs e)
+        private async void btn_horse_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -187,19 +159,27 @@ namespace autplay.View
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error", ex.Message, "OK");
             }
-
         }
 
-        private void AdcImagens()
+        private void ConfigElementos()
         {
+            // ADICIONANDO IMAGENS
             logo.Source = ImageSource.FromResource("autplay.Assets.logo.png");
             btn_arara.Source = ImageSource.FromResource("autplay.Assets.parrot.png");
             btn_gato.Source = ImageSource.FromResource("autplay.Assets.cat.png");
             btn_dog.Source = ImageSource.FromResource("autplay.Assets.dog.png");
             btn_peixe.Source = ImageSource.FromResource("autplay.Assets.clown-fish.png");
             btn_horse.Source = ImageSource.FromResource("autplay.Assets.horse.png");
+            //DEIXANDO AS FONTES EM NEGRITO E ITÁLICO
+            txtArara.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            txtCavalo.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            txtGato.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            txtPeixe.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            txtDog.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
+            //REMOVENDO A NAVBAR
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
     }

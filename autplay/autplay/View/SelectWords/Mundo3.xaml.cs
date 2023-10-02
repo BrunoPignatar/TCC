@@ -19,11 +19,11 @@ namespace autplay.selectword
             //removendo a navbar
             NavigationPage.SetHasNavigationBar(this, false);
 
+            // BARRA DE USUÁRIO
             if (App.DadosAvatar.ImagemEnviada != null)
             {
                 AvatarImage.Source = App.DadosAvatar.ImagemEnviada;
                 lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
-
             }
             else
             {
@@ -31,35 +31,70 @@ namespace autplay.selectword
                 lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
             }
 
-
-            //AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
-            //lblBoasVindas.Text = "Bem-vindo " + App.DadosAvatar.Nome;
-
             AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
         }
 
-        private void jogo1_mundo3_Clicked(object sender, EventArgs e)
+        private async void jogo1_mundo3_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new autplay.View.jogos.jogodocorreto());
+            try
+            {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                await Navigation.PushAsync(new autplay.View.jogos.jogodocorreto());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
         }
 
-        private void jogo2_mundo3_Clicked(object sender, EventArgs e)
+        private async void jogo2_mundo3_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
 
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                //await Navigation.PushAsync(new autplay.View.jogos.jogodocorreto());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
         }
 
-        private void jogo3_mundo3_Clicked(object sender, EventArgs e)
+        private async void jogo3_mundo3_Clicked(object sender, EventArgs e)
         {
+            try
+            {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
 
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                //await Navigation.PushAsync(new autplay.View.jogos.jogodocorreto());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
         }
 
         private async void voltar_Clicked(object sender, EventArgs e)
         {
             try
             {
-                await Task.Delay(300);
-                //App.Current.MainPage = new NavigationPage(new View.selecao());
-                Navigation.PopAsync();
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                await Navigation.PopAsync();
             }
             catch (Exception ex)
             {

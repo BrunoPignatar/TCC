@@ -20,18 +20,10 @@ namespace autplay.selectword
             NavigationPage.SetHasNavigationBar(this, false);
 
             //BARRA DO USUÁRIO(AVATAR)
-
-            //AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
-            //lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
-            //AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
-
-            //BARRA DO USUÁRIO(AVATAR)
-            //AvatarImage.Source = ImageSource.FromResource(App.DadosAvatar.ImagemPadrao);
             if (App.DadosAvatar.ImagemEnviada != null)
             {
                 AvatarImage.Source = App.DadosAvatar.ImagemEnviada;
                 lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
-
             }
             else
             {
@@ -39,30 +31,37 @@ namespace autplay.selectword
                 lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
             }
 
-
-            //AvatarImage.Source = App.DadosAvatar.ImagemPadrao;
-            //lblBoasVindas.Text = "Bem-vindo " + App.DadosAvatar.Nome;
-
             AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
         }
 
         private async void jogo1_Clicked(object sender, EventArgs e)
         {
+            // Manipule o clique do botão aqui
+            Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+            await Model.Animacoes.AnimacaoBotao(button);
             
-            // Aguardar por 2 segundos (2000 milissegundos)
-            await Task.Delay(300);
-            
-            Navigation.PushAsync(new autplay.View.jogos.jogodavelha());
+            await Navigation.PushAsync(new autplay.View.jogos.jogodavelha());
         }
 
-        private void jogo2_Clicked(object sender, EventArgs e)
+        private async void jogo2_Clicked(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new autplay.View.jogos.jogodapalavra());
+            // Manipule o clique do botão aqui
+            Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+            await Model.Animacoes.AnimacaoBotao(button);
+
+            await Navigation.PushAsync(new autplay.View.jogos.jogodapalavra());
         }
 
-        private void jogo3_Clicked(object sender, EventArgs e)
+        private async void jogo3_Clicked(object sender, EventArgs e)
         {
+            // Manipule o clique do botão aqui
+            Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
 
+            await Model.Animacoes.AnimacaoBotao(button);
+
+            //Navigation.PushAsync(new autplay.View.jogos.jogodapalavra());
         }
 
         private void AlterAvatar_Clicked(object sender, EventArgs e)
@@ -82,9 +81,12 @@ namespace autplay.selectword
         {
             try
             {
-                await Task.Delay(300);
-                //App.Current.MainPage = new NavigationPage(new View.selecao());
-                Navigation.PopAsync();
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                await Navigation.PopAsync();
             }
             catch (Exception ex)
             {

@@ -46,6 +46,11 @@ namespace autplay.selectword
         {
             try
             {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
                 await Navigation.PushAsync(new autplay.View.jogos.jogodasoma());
 
             }
@@ -59,6 +64,11 @@ namespace autplay.selectword
         {
             try
             {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
                 await Navigation.PushAsync(new autplay.View.jogos.jogodasubtração());
 
             }
@@ -68,9 +78,14 @@ namespace autplay.selectword
             }
         }
 
-        private void jogo3_mundo2_Clicked(object sender, EventArgs e)
+        private async void jogo3_mundo2_Clicked(object sender, EventArgs e)
         {
+            // Manipule o clique do botão aqui
+            Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
 
+            await Model.Animacoes.AnimacaoBotao(button);
+
+            //await Navigation.PushAsync(new autplay.View.jogos.jogodasubtração());
         }
 
         private void AlterAvatar_Clicked(object sender, EventArgs e)
@@ -91,9 +106,12 @@ namespace autplay.selectword
         {
             try
             {
-                await Task.Delay(300);
-                //App.Current.MainPage = new NavigationPage(new View.selecao());
-                Navigation.PopAsync();
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                await Navigation.PopAsync();
             }
             catch (Exception ex)
             {

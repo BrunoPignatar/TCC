@@ -12,7 +12,7 @@ namespace autplay.Model
         {
             // Animação de escala
             await btn.ScaleTo(0.7, 100, Easing.Linear);
-            Task.Delay(100);
+            await Task.Delay(50);
             await btn.ScaleTo(1, 100, Easing.Linear);
         }
     }

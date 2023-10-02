@@ -23,7 +23,7 @@
                     <ImageButton x:Name="AvatarImage"
                            BackgroundColor="#698F38"
                            BorderColor="#C6734E"
-                           BorderWidth="1"
+                           BorderWidth="1.5"
                            Scale="1.5"
                            HeightRequest="50"
                            WidthRequest="45"
@@ -42,7 +42,7 @@
                            VerticalTextAlignment="Center"/>
 
                     <ImageButton x:Name="AlterAvatar"
-                           BackgroundColor="Brown"
+                           BackgroundColor="#C6734E"
                            HorizontalOptions="EndAndExpand"
                            VerticalOptions="Center"
                            Padding="-3"
@@ -52,12 +52,12 @@
                            Clicked="AlterAvatar_Clicked"/>
                 </StackLayout>
             </Frame>
-            <BoxView Color="#C6734E" HeightRequest="1"
+            <BoxView Color="#C6734E" HeightRequest="1.5"
                      HorizontalOptions="FillAndExpand"/>
 
             <StackLayout VerticalOptions="CenterAndExpand">
 
-                    <Button
+                <Button
                         x:Name="jogo1_mundo2"
                          FontAttributes="Bold"
                          VerticalOptions="Center"
@@ -71,11 +71,10 @@
                          TextColor="#698F38"
                         Clicked="jogo1_mundo2_Clicked"
                         FontSize="23"
-                    xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                    xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#C6734E"/>
-                    
+                    />
 
-                    <Button
+
+                <Button
                         x:Name="jogo2_mundo2"
                          FontAttributes="Bold"
                          VerticalOptions="Center"
@@ -88,11 +87,10 @@
                          Text="JOGO DA SUBTRAÇÃO"
                          TextColor="#698F38"
                          Clicked="jogo2_mundo2_Clicked"
-                         FontSize="18"
-                         xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                         xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#C6734E"/>
+                         FontSize="23"
+                         />
 
-                    <Button
+                <Button
                         x:Name="jogo3_mundo2"
                          FontAttributes="Bold"
                          VerticalOptions="Center"
@@ -105,17 +103,15 @@
                          Text="JOGO 3"
                          TextColor="#698F38"
                          Clicked="jogo3_mundo2_Clicked"
-                         FontSize="18"
-                         xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                         xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#C6734E"/>
+                         FontSize="23"
+                         />
 
-                </StackLayout>
+            </StackLayout>
 
             <StackLayout VerticalOptions="End">
                 <Button
                             x:Name="voltar"
                             FontAttributes="Bold"
-                            
                             BorderColor="Transparent"
                             BorderWidth="1"
                             CornerRadius="15"
@@ -124,11 +120,10 @@
                             Margin="10,0,10,10"
                             BackgroundColor="white"
                             Text="RETORNAR"
-                            TextColor="#698F38"
+                            TextColor="#C6734E"
                             Clicked="voltar_Clicked"
                             FontSize="23"
-                            xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
-                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="#C6734E"/>
+                            />
 
             </StackLayout>
 

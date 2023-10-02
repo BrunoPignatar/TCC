@@ -19,13 +19,12 @@
                    BackgroundColor="#CDFFD8"
                    BorderColor="Transparent">
 
-
                 <StackLayout Orientation="Horizontal">
 
                     <ImageButton x:Name="AvatarImage"
                            BackgroundColor="#CDFFD8"
                            BorderColor="#94B9FF"
-                           BorderWidth="1"
+                           BorderWidth="1.5"
                            Scale="1.5"
                            HeightRequest="50"
                            WidthRequest="45"
@@ -53,11 +52,11 @@
                            Clicked="AlterAvatar_Clicked"/>
                 </StackLayout>
             </Frame>
-            <BoxView Color="#94B9FF" HeightRequest="1"
+            <BoxView Color="#94B9FF" HeightRequest="1.5"
                      HorizontalOptions="FillAndExpand"/>
 
             <StackLayout>
-                <Label Text="SELECIONE UM MUNDO" TextColor="#8C52FF" HorizontalOptions="Center"
+                <Label Text="VIAJAR PARA UM MUNDO" TextColor="#8C52FF" HorizontalOptions="Center"
                                FontSize="25" FontAttributes="Bold" Margin="0,0,0,05"/>
 
 
