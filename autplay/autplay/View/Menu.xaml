@@ -5,10 +5,10 @@
              x:Class="autplay.View.Menu"
              >
     <ContentPage.Background>
-        <LinearGradientBrush EndPoint="0,1">
-            <GradientStop Color="#CDFFD8"
+        <LinearGradientBrush EndPoint="1,0.7">
+            <GradientStop Color="#0583F2"
                           Offset="0.1" />
-            <GradientStop Color="#00A6F0"
+            <GradientStop Color="#f20587"
                           Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -21,16 +21,17 @@
                    />
 
             <Frame BackgroundColor="White"
-                       CornerRadius="10"
+                       CornerRadius="20"
                        HeightRequest="400"
                        Margin="15,0,15,0"
+                       HasShadow="False"
                        VerticalOptions="CenterAndExpand">
                 <StackLayout>
                     <Label HorizontalOptions="CenterAndExpand">
                         <Label.FormattedText>
                             <FormattedString>
-                                <Span Text="ESCOLHA O SEU" FontSize="21" TextColor="#00A6F0"/>
-                                <Span Text=" AVATAR" FontSize="22" FontAttributes="Bold" TextColor="#8C52FF"/>
+                                <Span Text="ESCOLHA O SEU" FontSize="21" TextColor="#0583F2"/>
+                                <Span Text=" AVATAR" FontSize="22" FontAttributes="Bold" TextColor="#7c05f2"/>
                             </FormattedString>
                         </Label.FormattedText>
                     </Label>
@@ -45,14 +46,15 @@
 
                             <StackLayout Margin="5,5,0,0" Scale="1.1">
                                 <ImageButton x:Name="btn_arara" Clicked="btn_arara_Clicked_1" 
-                                             BackgroundColor="#6cd2ff" Padding="15" 
+                                             BackgroundColor="#0583F2" Padding="15" 
                                              CornerRadius="50" 
                                              WidthRequest="100"
                                              HeightRequest="100"
                                              HorizontalOptions="CenterAndExpand"
                                              VerticalOptions="CenterAndExpand"
                                  />
-                                <Label TextColor="#ff9f34"
+                                <Label x:Name="txtArara"
+                                       TextColor="#ff9f34"
                                        FontSize="16" 
                                        HorizontalOptions="CenterAndExpand"
                                        VerticalOptions="StartAndExpand"
@@ -62,7 +64,7 @@
 
                             <StackLayout Margin="5,5,0,0" Scale="1.1">
                                 <ImageButton x:Name="btn_gato" Clicked="btn_gato_Clicked"
-                                             BackgroundColor="#6cd2ff" Padding="15" 
+                                             BackgroundColor="#0583F2" Padding="15" 
                                              CornerRadius="50" 
                                              WidthRequest="100"
                                              HeightRequest="100"
@@ -79,7 +81,7 @@
 
                             <StackLayout Margin="5,5,0,0" Scale="1.1">
                                 <ImageButton  x:Name="btn_peixe" Clicked="btn_peixe_Clicked"
-                                              BackgroundColor="#6cd2ff" Padding="15"
+                                              BackgroundColor="#0583F2" Padding="15"
                                               CornerRadius="50" 
                                               WidthRequest="100"
                                              HeightRequest="100"
@@ -95,7 +97,7 @@
 
                             <StackLayout Margin="5,5,0,0" Scale="1.1">
                                 <ImageButton x:Name="btn_dog" Clicked="btn_dog_Clicked"
-                                             BackgroundColor="#6cd2ff" Padding="15"
+                                             BackgroundColor="#0583F2" Padding="15"
                                              CornerRadius="50" 
                                              WidthRequest="100"
                                              HeightRequest="100"
@@ -111,7 +113,7 @@
 
                             <StackLayout Margin="5,5,0,0" Scale="1.1">
                                 <ImageButton x:Name="btn_horse" Clicked="btn_horse_Clicked"
-                                             BackgroundColor="#6cd2ff" Padding="15"
+                                             BackgroundColor="#0583F2" Padding="15"
                                              CornerRadius="50" 
                                              WidthRequest="100"
                                              HeightRequest="100"
@@ -130,7 +132,7 @@
                     <StackLayout VerticalOptions="EndAndExpand" Margin="0,0,0,010">
 
                         <Entry x:Name="txtNome" Placeholder="QUAL O SEU NOME?" 
-                               PlaceholderColor="#00A6F0" TextColor="#8C52FF" FontSize="20"
+                               PlaceholderColor="#0583F2" TextColor="#7c05f2" FontSize="20"
                                HorizontalOptions="CenterAndExpand" MaxLength="15"
                                
                                Scale="1.15"
@@ -140,18 +142,19 @@
 
                         <Label Text="USAR MINHA FOTO:"
                                HorizontalOptions="CenterAndExpand"
-                               FontSize="15"
-                               TextColor="#8C52FF"/>
+                               FontSize="16"
+                               TextColor="#7c05f2"
+                               Margin="0,05,0,0"/>
 
                         <Button x:Name="btn_add"
                                 Clicked="btn_add_Clicked"
                                 Margin="0,0,0,0"
                                 CornerRadius="100"
                                 HeightRequest="90"
-                                BorderColor="#00A6F0"
+                                BorderColor="#0583F2"
                                 BorderWidth="1.5"
                                 WidthRequest="90"
-                                BackgroundColor="#8C52FF"
+                                BackgroundColor="#7c05f2"
                                 Text="+"
                                 FontSize="50" TextColor="White" FontAttributes="Bold"
                                 HorizontalOptions="CenterAndExpand"

@@ -90,21 +90,6 @@
                          FontSize="18"
                     />
 
-                <Button
-                        x:Name="jogo3_mundo3"
-                         FontAttributes="Bold"
-                         VerticalOptions="Center"
-                         BorderWidth="1"
-                         CornerRadius="10"
-                         HeightRequest="60"
-                         WidthRequest="50"
-                         Margin="10"
-                         BackgroundColor="white"
-                         Text="JOGO 3"
-                         TextColor="Black"
-                         Clicked="jogo3_mundo3_Clicked"
-                         FontSize="18"
-                    />
             </StackLayout>
 
 

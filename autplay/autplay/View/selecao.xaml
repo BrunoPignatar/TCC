@@ -1,14 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             
              x:Class="autplay.View.selecao"
              >
     <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="0,0.6">
+        <LinearGradientBrush EndPoint="0,1">
             <GradientStop Color="#CDFFD8"
-                          Offset="0.28" />
-            <GradientStop Color="#94B9FF"
+                          Offset="0.1" />
+            <GradientStop Color="#00A6F0"
                           Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -23,7 +22,7 @@
 
                     <ImageButton x:Name="AvatarImage"
                            BackgroundColor="#CDFFD8"
-                           BorderColor="#94B9FF"
+                           BorderColor="white"
                            BorderWidth="1.5"
                            Scale="1.5"
                            HeightRequest="50"
@@ -35,7 +34,7 @@
                            Aspect="AspectFill"/>
 
                     <Label x:Name="lblBoasVindas"
-                           TextColor="#8C52FF" FontSize="20" 
+                           TextColor="white" FontSize="20" 
                            Margin="15,0,5,0"
                            HorizontalTextAlignment="Start" 
                            FontAttributes="Bold"
@@ -52,19 +51,18 @@
                            Clicked="AlterAvatar_Clicked"/>
                 </StackLayout>
             </Frame>
-            <BoxView Color="#94B9FF" HeightRequest="1.5"
+            <BoxView Color="white" HeightRequest="1.5"
                      HorizontalOptions="FillAndExpand"/>
 
             <StackLayout>
-                <Label Text="VIAJAR PARA UM MUNDO" TextColor="#8C52FF" HorizontalOptions="Center"
+                <Label Text="Viajar para um mundo" TextColor="#8C52FF" HorizontalOptions="Center"
                                FontSize="25" FontAttributes="Bold" Margin="0,0,0,05"/>
-
 
                 <Grid RowDefinitions="200,200,200">
                     <!-- MUDAR GRADIENTE DENTRO DAS PÁGINAS DE JOGOS DE ACORDO COM A LOGO -->
                     <ImageButton x:Name="btn_worldrose" Scale="2"
                                                  Clicked="btn_worldrose_Clicked"
-                                                 BackgroundColor="#8C52FF"
+                                                 BackgroundColor="white"
                                                  WidthRequest="100"
                                                  HeightRequest="100"
                                                  Grid.Row="0"
@@ -75,14 +73,14 @@
                                                  />
                     <ImageButton x:Name="btn_worldapocalypse" Scale="2" 
                                                  Clicked="btn_worldapocalypse_Clicked" 
-                                                 BackgroundColor="#8C52FF" 
+                                                 BackgroundColor="white" 
                                                  WidthRequest="100" HeightRequest="100"
                                                  Grid.Row="1" CornerRadius="50"
                                                  HorizontalOptions="Center"
                                                  VerticalOptions="Center"/>
                     <ImageButton  x:Name="btn_worldgum" Scale="2" 
                                                   Clicked="btn_worldgum_Clicked"  
-                                                  BackgroundColor="#8C52FF"
+                                                  BackgroundColor="white"
                                                   WidthRequest="100" HeightRequest="100"
                                                   Grid.Row="2" CornerRadius="50"
                                                   HorizontalOptions="Center"

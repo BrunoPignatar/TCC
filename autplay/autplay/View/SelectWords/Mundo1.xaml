@@ -6,9 +6,9 @@
              Title="MUNDO 1">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.9">
-            <GradientStop Color="#6BC6FA"
+            <GradientStop Color="#fff5ae"
                           Offset="0.28" />
-            <GradientStop Color="#D938A7"
+            <GradientStop Color="#ffacf5"
                           Offset="1.0" />
         </LinearGradientBrush>
 
@@ -17,14 +17,14 @@
         <StackLayout>
 
             <Frame HeightRequest="50"
-                   BackgroundColor="#6BC6FA"
+                   BackgroundColor="#fff5ae"
                    BorderColor="Transparent">
 
                 <StackLayout Orientation="Horizontal">
 
                     <ImageButton x:Name="AvatarImage"
-                           BackgroundColor="#6BC6FA"
-                           BorderColor="#8C52FF"
+                           BackgroundColor="#fff5ae"
+                           BorderColor="#ffacf5"
                            BorderWidth="1.5"
                            Scale="1.5"
                            HeightRequest="50"
@@ -35,7 +35,7 @@
                            Aspect="AspectFill"/>
 
                     <Label x:Name="lblBoasVindas"
-                           TextColor="#8C52FF" FontSize="20" 
+                           TextColor="#ffacf5" FontSize="20" 
                            Margin="15,0,5,0"
                            HorizontalTextAlignment="Start" 
                            
@@ -43,7 +43,7 @@
                            VerticalTextAlignment="Center"/>
 
                     <ImageButton x:Name="AlterAvatar"
-                           BackgroundColor="#8C52FF"
+                           BackgroundColor="#ffacf5"
                            HorizontalOptions="EndAndExpand"
                            VerticalOptions="Center"
                            Padding="-3"
@@ -53,7 +53,7 @@
                            Clicked="AlterAvatar_Clicked"/>
                 </StackLayout>
             </Frame>
-            <BoxView Color="#8C52FF" HeightRequest="1.5"
+            <BoxView Color="#ffacf5" HeightRequest="1.5"
                      HorizontalOptions="FillAndExpand"/>
 
             <StackLayout VerticalOptions="CenterAndExpand">
@@ -91,24 +91,6 @@
                 FontSize="23"
                 />
 
-
-                <Button
-                x:Name="jogo3"
-                FontAttributes="Bold"
-                BorderColor="Transparent"
-                BorderWidth="1"
-                CornerRadius="15"
-                HeightRequest="60"
-                WidthRequest="50"
-                Margin="10,10,10,0"
-                BackgroundColor="white"
-                Text="JOGO 3"
-                TextColor="#D938A7"
-                Clicked="jogo3_Clicked"
-                FontSize="23"
-                />
-
-                
             </StackLayout>
 
             <StackLayout VerticalOptions="End">
