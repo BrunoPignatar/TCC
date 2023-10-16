@@ -5,7 +5,7 @@
              x:Class="autplay.View.Menu"
              >
     <ContentPage.Background>
-        <LinearGradientBrush EndPoint="1,0.7">
+        <LinearGradientBrush EndPoint="1,1.1">
             <GradientStop Color="#0583F2"
                           Offset="0.1" />
             <GradientStop Color="#f20587"

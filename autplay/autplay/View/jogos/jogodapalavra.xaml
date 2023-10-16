@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="autplay.View.jogos.jogodapalavra"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
-    
+
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
             <GradientStop Color="#6BC6FA"
@@ -14,21 +14,78 @@
     </ContentPage.Background>
     <ContentPage.Content>
         <StackLayout>
+            <!--
+            <Label FontSize="40"
+                   Text="Jogo da Palavra" TextColor="White" 
+                   FontAttributes="Bold"
+                   HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   />
+            -->
 
-            <Frame CornerRadius="10" BackgroundColor="White" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
-                <StackLayout>
-                    <Image x:Name="img_imagem"/>
+            <Frame HeightRequest="30"
+                       WidthRequest="160"
+                       Margin="10,10,10,0"
+                       BackgroundColor="#D938A7"
+                       BorderColor="white"
+                       CornerRadius="15"
+                       HorizontalOptions="StartAndExpand">
+                
+                <Label x:Name="Score" Margin="05,0,0,0" FontSize="25"
+                           Scale="1.2" HorizontalOptions="Start"
+                           TextColor="white" FontAttributes="bold" 
+                           Text="Acertos: "/>
+            </Frame>
+            
 
-                    <Label Text="que animal é esse" TextColor="Black" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"/>
+            <Frame CornerRadius="10"
+                   Margin="10,0,10,0"
+                   HeightRequest="340"
+                   BackgroundColor="Transparent"
+                   BorderColor="white"
+                   VerticalOptions="CenterAndExpand">
 
-                    <Entry x:Name="txt_resposta"/>
+                <StackLayout VerticalOptions="CenterAndExpand">
 
-                    <Button x:Name="btn_enviar" Text="enviar" Clicked="btn_enviar_Clicked" TextColor="Black" CornerRadius="10" BorderWidth="1"
-                            BorderColor="Black" BackgroundColor="Transparent"/>
+                    <Image x:Name="img_imagem"
+                           HeightRequest="160" BackgroundColor="Transparent"
+                           HorizontalOptions="CenterAndExpand"
+                           
+                           />
+
+                    <Label Text="Adivinhe o animal!" FontSize="30"
+                           TextColor="white" HorizontalOptions="CenterAndExpand"
+                           />
+
+                    <Entry x:Name="txt_resposta" Placeholder="Qual é o animal?"
+                               PlaceholderColor="white" TextColor="white" FontSize="20"
+                               MaxLength="15"
+                               HorizontalTextAlignment="Center" 
+                               FontAttributes="Bold"
+                               Margin="10,0,10,0"
+                               />
+
+                    <Button x:Name="btn_enviar" Text="Tentar" FontSize="20"
+                            Clicked="btn_enviar_Clicked" TextColor="white"
+                            CornerRadius="10" BorderWidth="2"
+                            Margin="0,05,0,0"
+                            BorderColor="white" BackgroundColor="Transparent"/>
                 </StackLayout>
             </Frame>
 
-            
+            <Button FontAttributes="Bold"
+                    BorderColor="#D938A7"
+                    BorderWidth="2"
+                    CornerRadius="15"
+                    HeightRequest="60"
+                    WidthRequest="50"
+                    Margin="10,0,10,10"
+                    BackgroundColor="white"
+                    Text="Viajar de Volta"
+                    TextColor="#D938A7"
+                    Clicked="Button_Clicked"
+                    FontSize="23"
+                    />
 
         </StackLayout>
     </ContentPage.Content>

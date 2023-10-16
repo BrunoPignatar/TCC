@@ -25,7 +25,6 @@ namespace autplay.View.jogos
             NavigationPage.SetHasNavigationBar(this, false);
             background.Source = ImageSource.FromResource("autplay.Assets.backgroundJogodaSoma.png");
             gerar();
-            
         }
 
         public void gerar()
@@ -129,6 +128,23 @@ namespace autplay.View.jogos
             corAntiga = randomColor;
             return randomColor;
 
+        }
+
+        private async void voltar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
         }
     }
 }

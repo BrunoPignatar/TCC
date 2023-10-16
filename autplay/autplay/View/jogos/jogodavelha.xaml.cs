@@ -221,5 +221,21 @@ namespace autplay.View.jogos
             jogadas = 0;
         }
 
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
+        }
     }
 }

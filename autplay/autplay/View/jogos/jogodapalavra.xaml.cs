@@ -19,13 +19,18 @@ namespace autplay.View.jogos
             NavigationPage.SetHasNavigationBar(this, false);
             gerador();
         }
-        string resposta_correta;
+        string resposta_correta; int anterior; int acertos = 0;
 
         public void gerador()
         {
             var ramdom = new Random();
 
             int animal = ramdom.Next(1, 5);
+            while(animal == anterior)
+            {
+                animal = ramdom.Next(1, 5);
+            }
+
 
             if (animal == 1)
             {
@@ -53,6 +58,8 @@ namespace autplay.View.jogos
                 resposta_correta = "papagaio";
             }
 
+            anterior = animal;
+            Score.Text = "Acertos: " + acertos;
         }
 
         private async void btn_enviar_Clicked(object sender, EventArgs e)
@@ -60,22 +67,38 @@ namespace autplay.View.jogos
             Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
 
             await Model.Animacoes.AnimacaoBotao(button);
-            Task.Delay(500);
-
-
+            await Task.Delay(100);
 
             if (txt_resposta.Text == resposta_correta)
             {
-                await DisplayAlert("parabens", "vc acertou", "ok");
+                await DisplayAlert("Parabéns", "Você acertou", "ok");
+                resposta_correta = "";
+                txt_resposta.Text = "";
+                acertos++;
+                gerador();
             }
             else
             {
-                await DisplayAlert("que pena que", "você errou", "ok");
+                await DisplayAlert("Que pena!", "Você errou\nTente Novamente!", "ok");
+                txt_resposta.Text = "";
             }
+        }
 
-            txt_resposta.Text = "";
-            resposta_correta = "";
-            gerador();
+        private async void Button_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
         }
     }
 }

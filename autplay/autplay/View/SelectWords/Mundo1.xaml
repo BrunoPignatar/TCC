@@ -5,10 +5,10 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Title="MUNDO 1">
     <ContentPage.Background>
-        <LinearGradientBrush StartPoint="0,0" EndPoint="1,0.9">
-            <GradientStop Color="#fff5ae"
-                          Offset="0.28" />
-            <GradientStop Color="#ffacf5"
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1.1">
+            <GradientStop Color="#6BC6FA"
+                          Offset="0.23" />
+            <GradientStop Color="#D938A7"
                           Offset="1.0" />
         </LinearGradientBrush>
 
@@ -17,14 +17,14 @@
         <StackLayout>
 
             <Frame HeightRequest="50"
-                   BackgroundColor="#fff5ae"
+                   BackgroundColor="#6BC6FA"
                    BorderColor="Transparent">
 
                 <StackLayout Orientation="Horizontal">
 
                     <ImageButton x:Name="AvatarImage"
-                           BackgroundColor="#fff5ae"
-                           BorderColor="#ffacf5"
+                           BackgroundColor="#6BC6FA"
+                           BorderColor="#D938A7"
                            BorderWidth="1.5"
                            Scale="1.5"
                            HeightRequest="50"
@@ -35,7 +35,7 @@
                            Aspect="AspectFill"/>
 
                     <Label x:Name="lblBoasVindas"
-                           TextColor="#ffacf5" FontSize="20" 
+                           TextColor="#D938A7" FontSize="20" 
                            Margin="15,0,5,0"
                            HorizontalTextAlignment="Start" 
                            
@@ -43,7 +43,7 @@
                            VerticalTextAlignment="Center"/>
 
                     <ImageButton x:Name="AlterAvatar"
-                           BackgroundColor="#ffacf5"
+                           BackgroundColor="#D938A7"
                            HorizontalOptions="EndAndExpand"
                            VerticalOptions="Center"
                            Padding="-3"
@@ -53,7 +53,7 @@
                            Clicked="AlterAvatar_Clicked"/>
                 </StackLayout>
             </Frame>
-            <BoxView Color="#ffacf5" HeightRequest="1.5"
+            <BoxView Color="#D938A7" HeightRequest="1.5"
                      HorizontalOptions="FillAndExpand"/>
 
             <StackLayout VerticalOptions="CenterAndExpand">
@@ -70,7 +70,7 @@
                     Margin="10,0,10,0"
                     BackgroundColor="WHITE"
                     Text="JOGO DA VELHA"
-                    TextColor="#D938A7"
+                    TextColor="#6BC6FA"
                     Clicked="jogo1_Clicked"
                     FontSize="23"
                     />
@@ -86,7 +86,7 @@
                 Margin="10,10,10,0"
                 BackgroundColor="White"
                 Text="JOGO DA PALAVRA"
-                TextColor="#D938A7"
+                TextColor="#6BC6FA"
                 Clicked="jogo2_Clicked"
                 FontSize="23"
                 />
@@ -97,15 +97,15 @@
                 <Button
                             x:Name="voltar"
                             FontAttributes="Bold"
-                            BorderColor="Transparent"
-                            BorderWidth="1"
+                            BorderColor="#D938A7"
+                            BorderWidth="2"
                             CornerRadius="15"
                             HeightRequest="60"
                             WidthRequest="50"
                             Margin="10,0,10,10"
                             BackgroundColor="white"
-                            Text="RETORNAR"
-                            TextColor="#8C52FF"
+                            Text="Viajar de Volta"
+                            TextColor="#D938A7"
                             Clicked="voltar_Clicked"
                             FontSize="23"
                             />

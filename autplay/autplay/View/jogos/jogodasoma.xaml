@@ -18,9 +18,6 @@
                            Scale="1.2" HorizontalOptions="Start"
                            TextColor="DarkGreen" FontAttributes="bold" 
                            Text="Acertos: "/>
-
-
-
                 </Frame>
 
                 <!--<Frame HeightRequest="100"
@@ -189,7 +186,21 @@
                     </Frame>
                 </StackLayout>
 
-
+                <Button
+                            x:Name="voltar"
+                            FontAttributes="Bold"
+                            BorderColor="white"
+                            BorderWidth="2"
+                            CornerRadius="15"
+                            HeightRequest="60"
+                            WidthRequest="50"
+                            Margin="10,0,10,10"
+                            BackgroundColor="#C6734E"
+                            Text="Viajar de Volta"
+                            TextColor="white"
+                            Clicked="voltar_Clicked"
+                            FontSize="23"
+                            />
 
 
 
