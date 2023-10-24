@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="autplay.View.jogos.JogoDasSombras"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <ContentPage.Content>
+        <StackLayout>
+
+            <Frame>
+                <StackLayout>
+                    <Image x:Name="img_sombra" BackgroundColor="Transparent" xct:IconTintColorEffect.TintColor="Black"/>
+
+                    <ScrollView>
+                        <StackLayout>
+                            <ImageButton x:Name="img_1" Clicked="img_1_Clicked"/>
+                            <ImageButton x:Name="img_2" Clicked="img_2_Clicked"/>
+                            <ImageButton x:Name="img_3" Clicked="img_3_Clicked"/>
+                        </StackLayout>
+                    </ScrollView>
+                   
+                    
+                </StackLayout>
+            </Frame>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
