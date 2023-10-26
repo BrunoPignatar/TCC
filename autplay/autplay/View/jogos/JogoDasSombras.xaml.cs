@@ -13,75 +13,72 @@ namespace autplay.View.jogos
     public partial class JogoDasSombras : ContentPage
     {
 
-        int CERTO, BOTAO = 0;
+        int resposta, BOTAO = 0, ultimoGerado=0, ultimoGeradoIMG=0;
 
         public JogoDasSombras()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             gerador();
         }
 
-        private async void img_3_Clicked(object sender, EventArgs e)
+        private async void check(object sender, EventArgs e)
         {
-            if (img_3.Source == img_sombra.Source)
+            ImageButton btn = (ImageButton)sender;
+            if (btn.Source == img_sombra.Source)
             {
                 await DisplayAlert("Parabens", "voce acertou", "ok");
+                gerador();
             }
             else
             {
-                await DisplayAlert("Parabens", "voce errou", "ok");
+                await DisplayAlert("Que Pena ", "voce errou\nTente Novamente", "ok");
             }
-            gerador();
+            
         }
 
-        private async void img_2_Clicked(object sender, EventArgs e)
+        private async void voltar_Clicked(object sender, EventArgs e)
         {
-            if (img_2.Source == img_sombra.Source)
+            try
             {
-                await DisplayAlert("Parabens", "voce acertou", "ok");
-            }
-            else
-            {
-                await DisplayAlert("Parabens", "voce errou", "ok");
-            }
-            gerador();
-        }
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
 
-        private async void img_1_Clicked(object sender, EventArgs e)
-        {
-            if (img_1.Source == img_sombra.Source)
-            {
-                await DisplayAlert("Parabens", "voce acertou", "ok");
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                await Navigation.PopAsync();
             }
-            else
+            catch (Exception ex)
             {
-                await DisplayAlert("Parabens", "voce errou", "ok");
+                DisplayAlert("Error", ex.Message, "OK");
             }
-            gerador();
         }
 
         public void gerador()
         {
-
-            CERTO = new Random().Next(1, 6);
+            do resposta = new Random().Next(1, 6);
+            while (resposta == ultimoGerado);
 
             var random = new Random();
 
-            int img1 = random.Next(1, 6), img2 = random.Next(1, 6), img3 = random.Next(1, 6);
+
+            int img1 = random.Next(1, 6),
+                img2 = random.Next(1, 6),
+                img3 = random.Next(1, 6);
 
             
 
-            if (CERTO == 1)
+            if (resposta == 1)
             {
                 img_sombra.Source = ImageSource.FromResource("autplay.Assets.cat.png");
                 BOTAO = 1;
             }
-            else if (CERTO == 2)
+            else if (resposta == 2)
             {
                 img_sombra.Source = ImageSource.FromResource("autplay.Assets.clown-fish.png");
                 BOTAO = 2;
             }
-            else if (CERTO == 3)
+            else if (resposta == 3)
             {
                 img_sombra.Source = ImageSource.FromResource("autplay.Assets.dog.png");
                 BOTAO = 3;

@@ -60,7 +60,7 @@ namespace autplay.selectword
 
                 await Model.Animacoes.AnimacaoBotao(button);
 
-                //await Navigation.PushAsync(new autplay.View.jogos.jogodocorreto());
+                await Navigation.PushAsync(new autplay.View.jogos.JogoDasSombras());
             }
             catch (Exception ex)
             {
@@ -68,22 +68,6 @@ namespace autplay.selectword
             }
         }
 
-        private async void jogo3_mundo3_Clicked(object sender, EventArgs e)
-        {
-            try
-            {
-                // Manipule o clique do botão aqui
-                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
-
-                await Model.Animacoes.AnimacaoBotao(button);
-
-                //await Navigation.PushAsync(new autplay.View.jogos.jogodocorreto());
-            }
-            catch (Exception ex)
-            {
-                DisplayAlert("Error", ex.Message, "OK");
-            }
-        }
 
         private async void voltar_Clicked(object sender, EventArgs e)
         {

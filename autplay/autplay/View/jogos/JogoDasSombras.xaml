@@ -5,23 +5,59 @@
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
     <ContentPage.Content>
         <StackLayout>
-
-            <Frame>
+            <Frame HeightRequest="30"
+                   WidthRequest="160"
+                   Margin="10,10,10,0"
+                   BackgroundColor="DeepPink"
+                   BorderColor="Aqua"
+                   CornerRadius="15"
+                   HorizontalOptions="StartAndExpand"
+                   Scale="0.9">
+                <Label x:Name="Score" Margin="05,0,0,0" FontSize="25"
+                       Scale="1.2" HorizontalOptions="Start"
+                       TextColor="Aqua" FontAttributes="bold" 
+                       Text="Acertos: "/>
+            </Frame>
+            <Frame BackgroundColor="Transparent">
                 <StackLayout>
-                    <Image x:Name="img_sombra" BackgroundColor="Transparent" xct:IconTintColorEffect.TintColor="Black"/>
-
-                    <ScrollView>
-                        <StackLayout>
-                            <ImageButton x:Name="img_1" Clicked="img_1_Clicked"/>
-                            <ImageButton x:Name="img_2" Clicked="img_2_Clicked"/>
-                            <ImageButton x:Name="img_3" Clicked="img_3_Clicked"/>
-                        </StackLayout>
-                    </ScrollView>
-                   
-                    
+                    <Image x:Name="img_sombra" BackgroundColor="Transparent"
+                           HeightRequest="180" HorizontalOptions="CenterAndExpand"
+                           xct:IconTintColorEffect.TintColor="Black"/>
                 </StackLayout>
             </Frame>
-            
+            <StackLayout>
+                <Grid ColumnDefinitions="180,180"
+                      RowDefinitions="150,150"
+                      HorizontalOptions="CenterAndExpand"
+                      VerticalOptions="EndAndExpand">
+                    <ImageButton Grid.Column="0"  x:Name="img_1" Clicked="check" HeightRequest="150"
+                                 HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"/>
+                    <ImageButton Grid.Column="1" x:Name="img_2" Clicked="check" HeightRequest="150"
+                                 HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"/>
+                    <ImageButton Grid.Column="0" Grid.Row="1"  x:Name="img_3" Clicked="check" HeightRequest="150"
+                                 HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"/>
+                    <ImageButton Grid.Column="1" Grid.Row="1"  x:Name="img_4" Clicked="check" HeightRequest="150"
+                                HorizontalOptions="CenterAndExpand" BackgroundColor="red" Padding="20" CornerRadius="25"/>
+                </Grid>
+            </StackLayout>
+
+            <Button
+            x:Name="voltar"
+            FontAttributes="Bold"
+            BorderColor="white"
+            BorderWidth="2"
+            VerticalOptions="EndAndExpand"
+            CornerRadius="15"
+            HeightRequest="60"
+            WidthRequest="50"
+            Margin="10,0,10,10"
+            BackgroundColor="DeepPink"
+            Text="Viajar de Volta"
+            TextColor="white"
+            Clicked="voltar_Clicked"
+            FontSize="23"
+            />
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

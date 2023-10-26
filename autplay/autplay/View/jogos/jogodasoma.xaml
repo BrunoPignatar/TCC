@@ -202,10 +202,6 @@
                             FontSize="23"
                             />
 
-
-
-
-
             </StackLayout>
         </Grid>
     </ContentPage.Content>
