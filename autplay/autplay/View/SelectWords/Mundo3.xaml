@@ -68,13 +68,13 @@
                          Margin="10"
                          BackgroundColor="white"
                          Text="Jogo do Correto"
-                         TextColor="Black"
+                         TextColor="#23E9FC"
                          Clicked="jogo1_mundo3_Clicked"
                          FontSize="18"
                         xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
                         xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.6" xct:TouchEffect.PressedBackgroundColor="Gray"/>
 
-                <Button
+                <!-- <Button
                         x:Name="jogo2_mundo3"
                          FontAttributes="Bold"
                          VerticalOptions="Center"
@@ -88,7 +88,7 @@
                          TextColor="Black"
                          Clicked="jogo2_mundo3_Clicked"
                          FontSize="18"
-                    />
+                    /> -->
 
             </StackLayout>
 

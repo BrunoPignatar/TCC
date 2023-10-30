@@ -16,12 +16,16 @@
     <ContentPage.Content>
         <StackLayout>
 
-            <Frame CornerRadius="30" VerticalOptions="Start" HorizontalOptions="Start" BackgroundColor="#F25EC4" BorderColor="#23E9FC">
-                <Label x:Name="txt_contagem" TextColor="#23E9FC" Text="Acertos: 0" FontSize="Title"/>
+            <Frame CornerRadius="30" VerticalOptions="Start" Margin="5,5,0,0"
+                   HorizontalOptions="Start" BackgroundColor="#F25EC4" BorderColor="#23E9FC">
+                <Label x:Name="txt_contagem" TextColor="#23E9FC" Text="Acertos: 0" FontSize="Title"
+                       FontAttributes="Bold" />
             </Frame>
 
 
-            <Frame Scale="0.9" BackgroundColor="#F25EC4" BorderColor="#23E9FC" CornerRadius="30" VerticalOptions="CenterAndExpand">
+            <Frame Scale="1" BackgroundColor="#F25EC4" Margin="5"
+                   BorderColor="#23E9FC" CornerRadius="30"
+                   VerticalOptions="CenterAndExpand">
                 <StackLayout>
                     <Label x:Name="txt_pergunta" Text="esse é o animal" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#23E9FC" FontSize="30"/>
 
@@ -29,13 +33,13 @@
                     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
                         <Button CornerRadius="100" x:Name="btn_sim" HorizontalOptions="StartAndExpand" Text="✓" BackgroundColor="Transparent" FontSize="50" Clicked="btn_sim_Clicked" TextColor="#23E9FC"
                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.SpringOut}"
-                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="#F25EC4"/>
 
                         <Image x:Name="img_animal"/>
 
                         <Button  CornerRadius="100" x:Name="btn_nao" HorizontalOptions="EndAndExpand" Text="X" BackgroundColor="Transparent" FontSize="50" Clicked="btn_nao_Clicked" TextColor="#23E9FC" 
                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.SpringOut}"
-                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="Gray"/>
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="#F25EC4"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>

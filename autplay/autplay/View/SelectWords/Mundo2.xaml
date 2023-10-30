@@ -74,7 +74,7 @@
                     />
 
 
-                <Button
+                <!-- <Button
                         x:Name="jogo2_mundo2"
                          FontAttributes="Bold"
                          VerticalOptions="Center"
@@ -88,7 +88,7 @@
                          TextColor="#698F38"
                          Clicked="jogo2_mundo2_Clicked"
                          FontSize="23"
-                         />
+                         /> -->
 
             </StackLayout>
 

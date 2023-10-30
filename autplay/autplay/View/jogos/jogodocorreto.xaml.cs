@@ -19,7 +19,7 @@ namespace autplay.View.jogos
             gerador();
         }
 
-        int pergunta = 0, numero = 0, anteriorpgt = 0, anteriornmr = 0;
+        int pergunta = 0, numero = 0, anteriorpgt = 0, anteriornmr = 0, acertos=0;
 
         private async void voltar_Clicked(object sender, EventArgs e)
         {
@@ -53,23 +53,23 @@ namespace autplay.View.jogos
 
             if (pergunta == 1)
             {
-                txt_pergunta.Text = "esse é o gato?";
+                txt_pergunta.Text = "Esse é o Gato?";
             }
             else if (pergunta == 2)
             {
-                txt_pergunta.Text = "esse é o peixe?";
+                txt_pergunta.Text = "Esse é o Peixe?";
             }
             else if (pergunta == 3)
             {
-                txt_pergunta.Text = "esse é o cachorro?";
+                txt_pergunta.Text = "Esse é o Cachorro?";
             }
             else if (pergunta == 4)
             {
-                txt_pergunta.Text = "esse é o cavalo?";
+                txt_pergunta.Text = "Esse é o Cavalo?";
             }
             else if (pergunta == 5)
             {
-                txt_pergunta.Text = "esse é o papagaio?";
+                txt_pergunta.Text = "esse é o Papagaio?";
             }
 
             if (numero == 1)
@@ -94,6 +94,7 @@ namespace autplay.View.jogos
             }
 
             anteriornmr = numero;
+            txt_contagem.Text = "Acertos: " + acertos.ToString();
         }
 
         private async void btn_sim_Clicked(object sender, EventArgs e)
@@ -101,12 +102,13 @@ namespace autplay.View.jogos
             if (numero == pergunta)
             {
                 await DisplayAlert("Parabéns", "Você acertou", "OK");
+                acertos++;
                 gerador();
             }
             else
             {
                 await DisplayAlert("Que Pena", "Você errou\nTente Novamente!", "OK");
-                gerador();
+                
             }
         }
 
@@ -115,12 +117,13 @@ namespace autplay.View.jogos
             if (numero != pergunta)
             {
                 await DisplayAlert("Parabéns", "Você acertou", "OK");
+                acertos++;
                 gerador();
             }
             else
             {
                 await DisplayAlert("Que Pena", "Você errou\nTente Novamente!", "OK");
-                gerador();
+                
             }
         }
     }

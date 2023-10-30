@@ -13,7 +13,7 @@ namespace autplay.View.jogos
     public partial class JogoDasSombras : ContentPage
     {
 
-        int resposta, BOTAO = 0, ultimoGerado=0, ultimoGeradoIMG=0;
+        int resposta, BOTAO = 0, ultimoGerado = 0, ultimoGeradoIMG = 0, acertos = 0;
 
         public JogoDasSombras()
         {
@@ -28,6 +28,7 @@ namespace autplay.View.jogos
             if (btn.Source == img_sombra.Source)
             {
                 await DisplayAlert("Parabens", "voce acertou", "ok");
+                acertos++;
                 gerador();
             }
             else
@@ -55,7 +56,7 @@ namespace autplay.View.jogos
         }
 
         public void gerador()
-        {
+        { 
             do resposta = new Random().Next(1, 6);
             while (resposta == ultimoGerado);
 
@@ -64,7 +65,8 @@ namespace autplay.View.jogos
 
             int img1 = random.Next(1, 6),
                 img2 = random.Next(1, 6),
-                img3 = random.Next(1, 6);
+                img3 = random.Next(1, 6),
+                img4 = random.Next(1, 6);
 
             
 
@@ -84,17 +86,21 @@ namespace autplay.View.jogos
                 BOTAO = 3;
             }
            
-            while(img1 == img2 || img1 == img3)
+            while(img1 == img2 || img1 == img3 || img1 == img4)
             {
                 img1 = random.Next(1, 4);
             }
-            while (img2 == img1 || img2 == img3)
+            while (img2 == img1 || img2 == img3 || img2 == img4)
             {
                 img2 = random.Next(1, 4);
             }
-            while (img3 == img2 || img3 == img1)
+            while (img3 == img2 || img3 == img1 || img3 == img4)
             {
                 img3 = random.Next(1, 4);
+            }
+            while (img4 == img2 || img4 == img1 || img4 == img3)
+            {
+                img4 = random.Next(1, 4);
             }
 
 
@@ -198,9 +204,8 @@ namespace autplay.View.jogos
             {
                 img_2.Source = ImageSource.FromResource("autplay.Assets.parrot.png");
             }
-
-
-
+            Score.Text = "Acertos: " + acertos.ToString();
         }
+        
     }
 }

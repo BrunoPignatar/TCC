@@ -58,7 +58,7 @@
 
             <StackLayout VerticalOptions="CenterAndExpand">
 
-                <Button
+                <!-- <Button
                     x:Name="jogo1"
                     FontAttributes="Bold"
                     VerticalOptions="Center"
@@ -73,7 +73,7 @@
                     TextColor="#6BC6FA"
                     Clicked="jogo1_Clicked"
                     FontSize="23"
-                    />
+                    /> -->
 
                 <Button
                 x:Name="jogo2"
