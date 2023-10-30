@@ -20,7 +20,23 @@ namespace autplay.View.jogos
         }
 
         int pergunta = 0, numero = 0, anteriorpgt = 0, anteriornmr = 0;
-        
+
+        private async void voltar_Clicked(object sender, EventArgs e)
+        {
+            try
+            {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
+                await Navigation.PopAsync();
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Error", ex.Message, "OK");
+            }
+        }
 
         public void gerador()
         {
