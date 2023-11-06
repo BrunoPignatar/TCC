@@ -16,6 +16,8 @@ namespace autplay.View
         public selecao()
         {
             InitializeComponent();
+
+
             //REMOVENDO A NAVBAR
             NavigationPage.SetHasNavigationBar(this, false);
 

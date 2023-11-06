@@ -12,11 +12,8 @@
 
   <ItemGroup>
     <Compile Remove="Assets\Avatar\**" />
-    <Compile Remove="View\jogos\Mundo2\**" />
     <EmbeddedResource Remove="Assets\Avatar\**" />
-    <EmbeddedResource Remove="View\jogos\Mundo2\**" />
     <None Remove="Assets\Avatar\**" />
-    <None Remove="View\jogos\Mundo2\**" />
   </ItemGroup>
 
   <ItemGroup>
@@ -84,16 +81,16 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="View\jogos\jogodapalavra.xaml">
+    <EmbeddedResource Update="View\jogos\Mundo3\jogodapalavra.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\jogos\jogodasubtração.xaml">
+    <EmbeddedResource Update="View\jogos\Mundo2\jogodasubtração.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\jogos\jogodavelha.xaml">
+    <EmbeddedResource Update="View\jogos\Mundo1\jogodavelha.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="View\jogos\jogodocorreto.xaml">
+    <EmbeddedResource Update="View\jogos\Mundo1\jogodocorreto.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="View\Menu.xaml">
