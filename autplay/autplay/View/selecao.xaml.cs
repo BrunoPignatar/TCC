@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -41,7 +41,7 @@ namespace autplay.View
                 lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
             }
 
-            AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
+           // AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
 
             //DEIXANDO AS FONTES EM NEGRITO E ITÁLICO
             //worldapocalypse.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
@@ -95,6 +95,16 @@ namespace autplay.View
         private void AvatarImage_Clicked(object sender, EventArgs e)
         {
             DisplayAlert("teste", "imagem do avatar", "OK");
+        }
+
+        private async void btn_ajuda_Clicked(object sender, EventArgs e)
+        {
+            var settings = new SpeechOptions()
+            {
+                Volume = .50f,
+                Pitch = 1.6f
+            };
+            await TextToSpeech.SpeakAsync("Olá, nessa página você poderá escolher entre 3 mundos", settings);
         }
     }
 }

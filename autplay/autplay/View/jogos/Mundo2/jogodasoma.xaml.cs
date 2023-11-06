@@ -8,6 +8,7 @@ using autplay.Model;
 
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
+using Xamarin.Essentials;
 
 namespace autplay.View.jogos
 {
@@ -27,7 +28,7 @@ namespace autplay.View.jogos
             gerar();
         }
 
-        public void gerar()
+        public async void gerar()
         {
             int n1 = aleatorio(6);
             int n2 = aleatorio(6);
@@ -80,7 +81,15 @@ namespace autplay.View.jogos
             btn_4.BackgroundColor = RandomColor();
             Score.Text = "Score: " + acertos;
 
-            // TERMINAR ESSA FUNÇÃO AINDA
+            await Task.Delay(1000);
+
+            var settings = new SpeechOptions()
+            {
+                Volume = .50f,
+                Pitch = 1.6f
+            };
+
+            await TextToSpeech.SpeakAsync(n1 + "+" + n2, settings);
         }
 
         private int aleatorio(int n)

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 using Xamarin.Forms.Xaml;
@@ -21,7 +21,7 @@ namespace autplay.View.jogos
         }
         string resposta_correta; int anterior; int acertos = 0;
 
-        public void gerador()
+        public async void gerador()
         {
             var ramdom = new Random();
 
@@ -60,6 +60,17 @@ namespace autplay.View.jogos
 
             anterior = animal;
             Score.Text = "Acertos: " + acertos;
+
+
+            await Task.Delay(1000);
+
+            var settings = new SpeechOptions()
+            {
+                Volume = .50f,
+                Pitch = 1.6f
+            };
+            
+            await TextToSpeech.SpeakAsync(resposta_correta, settings);
         }
 
         private async void btn_enviar_Clicked(object sender, EventArgs e)

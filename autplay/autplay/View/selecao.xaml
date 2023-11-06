@@ -13,14 +13,16 @@
     </ContentPage.Background>
 
     <ContentPage.Content>
-        <StackLayout>
-            <Frame HeightRequest="50"
+        <Grid>
+           
+            <StackLayout>
+                <Frame HeightRequest="50"
                    BackgroundColor="#CDFFD8"
                    BorderColor="Transparent">
 
-                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
 
-                    <ImageButton x:Name="AvatarImage"
+                        <ImageButton x:Name="AvatarImage"
                            BackgroundColor="#CDFFD8"
                            BorderColor="white"
                            BorderWidth="1.5"
@@ -33,34 +35,36 @@
                            CornerRadius="50"
                            Aspect="AspectFill"/>
 
-                    <Label x:Name="lblBoasVindas"
-                           TextColor="white" FontSize="20" 
+                        <Label x:Name="lblBoasVindas"
+                           TextColor="#8C52FF" FontSize="20" 
                            Margin="15,0,5,0"
                            HorizontalTextAlignment="Start" 
                            FontAttributes="Bold"
                            VerticalTextAlignment="Center"/>
 
-                    <ImageButton x:Name="AlterAvatar"
-                           BackgroundColor="#8C52FF"
-                           HorizontalOptions="EndAndExpand"
-                           VerticalOptions="Center"
-                           Padding="-3"
-                           Scale="1"
-                           Margin="0,2,0,0"
-                           CornerRadius="50"
-                           Clicked="AlterAvatar_Clicked"/>
-                </StackLayout>
-            </Frame>
-            <BoxView Color="white" HeightRequest="1.5"
+                        <Button x:Name="btn_ajuda" Scale="0.5"
+                                Clicked="btn_ajuda_Clicked"
+                                BackgroundColor="white" 
+                                WidthRequest="100" HeightRequest="100"
+                                CornerRadius="100"
+                                HorizontalOptions="EndAndExpand"
+                                VerticalOptions="EndAndExpand"
+                                Margin="-18"
+                                BorderColor="Black"
+                                BorderWidth="2"
+                                Text="?"
+                                FontSize="50">  
+                        </Button>
+
+                    </StackLayout>
+                </Frame>
+                <BoxView Color="white" HeightRequest="1.5"
                      HorizontalOptions="FillAndExpand"/>
 
-            <StackLayout>
-                <Label Text="Viajar para um mundo" TextColor="#8C52FF" HorizontalOptions="Center"
-                               FontSize="25" FontAttributes="Bold" Margin="0,0,0,05"/>
-
-                <Grid RowDefinitions="200,200,200">
-                    <!-- MUDAR GRADIENTE DENTRO DAS PÁGINAS DE JOGOS DE ACORDO COM A LOGO -->
-                    <ImageButton x:Name="btn_worldrose" Scale="2"
+                <StackLayout>
+                    <Grid RowDefinitions="200,200,200">
+                        <!-- MUDAR GRADIENTE DENTRO DAS PÁGINAS DE JOGOS DE ACORDO COM A LOGO -->
+                        <ImageButton x:Name="btn_worldrose" Scale="2"
                                                  Clicked="btn_worldrose_Clicked"
                                                  BackgroundColor="white"
                                                  WidthRequest="100"
@@ -71,24 +75,41 @@
                                                  VerticalOptions="Center"
                                                  
                                                  />
-                    <ImageButton x:Name="btn_worldapocalypse" Scale="2" 
+                        <ImageButton x:Name="btn_worldapocalypse" Scale="2" 
                                                  Clicked="btn_worldapocalypse_Clicked" 
                                                  BackgroundColor="white" 
                                                  WidthRequest="100" HeightRequest="100"
                                                  Grid.Row="1" CornerRadius="50"
                                                  HorizontalOptions="Center"
                                                  VerticalOptions="Center"/>
-                    <ImageButton  x:Name="btn_worldgum" Scale="2" 
+                        <ImageButton  x:Name="btn_worldgum" Scale="2" 
                                                   Clicked="btn_worldgum_Clicked"  
                                                   BackgroundColor="white"
                                                   WidthRequest="100" HeightRequest="100"
                                                   Grid.Row="2" CornerRadius="50"
                                                   HorizontalOptions="Center"
                                                   VerticalOptions="Center"/>
-                </Grid>
 
+                        <Button
+                            FontAttributes="Bold"
+                            VerticalOptions="EndAndExpand"
+                            BorderColor="Transparent"
+                            Grid.Row="3"
+                            BorderWidth="1"
+                            CornerRadius="15"
+                            HeightRequest="50"
+                            WidthRequest="40"
+                            Margin="50,0,50,0"
+                            BackgroundColor="Transparent"
+                            Text="voltar"
+                            TextColor="#8C52FF"
+                            Clicked="AlterAvatar_Clicked"
+                            FontSize="23"/>
+
+                    </Grid>
+
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
 
 
 
@@ -96,6 +117,6 @@
 
 
 
-
+        </Grid>
     </ContentPage.Content>
 </ContentPage>

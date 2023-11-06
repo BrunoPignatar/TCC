@@ -23,7 +23,7 @@
             <Frame BackgroundColor="White"
                        CornerRadius="20"
                        HeightRequest="400"
-                       Margin="15,0,15,0"
+                       Margin="15,40,15,0"
                        HasShadow="False"
                        VerticalOptions="CenterAndExpand">
                 <StackLayout>
@@ -163,6 +163,19 @@
                     </StackLayout>
                 </StackLayout>
             </Frame>
+            <Button x:Name="btn_ajuda1" Scale="0.5"
+                                Clicked="btn_ajuda1_Clicked"
+                                BackgroundColor="white" 
+                                WidthRequest="100" HeightRequest="100"
+                                CornerRadius="100"
+                                HorizontalOptions="EndAndExpand"
+                                VerticalOptions="EndAndExpand"
+                                Margin="-10"
+                                BorderColor="Black"
+                                BorderWidth="2"
+                                Text="?"
+                                FontSize="50">
+            </Button>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
