@@ -183,14 +183,7 @@ namespace autplay.View.jogos
                 Owin.Text = WinO.ToString();
             }
 
-            // Empate
-            if (jogadas == 9)
-            {
-                await DisplayAlert("Não temos um vencedor!", "O jogo deu velha! \nEMPATE.", "OK");
-                zerar();
-                Empates++;
-                empatestxt.Text = Empates.ToString();
-            }
+            
 
            
 
@@ -235,7 +228,7 @@ namespace autplay.View.jogos
             }
             catch (Exception ex)
             {
-                DisplayAlert("Error", ex.Message, "OK");
+                await DisplayAlert("Error", ex.Message, "OK");
             }
         }
 
@@ -248,18 +241,21 @@ namespace autplay.View.jogos
             {
                 campo = random.Next(1, 10);
 
-                if (AtualizarBotao(campo, "O"))
-                    break;
+            } while (!AtualizarBotao(campo, "O"));
 
-            } while (btn10.Text == "X" || btn10.Text == "O" ||
-                     btn11.Text == "X" || btn11.Text == "O" ||
-                     btn12.Text == "X" || btn12.Text == "O" ||
-                     btn20.Text == "X" || btn20.Text == "O" ||
-                     btn21.Text == "X" || btn21.Text == "O" ||
-                     btn22.Text == "X" || btn22.Text == "O" ||
-                     btn30.Text == "X" || btn30.Text == "O" ||
-                     btn31.Text == "X" || btn31.Text == "O" ||
-                     btn32.Text == "X" || btn32.Text == "O");
+            VerificarVitoriasEEmpate();
+        }
+
+        private async void VerificarVitoriasEEmpate()
+        {           
+            // Empate
+            if (jogadas == 9)
+            {
+                await DisplayAlert("Não temos um vencedor!", "O jogo deu velha! \nEMPATE.", "OK");
+                zerar();
+                Empates++;
+                empatestxt.Text = Empates.ToString();
+            }
         }
 
         private bool AtualizarBotao(int campo, string marca)
