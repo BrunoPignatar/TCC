@@ -3,7 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="autplay.View.jogos.JogoDasSombras"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
+    <ContentPage.Background>
+        <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+            <GradientStop Color="#ff6a5a"
+                      Offset="0.23" />
+            <GradientStop Color="#b83564"
+                      Offset="1.0" />
+        </LinearGradientBrush>
+    </ContentPage.Background>
     <ContentPage.Content>
+        <!--
+        ff6a5a
+        b83564
+        -->
         <StackLayout>
             <Frame HeightRequest="30"
                    WidthRequest="160"
@@ -20,9 +32,25 @@
             </Frame>
             <Frame BackgroundColor="Transparent">
                 <StackLayout>
-                    <Image x:Name="img_sombra" BackgroundColor="Transparent"
-                           HeightRequest="180" HorizontalOptions="CenterAndExpand"
-                           xct:IconTintColorEffect.TintColor="Black"/>
+                    <Frame
+                        BackgroundColor="LightBlue"
+                        CornerRadius="20">
+                        <StackLayout HeightRequest="200">
+                            <Image x:Name="img_sombra" 
+                                   HeightRequest="160" xct:CornerRadiusEffect.CornerRadius="20"
+                                   xct:IconTintColorEffect.TintColor="black"/>
+                            <Label HorizontalOptions="CenterAndExpand">
+                                <Label.FormattedText>
+                                    <FormattedString>
+                                        <Span Text="ADIVINHE O" FontSize="21" TextColor="HotPink"/>
+                                        <Span Text=" ANIMAL" FontSize="22" FontAttributes="Bold" TextColor="DeepPink"/>
+                                    </FormattedString>
+                                </Label.FormattedText>
+                            </Label>
+                        </StackLayout>
+                    </Frame>
+
+
                 </StackLayout>
             </Frame>
             <StackLayout>
@@ -31,13 +59,16 @@
                       HorizontalOptions="CenterAndExpand"
                       VerticalOptions="EndAndExpand">
                     <ImageButton Grid.Column="0"  x:Name="img_1" Clicked="check" HeightRequest="150"
-                                 HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"/>
+                                 HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"
+                                 BackgroundColor="LightPink"/>
                     <ImageButton Grid.Column="1" x:Name="img_2" Clicked="check" HeightRequest="150"
-                                 HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"/>
+                                 HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"
+                                 BackgroundColor="LightPink"/>
                     <ImageButton Grid.Column="0" Grid.Row="1"  x:Name="img_3" Clicked="check" HeightRequest="150"
-                                 HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"/>
+                                 HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"
+                                 BackgroundColor="LightPink"/>
                     <ImageButton Grid.Column="1" Grid.Row="1"  x:Name="img_4" Clicked="check" HeightRequest="150"
-                                HorizontalOptions="CenterAndExpand" BackgroundColor="red" Padding="20" CornerRadius="25"/>
+                                HorizontalOptions="CenterAndExpand" BackgroundColor="LightPink" Padding="20" CornerRadius="25"/>
                 </Grid>
             </StackLayout>
 

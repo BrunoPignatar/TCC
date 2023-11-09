@@ -36,7 +36,7 @@ namespace autplay.View.jogos
             // Trocando texto do botão de acordo com quem é a vez.
             if (vez == "X")
             {
-                botao_clicado.Text = "X"; 
+                botao_clicado.Text = "X";
                 botao_clicado.TextColor = Color.White;
                 vez = "O";
                 jogadas++;
@@ -183,9 +183,9 @@ namespace autplay.View.jogos
                 Owin.Text = WinO.ToString();
             }
 
-            
 
-           
+
+
 
         }
 
@@ -247,7 +247,7 @@ namespace autplay.View.jogos
         }
 
         private async void VerificarVitoriasEEmpate()
-        {           
+        {
             // Empate
             if (jogadas == 9)
             {

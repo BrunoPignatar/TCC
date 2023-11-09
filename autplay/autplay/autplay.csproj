@@ -18,7 +18,6 @@
 
   <ItemGroup>
     <None Remove="Assets\backgroundJogodaSoma.png" />
-    <None Remove="Assets\botaoadd.png" />
     <None Remove="Assets\cat.png" />
     <None Remove="Assets\clown-fish.png" />
     <None Remove="Assets\dog.png" />
@@ -29,14 +28,10 @@
     <None Remove="Assets\Mundo2.png" />
     <None Remove="Assets\Mundo3.png" />
     <None Remove="Assets\parrot.png" />
-    <None Remove="Assets\setas.png" />
   </ItemGroup>
 
   <ItemGroup>
     <EmbeddedResource Include="Assets\backgroundJogodaSoma.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets\botaoadd.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\cat.png">
@@ -67,9 +62,6 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Assets\parrot.png">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Assets\setas.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
   </ItemGroup>

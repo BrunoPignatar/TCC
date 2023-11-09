@@ -138,6 +138,17 @@
                 </StackLayout>
             </Frame>
 
+            <Label HorizontalOptions="CenterAndExpand"
+                   VerticalOptions="CenterAndExpand"
+                   Scale="1.6">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="É A SUA" FontSize="26" TextColor="white"/>
+                        <Span Text=" VEZ" FontSize="27" FontAttributes="Bold" TextColor="#D938A7"/>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
             <Button FontAttributes="Bold"
                     BorderColor="#D938A7"
                     BorderWidth="2"

@@ -41,7 +41,7 @@
 
                         <StackLayout Orientation="Horizontal" Spacing="30" Padding="0"
                                      BackgroundColor="Transparent"
-                                     HeightRequest="150"
+                                     HeightRequest="140"
                                      WidthRequest="650">
 
                             <StackLayout Margin="5,5,0,0" Scale="1.1">
@@ -140,23 +140,27 @@
                                Margin="0,0,0,0"
                                />
 
-                        <Label Text="USAR MINHA FOTO:"
+                        <Button Text="USAR MINHA FOTO"
                                HorizontalOptions="CenterAndExpand"
                                FontSize="16"
                                TextColor="#7c05f2"
-                               Margin="0,05,0,0"/>
+                                HeightRequest="37"
+                               Margin="0,05,0,0"
+                               BackgroundColor="Transparent"
+                               Clicked="btn_add_Clicked"
+                               />
 
                         <Button x:Name="btn_add"
                                 Clicked="btn_add_Clicked"
                                 Margin="0,0,0,0"
                                 CornerRadius="100"
-                                HeightRequest="90"
+                                HeightRequest="87"
                                 BorderColor="#0583F2"
                                 BorderWidth="1.5"
                                 WidthRequest="90"
                                 BackgroundColor="#7c05f2"
                                 Text="+"
-                                FontSize="50" TextColor="White" FontAttributes="Bold"
+                                FontSize="45" TextColor="White" FontAttributes="Bold"
                                 HorizontalOptions="CenterAndExpand"
                                 />
 
@@ -171,8 +175,10 @@
                                 HorizontalOptions="EndAndExpand"
                                 VerticalOptions="EndAndExpand"
                                 Margin="-10"
-                                BorderColor="Black"
-                                BorderWidth="2"
+                                BorderColor="#0583F2"
+                                BorderWidth="3"
+                                TextColor="#0583F2"
+                                FontAttributes="Bold"
                                 Text="?"
                                 FontSize="50">
             </Button>

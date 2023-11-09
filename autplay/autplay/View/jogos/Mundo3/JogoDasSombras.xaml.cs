@@ -43,38 +43,39 @@ namespace autplay.View.jogos
             int resposta = random.Next(1, 6);
             while (resposta == anteriorResposta)
             {
-                resposta = random.Next(1, 5);
+                resposta = random.Next(1, 6);
             }
 
             //botao correto
             int botao = random.Next(1, 5);
             while (botao == anteriorbotao)
             {
-                botao = random.Next(1, 4);
+                botao = random.Next(1, 5);
             }
 
             //colocando img_sombra
-            if (resposta == 1)
+            
+            if (resposta == 1) // papagaio 1
             {
                 imgcorreta = ImageSource.FromResource("autplay.Assets.parrot.png");
                 img_sombra.Source = imgcorreta;
             }
-            else if (resposta == 2)
+            else if (resposta == 2) // dog 2
             {
                 imgcorreta = ImageSource.FromResource("autplay.Assets.dog.png");
                 img_sombra.Source = imgcorreta;
             }
-            else if (resposta == 3)
+            else if (resposta == 3) // cavalo 3
             {
                 imgcorreta = ImageSource.FromResource("autplay.Assets.horse.png");
                 img_sombra.Source = imgcorreta;
             }
-            else if (resposta == 4)
+            else if (resposta == 4) // peixe 4
             {
                 imgcorreta = ImageSource.FromResource("autplay.Assets.clown-fish.png");
                 img_sombra.Source = imgcorreta;
             }
-            else if (resposta == 5)
+            else if (resposta == 5) // gato 5
             {
                 imgcorreta = ImageSource.FromResource("autplay.Assets.cat.png");
                 img_sombra.Source = imgcorreta;
@@ -84,15 +85,15 @@ namespace autplay.View.jogos
             int btn1 = random.Next(1, 5),
                 btn2 = random.Next(1, 5),
                 btn3 = random.Next(1, 5);
-            while (btn1 == botao || btn1 == btn2 || btn1 == btn3)
+            while (btn1 == resposta || btn1 == btn2 || btn1 == btn3)
             {
                 btn1 = random.Next(1, 5);
             }
-            while (btn2 == botao || btn2 == btn1 || btn2 == btn3)
+            while (btn2 == resposta || btn2 == btn1 || btn2 == btn3)
             {
                 btn2 = random.Next(1, 5);
             }
-            while (btn3 == botao || btn3 == btn2 || btn3 == btn1)
+            while (btn3 == resposta || btn3 == btn2 || btn3 == btn1)
             {
                 btn3 = random.Next(1, 5);
             }

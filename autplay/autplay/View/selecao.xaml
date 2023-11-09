@@ -5,31 +5,27 @@
              >
     <ContentPage.Background>
         <LinearGradientBrush EndPoint="0,1">
-            <GradientStop Color="#CDFFD8"
+            <GradientStop Color="Aquamarine"
                           Offset="0.1" />
             <GradientStop Color="#00A6F0"
                           Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
-
     <ContentPage.Content>
         <Grid>
-           
             <StackLayout>
                 <Frame HeightRequest="50"
-                   BackgroundColor="#CDFFD8"
+                   BackgroundColor="Aquamarine"
                    BorderColor="Transparent">
-
                     <StackLayout Orientation="Horizontal">
-
                         <ImageButton x:Name="AvatarImage"
-                           BackgroundColor="#CDFFD8"
-                           BorderColor="white"
+                           BackgroundColor="Aquamarine"
+                           BorderColor="#8C52FF"
                            BorderWidth="1.5"
                            Scale="1.5"
                            HeightRequest="50"
                            WidthRequest="45"
-                           Padding="4.5"
+                           Padding="5"
                            Margin="3"
                            Clicked="AvatarImage_Clicked"
                            CornerRadius="50"
@@ -45,20 +41,21 @@
                         <Button x:Name="btn_ajuda" Scale="0.5"
                                 Clicked="btn_ajuda_Clicked"
                                 BackgroundColor="white" 
-                                WidthRequest="100" HeightRequest="100"
+                                WidthRequest="85" HeightRequest="100"
                                 CornerRadius="100"
                                 HorizontalOptions="EndAndExpand"
                                 VerticalOptions="EndAndExpand"
                                 Margin="-18"
-                                BorderColor="Black"
-                                BorderWidth="2"
+                                BorderColor="#8C52FF"
+                                BorderWidth="3"
+                                TextColor="#8C52FF"
+                                FontAttributes="Bold"
                                 Text="?"
-                                FontSize="50">  
+                                FontSize="50">
                         </Button>
-
                     </StackLayout>
                 </Frame>
-                <BoxView Color="white" HeightRequest="1.5"
+                <BoxView Color="#8C52FF" HeightRequest="1.5"
                      HorizontalOptions="FillAndExpand"/>
 
                 <StackLayout>
@@ -75,7 +72,7 @@
                                                  VerticalOptions="Center"
                                                  
                                                  />
-                        <ImageButton x:Name="btn_worldapocalypse" Scale="2.7" 
+                        <ImageButton x:Name="btn_worldapocalypse" Scale="2" 
                                                  Clicked="btn_worldapocalypse_Clicked" 
                                                  BackgroundColor="Transparent" 
                                                  WidthRequest="100" HeightRequest="100"
@@ -93,30 +90,22 @@
                         <Button
                             FontAttributes="Bold"
                             VerticalOptions="EndAndExpand"
-                            BorderColor="Transparent"
+                            BorderColor="#8C52FF"
                             Grid.Row="3"
-                            BorderWidth="1"
+                            BorderWidth="2"
                             CornerRadius="15"
                             HeightRequest="50"
                             WidthRequest="40"
                             Margin="50,0,50,0"
                             BackgroundColor="Transparent"
                             Text="voltar"
-                            TextColor="#8C52FF"
+                            TextColor="white"
                             Clicked="AlterAvatar_Clicked"
                             FontSize="23"/>
 
                     </Grid>
-
                 </StackLayout>
             </StackLayout>
-
-
-
-
-
-
-
         </Grid>
     </ContentPage.Content>
 </ContentPage>

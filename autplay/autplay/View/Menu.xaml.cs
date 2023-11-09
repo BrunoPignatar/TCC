@@ -16,7 +16,6 @@ namespace autplay.View
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Menu : ContentPage
     {
-
         public Menu()
         {
             InitializeComponent();
@@ -26,13 +25,6 @@ namespace autplay.View
         //BOTÃO DE ADICIONAR FOTO COMO AVATAR 
         private async void btn_add_Clicked(object sender, EventArgs e)
         {
-            var settings = new SpeechOptions()
-            {
-                Volume = .50f,
-                Pitch = 1.6f
-            };
-            await TextToSpeech.SpeakAsync("bem vindo" + txtNome.Text, settings);
-
             try
             {
                 Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
@@ -67,14 +59,6 @@ namespace autplay.View
         //BOTÕES PARA OS AVATARES
         private async void btn_arara_Clicked_1(object sender, EventArgs e)
         {
-            var settings = new SpeechOptions()
-            { 
-                Volume = .50f,
-                Pitch = 1.6f
-            };
-          await TextToSpeech.SpeakAsync("bem vindo senhor arara", settings);
-
-
             try
             {
                 Model.Avatares a = new Model.Avatares
@@ -96,13 +80,6 @@ namespace autplay.View
 
         private async void btn_gato_Clicked(object sender, EventArgs e)
         {
-            var settings = new SpeechOptions()
-            {
-                Volume = .50f,
-                Pitch = 1.6f
-            };
-            await TextToSpeech.SpeakAsync("bem vindo senhor gato", settings);
-
             try
             {
                 Model.Avatares a = new Model.Avatares
@@ -124,13 +101,6 @@ namespace autplay.View
 
         private async void btn_peixe_Clicked(object sender, EventArgs e)
         {
-            var settings = new SpeechOptions()
-            {         
-                Volume = .50f,
-                Pitch = 1.6f
-            };
-            await TextToSpeech.SpeakAsync("bem vindo senhor peixe", settings);
-
             try
             {
                 Model.Avatares a = new Model.Avatares
@@ -152,13 +122,6 @@ namespace autplay.View
 
         private async void btn_dog_Clicked(object sender, EventArgs e)
         {
-            var settings = new SpeechOptions()
-            {  
-                Volume = .50f,
-                Pitch = 1.6f
-            };
-            await TextToSpeech.SpeakAsync("bem vindo senhor cachorro", settings);
-
             try
             {
                 Model.Avatares a = new Model.Avatares
@@ -180,13 +143,6 @@ namespace autplay.View
 
         private async void btn_horse_Clicked(object sender, EventArgs e)
         {
-            var settings = new SpeechOptions()
-            {
-                Volume = .50f,
-                Pitch = 1.6f
-            };
-            await TextToSpeech.SpeakAsync("bem vindo senhor cavalo", settings);
-
             try
             {
                 Model.Avatares a = new Model.Avatares
@@ -232,7 +188,7 @@ namespace autplay.View
                 Volume = .50f,
                 Pitch = 1.6f
             };
-            await TextToSpeech.SpeakAsync("Bem vindo ao neu play! nesta página você pode selecionar seu avatar, se não gostar dos avatares padrões você pode escolher seu próprio nome e sua foto", settings);
+            await TextToSpeech.SpeakAsync("Olá, Bem vindo ao neu play! Selecione seu avatar para se aventurar, se não gostar dos avatares padrões você pode escolher seu próprio nome e sua foto", settings);
         }
     }
 }

@@ -41,13 +41,17 @@ namespace autplay.View
                 lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
             }
 
-           // AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
+            FalaInicial();
+        }
 
-            //DEIXANDO AS FONTES EM NEGRITO E ITÁLICO
-            //worldapocalypse.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-            //worldgum.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-            //worldrose.FontAttributes = FontAttributes.Bold | FontAttributes.Italic;
-
+        private async void FalaInicial()
+        {
+            var settings = new SpeechOptions()
+            {
+                Volume = .50f,
+                Pitch = 1.6f
+            };
+            await TextToSpeech.SpeakAsync("bem vindo senhor" + App.DadosAvatar.Nome, settings);
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
@@ -78,10 +82,15 @@ namespace autplay.View
             Navigation.PushAsync(new selectword.Mundo3());
         }
 
-        private void AlterAvatar_Clicked(object sender, EventArgs e)
+        private async void AlterAvatar_Clicked(object sender, EventArgs e)
         {
             try
             {
+                // Manipule o clique do botão aqui
+                Xamarin.Forms.Button button = (Xamarin.Forms.Button)sender;
+
+                await Model.Animacoes.AnimacaoBotao(button);
+
                 App.Current.MainPage = new NavigationPage(new Menu());
                 App.DadosAvatar = null;
 
@@ -104,7 +113,7 @@ namespace autplay.View
                 Volume = .50f,
                 Pitch = 1.6f
             };
-            await TextToSpeech.SpeakAsync("Olá, nessa página você poderá escolher entre 3 mundos", settings);
+            await TextToSpeech.SpeakAsync("Selecione um mundo e se divirta em seus jogos!", settings);
         }
     }
 }
