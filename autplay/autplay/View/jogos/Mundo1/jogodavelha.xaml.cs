@@ -40,13 +40,14 @@ namespace autplay.View.jogos
                 botao_clicado.TextColor = Color.White;
                 vez = "O";
                 jogadas++;
+                Bot();
             }
-            else
-            {
-                botao_clicado.Text = "O";
-                vez = "X";
-                jogadas++;
-            }
+            //else
+            //{
+            //    botao_clicado.Text = "O";
+            //    vez = "X";
+            //    jogadas++;
+            //}
 
             //horizontal
             if (btn10.Text == "X" && btn11.Text == "X" && btn12.Text == "X")
@@ -237,5 +238,79 @@ namespace autplay.View.jogos
                 DisplayAlert("Error", ex.Message, "OK");
             }
         }
+
+        public void Bot()
+        {
+            var random = new Random();
+            int campo;
+
+            do
+            {
+                campo = random.Next(1, 10);
+
+                if (AtualizarBotao(campo, "O"))
+                    break;
+
+            } while (btn10.Text == "X" || btn10.Text == "O" ||
+                     btn11.Text == "X" || btn11.Text == "O" ||
+                     btn12.Text == "X" || btn12.Text == "O" ||
+                     btn20.Text == "X" || btn20.Text == "O" ||
+                     btn21.Text == "X" || btn21.Text == "O" ||
+                     btn22.Text == "X" || btn22.Text == "O" ||
+                     btn30.Text == "X" || btn30.Text == "O" ||
+                     btn31.Text == "X" || btn31.Text == "O" ||
+                     btn32.Text == "X" || btn32.Text == "O");
+        }
+
+        private bool AtualizarBotao(int campo, string marca)
+        {
+            switch (campo)
+            {
+                case 1:
+                    return Atualizar(btn10, marca);
+
+                case 2:
+                    return Atualizar(btn11, marca);
+
+                case 3:
+                    return Atualizar(btn12, marca);
+
+                case 4:
+                    return Atualizar(btn20, marca);
+
+                case 5:
+                    return Atualizar(btn21, marca);
+
+                case 6:
+                    return Atualizar(btn22, marca);
+
+                case 7:
+                    return Atualizar(btn30, marca);
+
+                case 8:
+                    return Atualizar(btn31, marca);
+
+                case 9:
+                    return Atualizar(btn32, marca);
+
+                default:
+                    return false;
+            }
+        }
+
+        private bool Atualizar(Button button, string marca)
+        {
+            if (button.Text != "X" && button.Text != "O")
+            {
+                button.Text = marca;
+                button.IsEnabled = false;
+                jogadas++;
+                vez = "X";
+                return true;
+            }
+            return false;
+        }
+
+
     }
 }
