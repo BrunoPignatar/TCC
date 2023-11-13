@@ -103,7 +103,7 @@ namespace autplay.View
 
         private void AvatarImage_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("teste", "imagem do avatar", "OK");
+            //DisplayAlert("teste", "imagem do avatar", "OK");
         }
 
         private async void btn_ajuda_Clicked(object sender, EventArgs e)

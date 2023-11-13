@@ -31,7 +31,7 @@ namespace autplay.selectword
                 lblBoasVindas.Text = "Bem-vindo Senhor(a) " + App.DadosAvatar.Nome;
             }
 
-            AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
+            //AlterAvatar.Source = ImageSource.FromResource("autplay.Assets.lapis.png");
         }
 
         private async void jogo1_Clicked(object sender, EventArgs e)

@@ -98,7 +98,7 @@
                             WidthRequest="40"
                             Margin="50,0,50,0"
                             BackgroundColor="Transparent"
-                            Text="voltar"
+                            Text="voltar ao menu"
                             TextColor="white"
                             Clicked="AlterAvatar_Clicked"
                             FontSize="23"/>

@@ -21,7 +21,7 @@ namespace autplay.View
             InitializeComponent();
             ConfigElementos();
         }
-
+        string nome;
         //BOTÃO DE ADICIONAR FOTO COMO AVATAR 
         private async void btn_add_Clicked(object sender, EventArgs e)
         {
@@ -61,9 +61,15 @@ namespace autplay.View
         {
             try
             {
+                
+                if(txtNome.Text != null)
+                {
+                    nome = txtNome.Text;
+                }
+                else { nome = "Arara"; }
                 Model.Avatares a = new Model.Avatares
                 {
-                    Nome = "Arara",
+                    Nome = nome,
                     Id = 1,
                     ImagemPadrao = ImageSource.FromResource("autplay.Assets.parrot.png"),
                     ImagemEnviada = null
@@ -82,9 +88,14 @@ namespace autplay.View
         {
             try
             {
+                if (txtNome.Text != null)
+                {
+                    nome = txtNome.Text;
+                }
+                else { nome = "Gato"; }
                 Model.Avatares a = new Model.Avatares
                 {
-                    Nome = "Gato",
+                    Nome = nome,
                     Id = 2,
                     ImagemPadrao = ImageSource.FromResource("autplay.Assets.cat.png"),
                     ImagemEnviada = null
@@ -103,9 +114,14 @@ namespace autplay.View
         {
             try
             {
+                if (txtNome.Text != null)
+                {
+                    nome = txtNome.Text;
+                }
+                else { nome = "Peixe"; }
                 Model.Avatares a = new Model.Avatares
                 {
-                    Nome = "Peixe",
+                    Nome = nome,
                     Id = 3,
                     ImagemPadrao = ImageSource.FromResource("autplay.Assets.clown-fish.png"),
                     ImagemEnviada = null
@@ -124,9 +140,14 @@ namespace autplay.View
         {
             try
             {
+                if (txtNome.Text != null)
+                {
+                    nome = txtNome.Text;
+                }
+                else { nome = "Cachorro"; }
                 Model.Avatares a = new Model.Avatares
                 {
-                    Nome = "Cachorro",
+                    Nome = nome,
                     Id = 4,
                     ImagemPadrao = ImageSource.FromResource("autplay.Assets.dog.png"),
                     ImagemEnviada = null
@@ -145,9 +166,14 @@ namespace autplay.View
         {
             try
             {
+                if (txtNome.Text != null)
+                {
+                    nome = txtNome.Text;
+                }
+                else { nome = "Cavalo"; }
                 Model.Avatares a = new Model.Avatares
                 {
-                    Nome = "Cavalo",
+                    Nome = nome,
                     Id = 5,
                     ImagemPadrao = ImageSource.FromResource("autplay.Assets.horse.png"),
                     ImagemEnviada = null

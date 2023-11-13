@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -31,7 +31,7 @@ namespace autplay.View.jogos
                 int n1, n2;
                 do
                 {
-                    n1 = aleatorio(6);
+                    n1 = aleatorio(11);
                     n2 = aleatorio(6);
                 } while (n1 <= n2 || n1 == 0);
 
@@ -80,6 +80,16 @@ namespace autplay.View.jogos
                 btn_4.BackgroundColor = RandomColor();
 
                 Score.Text = "Score: " + acertos;
+
+                await Task.Delay(1000);
+
+                var settings = new SpeechOptions()
+                {
+                    Volume = .50f,
+                    Pitch = 1.6f
+                };
+
+                await TextToSpeech.SpeakAsync(n1 + "menos" + n2, settings);
             }
             catch (Exception ex)
             {

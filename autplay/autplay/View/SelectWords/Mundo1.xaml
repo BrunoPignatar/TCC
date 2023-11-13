@@ -42,7 +42,7 @@
                            FontAttributes="Bold"
                            VerticalTextAlignment="Center"/>
 
-                    <ImageButton x:Name="AlterAvatar"
+                    <!--<ImageButton x:Name="AlterAvatar"
                            BackgroundColor="#D938A7"
                            HorizontalOptions="EndAndExpand"
                            VerticalOptions="Center"
@@ -50,7 +50,7 @@
                            Scale="1"
                            Margin="0,2,0,0"
                            CornerRadius="50"
-                           Clicked="AlterAvatar_Clicked"/>
+                           Clicked="AlterAvatar_Clicked"/>-->
                 </StackLayout>
             </Frame>
             <BoxView Color="#D938A7" HeightRequest="1.5"
