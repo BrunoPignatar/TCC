@@ -61,7 +61,7 @@
                 <StackLayout>
                     <Grid RowDefinitions="200,200,200">
                         <!-- MUDAR GRADIENTE DENTRO DAS PÁGINAS DE JOGOS DE ACORDO COM A LOGO -->
-                        <ImageButton x:Name="btn_worldrose" Scale="2"
+                        <ImageButton x:Name="btn_worldrose" Scale="2.1"
                                                  Clicked="btn_worldrose_Clicked"
                                                  BackgroundColor="Transparent" 
                                                  WidthRequest="100"
@@ -72,14 +72,14 @@
                                                  VerticalOptions="Center"
                                                  
                                                  />
-                        <ImageButton x:Name="btn_worldapocalypse" Scale="2" 
+                        <ImageButton x:Name="btn_worldapocalypse" Scale="2.1" 
                                                  Clicked="btn_worldapocalypse_Clicked" 
                                                  BackgroundColor="Transparent" 
                                                  WidthRequest="100" HeightRequest="100"
                                                  Grid.Row="1" CornerRadius="50"
                                                  HorizontalOptions="Center"
                                                  VerticalOptions="Center"/>
-                        <ImageButton  x:Name="btn_worldgum" Scale="2" 
+                        <ImageButton  x:Name="btn_worldgum" Scale="2.1" 
                                                   Clicked="btn_worldgum_Clicked"  
                                                   BackgroundColor="Transparent"
                                                   WidthRequest="100" HeightRequest="100"

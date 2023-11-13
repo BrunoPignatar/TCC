@@ -55,7 +55,7 @@ namespace autplay.View.jogos
             else if (animal == 5)
             {
                 img_imagem.Source = ImageSource.FromResource("autplay.Assets.parrot.png");
-                resposta_correta = "papagaio";
+                resposta_correta = "arara";
             }
 
             anterior = animal;

@@ -69,7 +69,7 @@ namespace autplay.View.jogos
             }
             else if (pergunta == 5)
             {
-                txt_pergunta.Text = "esse é o Papagaio?";
+                txt_pergunta.Text = "esse é o Arara?";
             }
 
             if (numero == 1)
