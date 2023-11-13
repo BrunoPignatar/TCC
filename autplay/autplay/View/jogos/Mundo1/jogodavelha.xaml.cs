@@ -232,7 +232,7 @@ namespace autplay.View.jogos
             }
         }
 
-        public void Bot()
+        public async void Bot()
         {
             var random = new Random();
             int campo;
@@ -241,14 +241,8 @@ namespace autplay.View.jogos
             {
                 campo = random.Next(1, 10);
 
-            } while (!AtualizarBotao(campo, "O"));
+            } while (!AtualizarBotao(campo, "O") && jogadas < 9);
 
-            VerificarVitoriasEEmpate();
-        }
-
-        private async void VerificarVitoriasEEmpate()
-        {
-            // Empate
             if (jogadas == 9)
             {
                 await DisplayAlert("Não temos um vencedor!", "O jogo deu velha! \nEMPATE.", "OK");

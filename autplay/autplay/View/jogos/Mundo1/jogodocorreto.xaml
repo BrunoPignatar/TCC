@@ -6,9 +6,9 @@
     
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
-            <GradientStop Color="#23E9FC"
+            <GradientStop Color="#ff6a5a"
                           Offset="0.1" />
-            <GradientStop Color="#F25EC4"
+            <GradientStop Color="#b83564"
                           Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -17,29 +17,29 @@
         <StackLayout>
 
             <Frame CornerRadius="30" VerticalOptions="Start" Margin="5,5,0,0"
-                   HorizontalOptions="Start" BackgroundColor="#F25EC4" BorderColor="#23E9FC">
-                <Label x:Name="txt_contagem" TextColor="#23E9FC" Text="Acertos: 0" FontSize="Title"
+                   HorizontalOptions="Start" BackgroundColor="#b83564" BorderColor="#ff6a5a">
+                <Label x:Name="txt_contagem" TextColor="#ff6a5a" Text="Acertos: 0" FontSize="Title"
                        FontAttributes="Bold" />
             </Frame>
 
 
-            <Frame Scale="1" BackgroundColor="#F25EC4" Margin="5"
-                   BorderColor="#23E9FC" CornerRadius="30"
+            <Frame Scale="1" BackgroundColor="#b83564" Margin="5"
+                   BorderColor="#ff6a5a" CornerRadius="30"
                    VerticalOptions="CenterAndExpand">
                 <StackLayout>
-                    <Label x:Name="txt_pergunta" Text="esse é o animal" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#23E9FC" FontSize="30"/>
+                    <Label x:Name="txt_pergunta" Text="esse é o animal" FontAttributes="Bold" HorizontalOptions="CenterAndExpand" TextColor="#ff6a5a" FontSize="30"/>
 
 
                     <StackLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
-                        <Button CornerRadius="100" x:Name="btn_sim" HorizontalOptions="StartAndExpand" Text="✓" BackgroundColor="Transparent" FontSize="50" Clicked="btn_sim_Clicked" TextColor="#23E9FC"
+                        <Button CornerRadius="100" x:Name="btn_sim" HorizontalOptions="StartAndExpand" Text="✓" BackgroundColor="Transparent" FontSize="50" Clicked="btn_sim_Clicked" TextColor="#ff6a5a"
                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.SpringOut}"
-                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="#F25EC4"/>
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="#b83564"/>
 
                         <Image x:Name="img_animal"/>
 
-                        <Button  CornerRadius="100" x:Name="btn_nao" HorizontalOptions="EndAndExpand" Text="X" BackgroundColor="Transparent" FontSize="50" Clicked="btn_nao_Clicked" TextColor="#23E9FC" 
+                        <Button  CornerRadius="100" x:Name="btn_nao" HorizontalOptions="EndAndExpand" Text="X" BackgroundColor="Transparent" FontSize="50" Clicked="btn_nao_Clicked" TextColor="#ff6a5a" 
                             xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.SpringOut}"
-                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="#F25EC4"/>
+                            xct:TouchEffect.PressedScale="0.75" xct:TouchEffect.PressedOpacity="0.5" xct:TouchEffect.PressedBackgroundColor="#b83564"/>
                     </StackLayout>
                 </StackLayout>
             </Frame>
@@ -47,16 +47,16 @@
             <Button
                  x:Name="voltar"
                  FontAttributes="Bold"
-                 BorderColor="#23E9FC"
+                 BorderColor="#ff6a5a"
                  BorderWidth="2"
                  VerticalOptions="EndAndExpand"
                  CornerRadius="15"
                  HeightRequest="60"
                  WidthRequest="50"
                  Margin="10,0,10,10"
-                 BackgroundColor="#F25EC4"
+                 BackgroundColor="#b83564"
                  Text="Viajar de Volta"
-                 TextColor="#23E9FC"
+                 TextColor="#ff6a5a"
                  Clicked="voltar_Clicked"
                  FontSize="23"
              />

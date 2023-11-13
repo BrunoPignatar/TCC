@@ -6,9 +6,9 @@
              Title="MUNDO 3">
     <ContentPage.Background>
         <LinearGradientBrush StartPoint="0,0" EndPoint="0.5,1.2">
-            <GradientStop Color="#23E9FC"
+            <GradientStop Color="#ff6a5a"
                           Offset="0.1" />
-            <GradientStop Color="#F25EC4"
+            <GradientStop Color="#b83564"
                           Offset="1.0" />
         </LinearGradientBrush>
     </ContentPage.Background>
@@ -16,14 +16,14 @@
         <StackLayout>
 
             <Frame HeightRequest="50"
-                   BackgroundColor="#23E9FC"
+                   BackgroundColor="#ff6a5a"
                    BorderColor="Transparent">
 
                 <StackLayout Orientation="Horizontal">
 
                     <ImageButton x:Name="AvatarImage"
-                           BackgroundColor="#23E9FC"
-                           BorderColor="#F25EC4"
+                           BackgroundColor="#ff6a5a"
+                           BorderColor="#b83564"
                            BorderWidth="1.5"
                            Scale="1.5"
                            HeightRequest="50"
@@ -35,7 +35,7 @@
                            Aspect="AspectFill"/>
 
                     <Label x:Name="lblBoasVindas"
-                           TextColor="#F25EC4" FontSize="20" 
+                           TextColor="#b83564" FontSize="20" 
                            Margin="15,0,5,0"
                            HorizontalTextAlignment="Start" 
                            
@@ -43,7 +43,7 @@
                            VerticalTextAlignment="Center"/>
 
                     <ImageButton x:Name="AlterAvatar"
-                           BackgroundColor="#F25EC4"
+                           BackgroundColor="#b83564"
                            HorizontalOptions="EndAndExpand"
                            VerticalOptions="Center"
                            Padding="-3"
@@ -53,7 +53,7 @@
                            Clicked="AlterAvatar_Clicked"/>
                 </StackLayout>
             </Frame>
-            <BoxView Color="#F25EC4" HeightRequest="1.5"
+            <BoxView Color="#b83564" HeightRequest="1.5"
                      HorizontalOptions="FillAndExpand"/>
 
             <StackLayout VerticalOptions="CenterAndExpand">
@@ -62,14 +62,14 @@
                          FontAttributes="Bold"
                          VerticalOptions="Center"
                          BorderWidth="2"
-                         BorderColor="#F25EC4"
+                         BorderColor="#b83564"
                          CornerRadius="10"
                          HeightRequest="60"
                          WidthRequest="50"
                          Margin="10"
                          BackgroundColor="white"
                          Text="Jogo do Correto"
-                         TextColor="#F25EC4"
+                         TextColor="#b83564"
                          Clicked="jogo1_mundo3_Clicked"
                          FontSize="18"
                         xct:TouchEffect.AnimationDuration="250" xct:TouchEffect.AnimationEasing="{x:Static Easing.CubicInOut}"
@@ -86,8 +86,8 @@
                          Margin="10"
                          BackgroundColor="white"
                          Text="Jogo das Sombras"
-                         TextColor="#F25EC4"
-                         BorderColor="#F25EC4"
+                         TextColor="#b83564"
+                         BorderColor="#b83564"
                          Clicked="jogo2_mundo3_Clicked"
                          FontSize="18"
                     /> 
@@ -98,7 +98,7 @@
             <StackLayout VerticalOptions="End">
                 <Button x:Name="voltar"
                             FontAttributes="Bold"
-                            BorderColor="#F25EC4"
+                            BorderColor="#b83564"
                             BorderWidth="2"
                             CornerRadius="15"
                             HeightRequest="60"
@@ -106,7 +106,7 @@
                             Margin="10,0,10,10"
                             BackgroundColor="white"
                             Text="RETORNAR"
-                            TextColor="#F25EC4"
+                            TextColor="#b83564"
                             Clicked="voltar_Clicked"
                             FontSize="23"
                             />

@@ -20,20 +20,20 @@
             <Frame HeightRequest="30"
                    WidthRequest="160"
                    Margin="10,10,10,0"
-                   BackgroundColor="DeepPink"
-                   BorderColor="Aqua"
+                   BackgroundColor="#b83564"
+                   BorderColor="#ff6a5a"
                    CornerRadius="15"
                    HorizontalOptions="StartAndExpand"
                    Scale="0.9">
                 <Label x:Name="Score" Margin="05,0,0,0" FontSize="25"
                        Scale="1.2" HorizontalOptions="Start"
-                       TextColor="Aqua" FontAttributes="bold" 
+                       TextColor="#ff6a5a" FontAttributes="bold" 
                        Text="Acertos: "/>
             </Frame>
             <Frame BackgroundColor="Transparent">
                 <StackLayout>
                     <Frame
-                        BackgroundColor="LightBlue"
+                        BackgroundColor="#b83564"
                         CornerRadius="20">
                         <StackLayout HeightRequest="200">
                             <Image x:Name="img_sombra" 
@@ -42,8 +42,8 @@
                             <Label HorizontalOptions="CenterAndExpand">
                                 <Label.FormattedText>
                                     <FormattedString>
-                                        <Span Text="ADIVINHE O" FontSize="21" TextColor="HotPink"/>
-                                        <Span Text=" ANIMAL" FontSize="22" FontAttributes="Bold" TextColor="DeepPink"/>
+                                        <Span Text="ADIVINHE O" FontSize="21" TextColor="#ff6a5a"/>
+                                        <Span Text=" ANIMAL" FontSize="22" FontAttributes="Bold" TextColor="#000"/>
                                     </FormattedString>
                                 </Label.FormattedText>
                             </Label>
@@ -60,31 +60,31 @@
                       VerticalOptions="EndAndExpand">
                     <ImageButton Grid.Column="0"  x:Name="img_1" Clicked="check" HeightRequest="150"
                                  HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"
-                                 BackgroundColor="LightPink"/>
+                                 BackgroundColor="#ff6a5a"/>
                     <ImageButton Grid.Column="1" x:Name="img_2" Clicked="check" HeightRequest="150"
                                  HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"
-                                 BackgroundColor="LightPink"/>
+                                 BackgroundColor="#ff6a5a"/>
                     <ImageButton Grid.Column="0" Grid.Row="1"  x:Name="img_3" Clicked="check" HeightRequest="150"
                                  HorizontalOptions="CenterAndExpand" Padding="20" CornerRadius="25"
-                                 BackgroundColor="LightPink"/>
+                                 BackgroundColor="#ff6a5a"/>
                     <ImageButton Grid.Column="1" Grid.Row="1"  x:Name="img_4" Clicked="check" HeightRequest="150"
-                                HorizontalOptions="CenterAndExpand" BackgroundColor="LightPink" Padding="20" CornerRadius="25"/>
+                                HorizontalOptions="CenterAndExpand" BackgroundColor="#ff6a5a" Padding="20" CornerRadius="25"/>
                 </Grid>
             </StackLayout>
 
             <Button
             x:Name="voltar"
             FontAttributes="Bold"
-            BorderColor="white"
+            BorderColor="#ff6a5a"
             BorderWidth="2"
             VerticalOptions="EndAndExpand"
             CornerRadius="15"
             HeightRequest="60"
             WidthRequest="50"
             Margin="10,0,10,10"
-            BackgroundColor="DeepPink"
+            BackgroundColor="#b83564"
             Text="Viajar de Volta"
-            TextColor="white"
+            TextColor="#ff6a5a"
             Clicked="voltar_Clicked"
             FontSize="23"
             />

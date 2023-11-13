@@ -25,10 +25,10 @@ namespace autplay.View.jogos
         {
             var ramdom = new Random();
 
-            int animal = ramdom.Next(1, 5);
+            int animal = ramdom.Next(1, 6);
             while(animal == anterior)
             {
-                animal = ramdom.Next(1, 5);
+                animal = ramdom.Next(1, 6);
             }
 
 

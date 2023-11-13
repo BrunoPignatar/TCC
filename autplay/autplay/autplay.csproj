@@ -24,9 +24,9 @@
     <None Remove="Assets\horse.png" />
     <None Remove="Assets\lapis.png" />
     <None Remove="Assets\logo.png" />
-    <None Remove="Assets\Mundo1.png" />
-    <None Remove="Assets\Mundo2.png" />
-    <None Remove="Assets\Mundo3.png" />
+    <None Remove="Assets\mundo1.png" />
+    <None Remove="Assets\mundo2.png" />
+    <None Remove="Assets\mundo3.png" />
     <None Remove="Assets\parrot.png" />
   </ItemGroup>
 

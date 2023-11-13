@@ -42,12 +42,12 @@ namespace autplay.View.jogos
         {
             var random = new Random();
 
-            pergunta = random.Next(1, 5);
-            numero = random.Next(1, 5);
+            pergunta = random.Next(1, 6);
+            numero = random.Next(1, 6);
 
             if(numero == anteriornmr)
             {
-                numero = random.Next(1, 5);
+                numero = random.Next(1, 6);
             }
 
 
