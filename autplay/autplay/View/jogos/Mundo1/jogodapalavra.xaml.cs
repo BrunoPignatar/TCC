@@ -67,7 +67,7 @@ namespace autplay.View.jogos
             var settings = new SpeechOptions()
             {
                 Volume = .50f,
-                Pitch = 1.6f
+                Pitch = 1f
             };
             
             await TextToSpeech.SpeakAsync(resposta_correta, settings);

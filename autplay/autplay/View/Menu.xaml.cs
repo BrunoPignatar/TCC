@@ -212,7 +212,7 @@ namespace autplay.View
             var settings = new SpeechOptions()
             {
                 Volume = .50f,
-                Pitch = 1.6f
+                Pitch = 1f
             };
             await TextToSpeech.SpeakAsync("Olá, Bem vindo ao neu play! Selecione seu avatar para se aventurar, se não gostar dos avatares padrões você pode escolher seu próprio nome e sua foto", settings);
         }

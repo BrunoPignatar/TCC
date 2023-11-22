@@ -49,7 +49,7 @@ namespace autplay.View
             var settings = new SpeechOptions()
             {
                 Volume = .50f,
-                Pitch = 1.6f
+                Pitch = 1f
             };
             await TextToSpeech.SpeakAsync("bem vindo senhor" + App.DadosAvatar.Nome, settings);
         }
@@ -111,7 +111,7 @@ namespace autplay.View
             var settings = new SpeechOptions()
             {
                 Volume = .50f,
-                Pitch = 1.6f
+                Pitch = 1f
             };
             await TextToSpeech.SpeakAsync("Selecione um mundo e se divirta em seus jogos!", settings);
         }
